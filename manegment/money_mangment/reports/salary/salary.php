@@ -43,8 +43,8 @@ $date_now = date("Y-m-d");
     </div>
     <div class="form">
     <form action="" method="post">     
-    <div class="roww">
-        <div class="form-group">
+    <div class="row">
+        <div class="form-group col-lg-4">
             <label for="" class="lead"> Select Year</label>
             <select name="year" id=""  class="form-select">
                 <?php
@@ -54,7 +54,7 @@ $date_now = date("Y-m-d");
                 ?>
             </select>
         </div>
-        <div class="form-group">
+        <div class="form-group col-lg-4">
             <label for="" class="lead"> Select Month</label>
             <select name="month" id=""  class="form-select">
                 <option value="1">1</option>
@@ -71,10 +71,10 @@ $date_now = date("Y-m-d");
                 <option value="12">12</option>
             </select>
         </div>
-    </div>
-        <div>
+        <div class="form-group col-lg-4">
             <input type="submit" value="Search" name="search"  class='btn btn-primary'>
         </div>
+    </div>
     </form>
     <table class='table table-striped table-hover'>
         <tr>
