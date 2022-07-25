@@ -1,6 +1,7 @@
 <?php
 include "../../../connection/connection.php";
 $year = date("y");
+session_start();
 $name_user = $_SESSION["full_name_doctor"] ;
 $specialization = $_SESSION["specialization_doctor"];
 

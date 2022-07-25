@@ -2,9 +2,10 @@
 include "../../../connection/connection.php";
 session_start();
 $user_name =$_SESSION["user_doctor"]; 
-$display_info_user = mysqli_query($connection , "select full_name from medical_exam_doctors where username='$user_name'");
-$name_user = mysqli_fetch_array($display_info_user)["full_name"];
-$specialization = mysqli_fetch_array($display_info_user)["specialization"];
+$display_info_user = mysqli_query($connection , "select full_name,specialization from medical_exam_doctors where username='$user_name'");
+$row_info = mysqli_fetch_array($display_info_user);
+$name_user = $row_info["full_name"];
+$specialization = $row_info["specialization"];
 $_SESSION["full_name_doctor"] = $name_user;
 $_SESSION["specialization_doctor"] = $specialization;
 

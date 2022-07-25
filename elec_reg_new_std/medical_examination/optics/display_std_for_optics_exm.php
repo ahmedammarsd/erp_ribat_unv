@@ -1,10 +1,11 @@
 <?php
 include "../../../connection/connection.php";
 $year = date("y");
+session_start();
 $name_user = $_SESSION["full_name_doctor"] ;
 $specialization = $_SESSION["specialization_doctor"];
 
-if($specialization !== "Optics"){
+if($specialization != "Optics"){
 echo "<script>alert('Sorry, You don\'t have permissions');
  window.location.href='../statics/statics.php'</script>";
 }
