@@ -14,7 +14,7 @@ $display_username = mysqli_query($connection , "select full_name from employes")
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../../css/all.min.css">
     <link rel="stylesheet" href="../../../../bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../../css/manegment/query_daialy_reports.css">
+    <link rel="stylesheet" href="../../../../css/manegment/query_daialy_reports.css?v=<?php echo time(); ?>">
     <title>Document</title>
 </head>
 <body>
@@ -45,8 +45,8 @@ $display_username = mysqli_query($connection , "select full_name from employes")
     </div>
     <div class="form">
     <form action="" method="post">     
-    <div class="roww">
-        <div class="form-group">
+    <div class="row">
+        <div class="form-group col-lg-4 col-md-4">
         <label for="" class="lead">Selact Type Of Report</label>
         <select name="reports" id="" class="form-select">
             <option value="none">---SELECT REPORTS---</option>
@@ -58,9 +58,12 @@ $display_username = mysqli_query($connection , "select full_name from employes")
         </select>
         </div>
    
-    <div class="form-group">
+    <div class="form-group col-lg-4 col-md-4">
         <label for="" class="lead">Selact Date</label>
         <input type="date" name="date" id=""  class="form-control">
+    </div>
+    <div class="form-group col-lg-4 col-md-4">
+    <input type="submit" value="Search" name="ser"  class='btn btn-primary'>
     </div>
     </div>
      <!--   <select name="username" id="">
@@ -74,12 +77,8 @@ $display_username = mysqli_query($connection , "select full_name from employes")
             ?>
         </select>
         -->
-        <input type="submit" value="Search" name="ser"  class='btn btn-primary'>
     </form>
     <?php
-
-      
-
     if(isset($_POST["ser"])){
         $report_type = $_POST["reports"];
       //  $username1 = $_POST["username"];
