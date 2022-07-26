@@ -7,16 +7,17 @@ if(isset($_POST["login"])){
 
         $display_data_for_login_admin = mysqli_query($connection ,"select * from scientific_affairs_admins where username='$username' && password='$password'");
         $display_data_for_login_emp = mysqli_query($connection ,"select * from scientific_affairs_employes where username='$username' && password='$password'");
-        $display_data_for_login_doctor = mysqli_query($connection ,"select * from medical_exam_doctors where username='$username' && password='$password'");
 
         if(mysqli_num_rows($display_data_for_login_admin) == 1){
                  header("location: ../admin/statics/statics.php");
                  $_SESSION["user_admin_scientific_affairs"] = $username;
+                 $_SESSION["user_name_for_permsisson"] = $username;
                     }
         
         elseif(mysqli_num_rows($display_data_for_login_emp) == 1){
             header("location: ../scintific_affairs/statics/statics.php");
             $_SESSION["user_emp_scientific_affairs"] = $username;
+            $_SESSION["user_name_for_permsisson"] = $username;
                }
         else{
             echo "<script>alert('Sorry, Error In Information')</script>";

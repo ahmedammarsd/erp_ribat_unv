@@ -44,7 +44,7 @@ $_SESSION["full_name_scientific_affairs"] = $name_user;
 <div class="form">
 <form action="" method="post">
     <div class="row">
-        <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <div class="form-group col-lg-3 col-md-4 col-xs-12">
             <label for="" class="lead">Select The College </label>
             <select name="college" id="" class="form-select">
                 <option value="none">Select The College</option>
@@ -55,46 +55,60 @@ $_SESSION["full_name_scientific_affairs"] = $name_user;
                 <option value="كلية الاعلام">Faculty Of Media</option>
             </select>
         </div>
-        <div class="form-group col-lg-4 col-md-6 col-xs-12">
-            <label for="" class="lead">Select The Type Of Certificate </label>
+        <div class="form-group col-lg-3 col-md-4 col-xs-12">
+            <label for="" class="lead">Select Type Certificate </label>
             <select name="type_certificate_unv" id="" class="form-select">
                 <option value="none">Select Type Of Certificate</option>
                 <option value="بكلاريوس">Bechelor</option>
                 <option value="دبلوم">Diploma</option>
             </select>
         </div>
-        <div class="form-group col-lg-4 col-md-6 col-xs-12 my-5">   
+        <div class="form-group col-lg-3 col-md-4 col-xs-12">
+            <label for="" class="lead">Select Type Report </label>
+            <select name="type_report" id="" class="form-select">
+                <option value="none">Select  Type Report</option>
+                <option value="confirm">Confirm Information</option>
+                <option value="unconfirm">Unonfirm Information</option>
+                <option value="all">All</option>
+            </select>
+        </div>
+        <div class="form-group col-lg-3 col-md-12 col-xs-12 my-5">   
             <input type="submit" value="Search" name="ser" class="btn btn-primary ">
         </div>
     </form>
-    <table class='table table-striped table-hover'>
-  <tr>
-      <th>Std Name</th>
-      <th>Form Number</th>
-      <th>College</th>
-      <th>Certificate Type</th>
-      <th>Department</th>
-      <th>Operation</th>
-  </tr>
     <?php
 if(isset($_POST["ser"])){
     $college = $_POST["college"];
     $type_certificate_unv = $_POST["type_certificate_unv"];
+    $type_report = $_POST["type_report"];
    if($college == "none"){
     echo "<script>alert('Sorry, please select college');
-    window.location.href='info_std_electronic_register.php';</script>";
+    window.location.href='report_review_info_stds_done.php';</script>";
    }
    elseif($type_certificate_unv == "none"){
     echo "<script>alert('Sorry, please select type certificate');
-    window.location.href='info_std_electronic_register.php';</script>";
+    window.location.href='report_review_info_stds_done.php';</script>";
+   }
+   elseif($type_report == "none"){
+    echo "<script>alert('Sorry, please select type report');
+    window.location.href='report_review_info_stds_done.php';</script>";
    }
    else{
-    $display_data = mysqli_query($connection , "select id,form_number,name_std,college,type_certificate_unv,department from new_std_form_info where review='none' && college='$college' && type_certificate_unv='$type_certificate_unv' && year='$year'");
+    if($type_report == "confirm"){
+    $display_data = mysqli_query($connection , "select id,form_number,name_std,college,type_certificate_unv,department from new_std_form_info where review='good' && college='$college' && type_certificate_unv='$type_certificate_unv' && year='$year'");
     if(mysqli_num_rows($display_data) == 0){
         echo "<script>alert('Sorry, no student');
-        window.location.href='info_std_electronic_register.php';</script>";
+        window.location.href='report_review_info_stds_done.php';</script>";
     }
     else{
+        echo " <table class='table table-striped table-hover'>
+        <tr>
+            <th>Std Name</th>
+            <th>Form Number</th>
+            <th>College</th>
+            <th>Certificate Type</th>
+            <th>Department</th>
+        </tr>";
         // لو الالمتغير الفوق دا صحيح سوف يتم عرض البيانات
             while($row = mysqli_fetch_array($display_data)){
                 $id = $row['id'];
@@ -103,16 +117,97 @@ if(isset($_POST["ser"])){
                 $college = $row['college'];
                 $type_certificate = $row["type_certificate_unv"];
                 $department = $row["department"];
-               echo "<tr class='table-danger'>";
+               echo "<tr class='table-success'>";
                echo "<td>".$fullname."</td>";
                echo "<td>".$form_number."</td>";
                echo "<td>".$college."</td>";
                echo "<td>".$type_certificate."</td>";
                echo "<td>".$department."</td>";              
-               echo "<td><a href='../review_the_info/review_the_info.php?std_id=$id' class='btn btn-primary'>Review</a></td>";
                echo "</tr>";
         }
 }
+    }
+    //----------
+    if($type_report == "unconfirm"){
+        $display_data = mysqli_query($connection , "select id,form_number,name_std,college,type_certificate_unv,department,notes_not_submit from new_std_form_info where review='bad' && college='$college' && type_certificate_unv='$type_certificate_unv' && year='$year'");
+        if(mysqli_num_rows($display_data) == 0){
+            echo "<script>alert('Sorry, no student');
+            window.location.href='report_review_info_stds_done.php';</script>";
+        }
+        else{
+            echo " <table class='table table-striped table-hover'>
+            <tr>
+                <th>Std Name</th>
+                <th>Form Number</th>
+                <th>College</th>
+                <th>Certificate Type</th>
+                <th>Department</th>
+                <th>Status</th>
+            </tr>";
+            // لو الالمتغير الفوق دا صحيح سوف يتم عرض البيانات
+                while($row = mysqli_fetch_array($display_data)){
+                    $id = $row['id'];
+                    $fullname = $row['name_std'];
+                    $form_number = $row['form_number'];
+                    $college = $row['college'];
+                    $type_certificate = $row["type_certificate_unv"];
+                    $department = $row["department"];
+                    $notes_not_submit = $row["notes_not_submit"];
+                   echo "<tr class='table-danger'>";
+                   echo "<td>".$fullname."</td>";
+                   echo "<td>".$form_number."</td>";
+                   echo "<td>".$college."</td>";
+                   echo "<td>".$type_certificate."</td>";
+                   echo "<td>".$department."</td>";      
+                   echo "<td>".$notes_not_submit."</td>";              
+                   echo "</tr>";
+            }
+    }
+        }  
+  //----------
+  if($type_report == "all"){
+    $display_data = mysqli_query($connection , "select id,form_number,name_std,college,type_certificate_unv,department,notes_not_submit ,review from new_std_form_info where  college='$college' && type_certificate_unv='$type_certificate_unv' && year='$year' && review='bad' || review='good'");
+    if(mysqli_num_rows($display_data) == 0){
+        echo "<script>alert('Sorry, no student');
+        window.location.href='report_review_info_stds_done.php';</script>";
+    }
+    else{
+        echo " <table class='table table-striped table-hover'>
+        <tr>
+            <th>Std Name</th>
+            <th>Form Number</th>
+            <th>College</th>
+            <th>Certificate Type</th>
+            <th>Department</th>
+            <th>Status</th>
+        </tr>";
+        // لو الالمتغير الفوق دا صحيح سوف يتم عرض البيانات
+            while($row = mysqli_fetch_array($display_data)){
+                $id = $row['id'];
+                $fullname = $row['name_std'];
+                $form_number = $row['form_number'];
+                $college = $row['college'];
+                $type_certificate = $row["type_certificate_unv"];
+                $department = $row["department"];
+                $notes_not_submit = $row["notes_not_submit"];
+                $review = $row["review"];
+                if($review == "good"){
+                    $class = " class='table-success'";
+                }
+                else{
+                    $class = " class='table-danger'";
+                }
+               echo "<tr $class>";
+               echo "<td>".$fullname."</td>";
+               echo "<td>".$form_number."</td>";
+               echo "<td>".$college."</td>";
+               echo "<td>".$type_certificate."</td>";
+               echo "<td>".$department."</td>";      
+               echo "<td>".$notes_not_submit."</td>";              
+               echo "</tr>";
+        }
+}
+    }  
 }
 }
 // elseif($typejop === "كلية دراسات الحاسوب" && $type_certificate_unv === "دبلوم" ){

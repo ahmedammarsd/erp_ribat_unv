@@ -165,7 +165,7 @@ h2 {
 
 .form-control,
 .form-select {
-    width: 270px;
+    width: 100%;
     margin: 5px;
     border-left: 3px solid #0e6a93;
     border-radius: none;
@@ -178,9 +178,7 @@ label {
 }
 
 .btn {
-    margin-top: 40px;
     width: 100%;
-    font-size: 20px;
     background-color: #0e6a93;
 }
 

@@ -10,7 +10,6 @@ $id_std = $_GET["std_id"];
 
 $display_data_std_for_review = mysqli_query($connection , "select * from new_std_form_info where id = '$id_std'");
 $row = mysqli_fetch_array($display_data_std_for_review);
-
 $form_number = $row["form_number"];
 $name_std = $row["name_std"];
 $the_college = $row["college"];

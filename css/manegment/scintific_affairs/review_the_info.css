@@ -20,7 +20,7 @@ h2 {
     width: 100%;
 }
 .container .header{
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     width: 100%;
@@ -58,7 +58,7 @@ h2 {
     color: #0e6a93;
 }
 .container .form{
-    margin-top:55px;
+    margin-top:95px;
     margin-bottom: 55px;
     width: 100%;
     padding: 30px;
