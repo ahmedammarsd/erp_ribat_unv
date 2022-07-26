@@ -523,7 +523,7 @@ if(isset($_POST["addreg"])){
 </head>
 <body>
 <div class="container">
-    <div class="header">
+    <!-- <div class="header">
         <div class="nav">
         <div>
         <h3><a href="../account/account.php"><img src="../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_user ?></h3>
@@ -532,49 +532,49 @@ if(isset($_POST["addreg"])){
         <a href="../../login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
         </div>
         </div>
-    </div>
+    </div> -->
     <div class="form">
     <form action="" method="post" enctype="multipart/form-data">
         <div class="roww">
             <div class="form-group">
                 <label for="" class="lead">Form Number </label>
-                <input type="text"  value="" class="form-control" placeholder="Enter Form Number">
+                <input type="text"  class="form-control" value="<?php echo $form_no; ?>" readonly>
             </div>
             <div class="form-group">
                 <label for="" class="lead">Name </label>
-                <input type="text" value="" class="form-control"placeholder="Enter Your Name" >
+                <input type="text"  class="form-control" value="<?php echo $name_std; ?>" readonly>
             </div>
              <div  class="form-group">
                 <label for="" class="lead">College</label>
-                <input type="text" value="" class="form-control" placeholder="Enter Your College" >
+                <input type="text" class="form-control" value="<?php echo $college; ?>" readonly>
             </div>
         </div>
         <div class="roww">
             <div  class="form-group">
                 <label for="" class="lead">  Certificate Unv Type </label>
-                <input type="text"  value="" class="form-control" placeholder="Enter Certificate Unv Type">
+                <input type="text"  class="form-control" value="<?php echo $type_certificate_unv; ?>" readonly>
             </div>
             <div  class="form-group">
                 <label for="" class="lead">Department</label>
-                <input type="text"  value="" class="form-control" placeholder="Enter Your Department">
+                <input type="text"  class="form-control" value="<?php echo $department; ?>" readonly>
             </div>
             <div  class="form-group">
                  <label for="" class="lead"> Certificate Type</label>
-                <input type="text"  value="" class="form-control" placeholder="EnterCertificate Type">
+                <input type="text"  class="form-control" value="<?php echo $type_certifcate; ?>" readonly>
             </div>
         </div>
         <div class="roww">
             <div class="form-group">
                 <label for="" class="lead">The Course</label>
-                <input type="text" value="" class="form-control" placeholder="Enter Your Course Name">
+                <input type="text" class="form-control" value="<?php echo $course; ?>" readonly>
             </div>
             <div class="form-group">
                 <label for="" class="lead">Certificate Rate</label>
-                <input type="text"  value="" class="form-control" placeholder="Enter Certificate Rate">
+                <input type="text"   class="form-control" value="<?php echo $certifcate_rate; ?>" readonly>
             </div>
             <div class="form-group">
             <label for="" class="lead">Set Number</label>
-                <input type="text"  value="" class="form-control"placeholder="Enter Your Set Number"  >
+                <input type="text" class="form-control" value="<?php echo $set_number; ?>" readonly>
             </div>
         </div>
         <hr>
