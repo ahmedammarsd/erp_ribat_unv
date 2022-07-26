@@ -54,14 +54,14 @@ if(isset($_POST["change"])){
 <body>
 <div class="side-menu">
 <div class="brand-name">
-    <h2><img src="../../../icons/da.png" alt="" width="50px" height="50px">Scientific Affairs-Admin</h2>
+    <h2><img src="../../../icons/da.png" alt="" width="50px" height="50px">Scientific Affairs</h2>
             </div>
         <ul>
         <a href="../statics/statics.php"><li><img src="../../../icons/statc1.png" alt="" width="40px" height="40px">Statics</li></a>
             <a href="../employes/add_employe/add_emp.php"><li><img src="../../../icons/eemp3.png" alt="" width="40px" height="40px"> Add Employe</li></a>
             <a href="../doctors/add_doctor/add_doctor.php"><li><img src="../../../icons/doc.png" alt="" width="40px" height="40px"> Add Doctor</li></a>
             <a href="../admins/add_admin/add_admin.php"><li><img src="../../../icons/admin.png" alt="" width="40px" height="40px">Add Admin</li></a>
-
+            <a href="../../scintific_affairs/info_std_electronic_register/info_std_electronic_register.php"><li><img src="../../../icons/stdifo1.png" alt="" width="40px" height="40px"> Students Information</li></a>
             </ul>
     </div>
 <div class="container">

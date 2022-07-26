@@ -53,62 +53,59 @@ if(isset($_POST["edittetcher"])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../css/add_tetcher.css">
+    <link rel="stylesheet" href="../../../../css/all.min.css">
+    <link rel="stylesheet" href="../../../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../css/manegment/scintific_affairs/display_for_edit.css">
     <title>Edit Admin</title>
 </head>
 <body>
 <div class="side-menu">
-        <div class="brand-name">
-            <h2>Coustoms Univirsity</h2>
+<div class="brand-name">
+<h2><img src="../../../../icons/da.png" alt="" width="50px" height="50px">Scientific Affairs</h2>
         </div>
-        <ul>
-        <a href="../../statics/statics.php"><li class="active">Dashboard</li></a>
-            <a href="../../admins/add_admin/add_admin.php"><li>admin</li></a>
-            <a href="../../students/add_student/add_student.php"><li>Students</li></a>
-            <a href="../../tetchers/add_tetchers/add_tetcher.php"><li>Tetchers</li></a>
-            <a href="../../add_subject/add_subject.php"><li>Add subject</li></a>
-            <a href="../../subjects_distribution/subjects_distribution.php"><li>Distribute Subjects</li></a>
-            <a href="../../profile_admin/profile_admin.php"><li>Account</li></a>
-        </ul>
-    </div>
-<div class="container">
-        <div class="header">
-            <div class="nav">
-               <div>
-                   <h3><img src="../../../images/icon-admin.png" alt="" srcset="" width="50px" height="50px"> Admin :<?php echo " " . $name_admin ?> </h3>
-               </div>
-               <div class="log">
-               <a href="../../../logout/logout.php"><div><img src="../../../images/logout.png" alt="" srcset="" width="50px" height="50px"></div></a>
-               </div>
+            <ul>    
+            <a href="../../statics/statics.php"><li class="active"><img src="../../../../icons/statc1.png" alt="" width="40px" height="40px">Statics</li></a>
+            <a href="../../employes/add_employe/add_emp.php"><li><img src="../../../../icons/eemp3.png" alt="" width="40px" height="40px"> Add Employe</li></a>
+            <a href="../../doctors/add_doctor/add_doctor.php"><li><img src="../../../../icons/doc.png" alt="" width="40px" height="40px"> Add Doctor</li></a>
+            <a href="../../admins/add_admin/add_admin.php"><li><img src="../../../../icons/admin.png" alt="" width="40px" height="40px">Add Admin</li></a>
+            <a href="../../../scintific_affairs/info_std_electronic_register/info_std_electronic_register.php"><li><img src="../../../../icons/stdifo1.png" alt="" width="40px" height="40px"> Students Information</li></a>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="header">
+                <div class="nav">
+                <div>
+                <h3> <a href="../../account/account.php"><img src="../../../../icons/account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_user ?></h3>
+                </div>
+                <div class="log">
+                <a href="../../../login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+                </div>
+                </div>
             </div>
-        </div>
-        <div class="form">
-
+<div class="form">
 <form action="" method="post">
-<div class="roww">
-    <div>
-    <label for="" class="form-group">Full Name</label>
+<div class="row">
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+    <label for="" class="lead">Full Name</label>
         <input type="text" name="fullname" id=""  value="<?php echo $inp_name ?>" class="form-control">
     </div>
-    <div>
-    <label for="" class="form-group">Phone Number</label>
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+    <label for="" class="lead">Phone Number</label>
         <input type="text" name="phone" id=""  value="<?php echo $inp_phone ?>" class="form-control">
     </div>
-    <div>
-    <label for="" class="form-group">Email</label>
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+    <label for="" class="lead">Email</label>
         <input type="email" name="email" id=""  value="<?php echo $inp_email ?>" class="form-control">
     </div>
-    <div>
-    <label for="" class="form-group">Address</label>
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+    <label for="" class="lead">Address</label>
         <input type="text" name="address" id=""  value="<?php echo $inp_address ?>" class="form-control">
     </div>
-    <div>
-    <label for="" class="form-group">Username</label>
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+    <label for="" class="lead">Username</label>
         <input type="text" name="username" id=""  value="<?php echo $inp_username ?>" class="form-control">
     </div>
-</div>
-    <div>
+    <div class="form-group col-lg-12 col-md-12 col-xs-12">
         <input type="submit" name="edittetcher" id="" value="Update"  class="btn btn-success">
     </div>
 </form>
