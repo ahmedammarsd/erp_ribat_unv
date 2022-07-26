@@ -48,7 +48,7 @@ $_SESSION["full_name_reg"] = $name_user;
                             <h3>Query student</h3>
                         </div>
                         <div class="icon-case">
-                            <img src="../../../icons/Expenses1.png" alt="" srcset=""  width="70px" height="70px">
+                            <img src="../../../icons/qs1.png" alt="" srcset=""  width="70px" height="70px">
                         </div>
                         <div>
                            <a href="../reports/query_std/query_std.php"><button class="btn btn-primary">View</button></a>
@@ -74,17 +74,6 @@ $_SESSION["full_name_reg"] = $name_user;
                         </div>
                         <div>
                            <a href="#"><button class="btn btn-primary">View</button></a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="box"><br>
-                            <h3>3</h3>
-                        </div>
-                        <div class="icon-case">
-                            <img src="../../../icons/salary3.png" alt="" srcset=""  width="70px" height="70px">
-                        </div>
-                        <div>
-                            <a href="#"><button class="btn btn-primary">View</button></a>
                         </div>
                     </div>
               </div>  

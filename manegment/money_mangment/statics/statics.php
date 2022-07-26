@@ -53,6 +53,7 @@ $num_workers = mysqli_num_rows($display_num_user_worker);
         </div>
     </div>
 <div class="content">
+<div class="roww">
                 <div class="cards">
                     <div class="card">
                         <div class="box"><br>
@@ -87,6 +88,8 @@ $num_workers = mysqli_num_rows($display_num_user_worker);
                            <a href="../reports/period_reports/period_reports.php"><button class="btn btn-primary">View</button></a>
                         </div>
                     </div>
+                    </div>
+                <div class="roww">
                     <div class="card">
                         <div class="box"><br>
                             <h3>Salary</h3>
@@ -120,6 +123,7 @@ $num_workers = mysqli_num_rows($display_num_user_worker);
                             <a href="../reports/query_std/query_std.php"><button class="btn btn-primary">View</button></a>
                         </div>
                     </div>
+                </div>
               </div>  
            </div>
         </div>
