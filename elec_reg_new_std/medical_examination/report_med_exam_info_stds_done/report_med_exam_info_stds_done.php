@@ -2,10 +2,7 @@
 include "../../../connection/connection.php";
 $year = date("y");
 session_start();
-$user_name =$_SESSION["user_admin_scientific_affairs"]; 
-$display_info_user = mysqli_query($connection , "select full_name from scientific_affairs_admins where username='$user_name'");
-$name_user = mysqli_fetch_array($display_info_user)["full_name"];
-$_SESSION["full_name_scientific_affairs"] = $name_user;
+$name_user = $_SESSION["full_name_doctor"] ;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,8 +65,8 @@ $_SESSION["full_name_scientific_affairs"] = $name_user;
             <label for="" class="lead">Select Type Report </label>
             <select name="type_report" id="" class="form-select">
                 <option value="none">Select  Type Report</option>
-                <option value="confirm">Confirm Information</option>
-                <option value="unconfirm">Unonfirm Information</option>
+                <option value="confirm">Confirm Medical Examination</option>
+                <option value="unconfirm">Unonfirm Medical Examination</option>
                 <option value="all">All</option>
             </select>
         </div>
@@ -84,22 +81,22 @@ if(isset($_POST["ser"])){
     $type_report = $_POST["type_report"];
    if($college == "none"){
     echo "<script>alert('Sorry, please select college');
-    window.location.href='report_review_info_stds_done.php';</script>";
+    window.location.href='report_med_exam_info_stds_done.php';</script>";
    }
    elseif($type_certificate_unv == "none"){
     echo "<script>alert('Sorry, please select type certificate');
-    window.location.href='report_review_info_stds_done.php';</script>";
+    window.location.href='report_med_exam_info_stds_done.php';</script>";
    }
    elseif($type_report == "none"){
     echo "<script>alert('Sorry, please select type report');
-    window.location.href='report_review_info_stds_done.php';</script>";
+    window.location.href='report_med_exam_info_stds_done.php';</script>";
    }
    else{
     if($type_report == "confirm"){
-    $display_data = mysqli_query($connection , "select id,form_number,name_std,college,type_certificate_unv,department from new_std_form_info where review='good' && college='$college' && type_certificate_unv='$type_certificate_unv' && year='$year'");
+    $display_data = mysqli_query($connection , "select id,form_number,name_std,college,type_certificate_unv,department from new_std_form_info where college='$college' && type_certificate_unv='$type_certificate_unv' && doctor='done' && optic='done' && psychologist='done' && year='$year'");
     if(mysqli_num_rows($display_data) == 0){
         echo "<script>alert('Sorry, no student');
-        window.location.href='report_review_info_stds_done.php';</script>";
+        window.location.href='report_med_exam_info_stds_done.php';</script>";
     }
     else{
         echo " <table class='table table-striped table-hover'>
@@ -130,10 +127,10 @@ if(isset($_POST["ser"])){
     }
     //----------
     if($type_report == "unconfirm"){
-        $display_data = mysqli_query($connection , "select id,form_number,name_std,college,type_certificate_unv,department,notes_not_submit from new_std_form_info where review='bad' && college='$college' && type_certificate_unv='$type_certificate_unv' && year='$year'");
+        $display_data = mysqli_query($connection , "select id,form_number,name_std,college,type_certificate_unv,department,notes_not_submit from new_std_form_info where college='$college' && type_certificate_unv='$type_certificate_unv'&& doctor='none' && optic='none' && psychologist='none' && year='$year'");
         if(mysqli_num_rows($display_data) == 0){
             echo "<script>alert('Sorry, no student');
-            window.location.href='report_review_info_stds_done.php';</script>";
+            window.location.href='report_med_exam_info_stds_done.php';</script>";
         }
         else{
             echo " <table class='table table-striped table-hover'>
@@ -167,10 +164,10 @@ if(isset($_POST["ser"])){
         }  
   //----------
   if($type_report == "all"){
-    $display_data = mysqli_query($connection , "select id,form_number,name_std,college,type_certificate_unv,department,notes_not_submit ,review from new_std_form_info where review='bad' || review='good' && college='$college' && type_certificate_unv='$type_certificate_unv' && year='$year'");
+    $display_data = mysqli_query($connection , "select id,form_number,name_std,college,type_certificate_unv,department ,doctor, optic,psychologist from new_std_form_info where  doctor='none' || doctor='done' && optic='none' && optic='done' && psychologist='none'  || psychologist='done' &&  college='$college' && type_certificate_unv='$type_certificate_unv' && year='$year'");
     if(mysqli_num_rows($display_data) == 0){
         echo "<script>alert('Sorry, no student');
-        window.location.href='report_review_info_stds_done.php';</script>";
+        window.location.href='report_med_exam_info_stds_done.php';</script>";
     }
     else{
         echo " <table class='table table-striped table-hover'>
@@ -180,7 +177,6 @@ if(isset($_POST["ser"])){
             <th>College</th>
             <th>Certificate Type</th>
             <th>Department</th>
-            <th>Status</th>
         </tr>";
         // لو الالمتغير الفوق دا صحيح سوف يتم عرض البيانات
             while($row = mysqli_fetch_array($display_data)){
@@ -190,9 +186,10 @@ if(isset($_POST["ser"])){
                 $college = $row['college'];
                 $type_certificate = $row["type_certificate_unv"];
                 $department = $row["department"];
-                $notes_not_submit = $row["notes_not_submit"];
-                $review = $row["review"];
-                if($review == "good"){
+                $doctor = $row["doctor"];
+                $optic = $row["optic"];
+                $psychologist = $row["psychologist"];
+                if($doctor == "done" && $optic == "done" && $psychologist == "done"){
                     $class = " class='table-success'";
                 }
                 else{
@@ -204,7 +201,6 @@ if(isset($_POST["ser"])){
                echo "<td>".$college."</td>";
                echo "<td>".$type_certificate."</td>";
                echo "<td>".$department."</td>";      
-               echo "<td>".$notes_not_submit."</td>";              
                echo "</tr>";
         }
 }

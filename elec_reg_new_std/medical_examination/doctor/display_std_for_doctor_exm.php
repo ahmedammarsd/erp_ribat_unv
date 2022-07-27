@@ -5,10 +5,10 @@ session_start();
 $name_user = $_SESSION["full_name_doctor"] ;
 $specialization = $_SESSION["specialization_doctor"];
 
-if($specialization != "GP"){
-echo "<script>alert('Sorry, You don\'t have permissions');
- window.location.href='../statics/statics.php'</script>";
-}
+// if($specialization != "GP"){
+// echo "<script>alert('Sorry, You don\'t have permissions');
+//  window.location.href='../statics/statics.php'</script>";
+// }
 ?>
 
 <!DOCTYPE html>
@@ -61,7 +61,7 @@ echo "<script>alert('Sorry, You don\'t have permissions');
         </select>
     </div>
     <div class="form-group col-lg-4 col-md-6 col-xs-12">
-        <label for=""class="lead">Select The College</label>
+        <label for=""class="lead">Select The Type Of Certificate</label>
         <select name="type_certificate_unv" id=""  class="form-select">
             <option value="">Select Certificate Type</option>
             <option value="بكلاريوس">Bechelors</option>
@@ -73,18 +73,7 @@ echo "<script>alert('Sorry, You don\'t have permissions');
     </div>
 </div>
 </form>
-
-    <?php
-
-if(isset($_POST["ser"])){
-    $typejop = $_POST["college"];
-    $type_certificate_unv = $_POST["type_certificate_unv"];
- 
-  if($typejop === "كلية دراسات الحاسوب" && $type_certificate_unv === "بكلاريوس" ){
-   
-
-  echo "
-    <table class='table table-striped table-hover'>
+<table class='table table-striped table-hover'>
     <tr>
         <th>Std Name</th>
         <th>Form Number</th>
@@ -93,30 +82,40 @@ if(isset($_POST["ser"])){
         <th>Department</th>
         <th>Operation</th>
     </tr>
-   ";
-    $display_data = mysqli_query($connection , "select id,form_number,name_std,college,type_certificate_unv,department from new_std_form_info where review ='good' and type_certificate_unv = 'بكلاريوس'  and doctor= 'none' and year='$year' ");
-    
+    <?php
+
+if(isset($_POST["ser"])){
+    $college = $_POST["college"];
+    $type_certificate_unv = $_POST["type_certificate_unv"];
+    if($college == "none"){
+        echo "<script>alert('Sorry, please select college');
+        window.location.href='display_std_for_doctor_exm.php';</script>";
+       }
+       elseif($type_certificate_unv == "none"){
+        echo "<script>alert('Sorry, please select type certificate');
+        window.location.href='display_std_for_doctor_exm.php';</script>";
+       }
+    else{   
+    $display_data = mysqli_query($connection , "select id,form_number,name_std,college,type_certificate_unv,department from new_std_form_info where review ='good' && college='$college' && type_certificate_unv = '$type_certificate_unv'  && doctor= 'none' && year='$year' ");
+    if(mysqli_num_rows($display_data) == 0){
+        echo "<script>alert('Sorry, no student');
+        window.location.href='display_std_for_doctor_exm.php';</script>";
+    }
+    else{
         // لو الالمتغير الفوق دا صحيح سوف يتم عرض البيانات
-        if($display_data){
-           
             while( $row = mysqli_fetch_array($display_data)){
                 $id = $row['id'];
                 $fullname = $row['name_std'];
                 $form_number = $row['form_number'];
                 $college = $row['college'];
                 $type_certificate = $row["type_certificate_unv"];
-                $department = $row["department"];
-    
-               
+                $department = $row["department"];           
                echo "<tr>";
                echo "<td>".$fullname."</td>";
                echo "<td>".$form_number."</td>";
                echo "<td>".$college."</td>";
                echo "<td>".$type_certificate."</td>";
                echo "<td>".$department."</td>";
-
-              
-              
                echo "<td><a href='insert_the_info_std_doctor.php?std_id=".$id."'><button  class='btn btn-primary'>كشف الطبيب</button></a>";
                echo "<tr>";
             }
@@ -125,54 +124,45 @@ if(isset($_POST["ser"])){
 
  echo "</table>" ;
 }
-
-elseif($typejop === "كلية دراسات الحاسوب" && $type_certificate_unv === "دبلوم" ){
+}
+// elseif($typejop === "كلية دراسات الحاسوب" && $type_certificate_unv === "دبلوم" ){
    
 
-    echo "
-      <table class='table table-striped table-hover'>
-      <tr>
+//     echo "
+//       <table class='table table-striped table-hover'>
+//       <tr>
          
-      <th>Std Name</th>
-      <th>Form Number</th>
-      <th>College</th>
-      <th>Certificate Type</th>
-      <th>Department</th>
-      <th>Operation</th>
-      </tr>
-     ";
-      $display_data = mysqli_query($connection , "select id,form_number,name_std,college,type_certificate_unv,department from new_std_form_info where review ='good' and type_certificate_unv = 'دبلوم' and doctor= 'none' and year='$year' ");
-      
-          // لو الالمتغير الفوق دا صحيح سوف يتم عرض البيانات
-          if($display_data){
-             
-              while( $row = mysqli_fetch_array($display_data)){
-                  $id = $row['id'];
-                  $fullname = $row['name_std'];
-                  $form_number = $row['form_number'];
-                  $college = $row['college'];
-                  $type_certificate = $row["type_certificate_unv"];
-                  $department = $row["department"];
-      
-                 
-                 echo "<tr>";
-                 echo "<td>".$fullname."</td>";
-                 echo "<td>".$form_number."</td>";
-                 echo "<td>".$college."</td>";
-                 echo "<td>".$type_certificate."</td>";
-                 echo "<td>".$department."</td>";
-  
-                
-                
-                 echo "<td><a href='insert_the_info_std_doctor.php?std_id=".$id."'><button  class='btn btn-primary'>كشف الطبيب</button></a>";
-                 echo "<tr>";
-              }
-          }
-       
-  
-   echo "</table>" ;
-  }
-}
+//       <th>Std Name</th>
+//       <th>Form Number</th>
+//       <th>College</th>
+//       <th>Certificate Type</th>
+//       <th>Department</th>
+//       <th>Operation</th>
+//       </tr>
+//      ";
+//       $display_data = mysqli_query($connection , "select id,form_number,name_std,college,type_certificate_unv,department from new_std_form_info where review ='good' and type_certificate_unv = 'دبلوم' and doctor= 'none' and year='$year' ");
+//           // لو الالمتغير الفوق دا صحيح سوف يتم عرض البيانات
+//           if($display_data){
+//               while( $row = mysqli_fetch_array($display_data)){
+//                   $id = $row['id'];
+//                   $fullname = $row['name_std'];
+//                   $form_number = $row['form_number'];
+//                   $college = $row['college'];
+//                   $type_certificate = $row["type_certificate_unv"];
+//                   $department = $row["department"];
+//                  echo "<tr>";
+//                  echo "<td>".$fullname."</td>";
+//                  echo "<td>".$form_number."</td>";
+//                  echo "<td>".$college."</td>";
+//                  echo "<td>".$type_certificate."</td>";
+//                  echo "<td>".$department."</td>";  
+//                  echo "<td><a href='insert_the_info_std_doctor.php?std_id=".$id."'><button  class='btn btn-primary'>كشف الطبيب</button></a>";
+//                  echo "<tr>";
+//               }
+//           }
+//    echo "</table>" ;
+//   }
+// }
 ?>
 </body>
 </html>

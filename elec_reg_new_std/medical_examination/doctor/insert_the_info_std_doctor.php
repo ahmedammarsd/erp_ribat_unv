@@ -4,10 +4,10 @@ $id_std = $_GET["std_id"];
 $name_user = $_SESSION["full_name_doctor"] ;
 $specialization = $_SESSION["specialization_doctor"];
 
-if($specialization !== "GP"){
-echo "<script>alert('Sorry, You don\'t have permissions');
- window.location.href='../statics/statics.php'</script>";
-}
+// if($specialization !== "GP"){
+// echo "<script>alert('Sorry, You don\'t have permissions');
+//  window.location.href='../statics/statics.php'</script>";
+// }
 
 $dispaly_name_and_college_std = mysqli_query($connection , "select form_number ,name_std , college from new_std_form_info where id= '$id_std'");
 $row = mysqli_fetch_array($dispaly_name_and_college_std);
