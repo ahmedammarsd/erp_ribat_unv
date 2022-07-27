@@ -25,6 +25,7 @@ h2 {
     position: fixed;
     background: #0e6a93;
     /*background: rgba(0,0,0,0.4)*/
+    ;
     width: 19vw;
     min-height: 100vh;
     display: flex;
@@ -53,10 +54,6 @@ h2 {
     border-left: 5px solid #f5f6fa;
     /* box-shadow: 0 4px 8px 0 #0e1c36;*/
     cursor: pointer;
-}
-
-.side-menu li i {
-    color: white;
 }
 
 .side-menu li img {
@@ -140,49 +137,52 @@ h2 {
 
 .fa-solid {
     color: #0e6a93;
-    font-size: 30px;
 }
 
-.container .content {
-    position: relative;
-    margin-top: -10px;
-    min-height: 90vh;
-}
-
-.container .content .cards {
-    padding: 20px 15px;
+.log {
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-}
-
-.container .content .cards .card {
-    width: 300px;
-    height: 200px;
-    background-color: white;
-    padding: 5px;
-    padding-bottom: 10px;
-    margin: 95px 10px;
-    margin-top: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-left: 5px solid #0e6a93;
     color: #0e6a93;
 }
 
-.container .content .cards .card .box h1 {
-    padding-left: 40px;
+.container .form {
+    margin-top: 95px;
+    margin-left: 30px;
+    width: 1000px;
+    height: 460px;
+    padding: 30px;
+    border-left: 5px solid #0e6a93;
+    border-radius: 10px;
+    overflow: scroll;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.container .content .cards .card .icon-case img {
-    mix-blend-mode: multiply;
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-control,
+.form-select {
+    width: 100%;
+    margin: 5px;
+    border-left: 3px solid #0e6a93;
+    border-radius: none;
+}
+
+label {
+    color: #0e6a93;
+    margin: 5px;
+    font-size: 15px;
 }
 
 .btn {
-    width: 150px;
+    width: 100%;
     background-color: #0e6a93;
+}
 
+.fa-solid {
+    color: #0e6a93;
 }

@@ -24,20 +24,20 @@ $num_display_number_of_students_completed_medical = mysqli_num_rows($display_num
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../css/all.min.css">
     <link rel="stylesheet" href="../../../bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../css/manegment/statics.css?v=<?php echo time();?>">
-    <title>Document</title>
+    <link rel="stylesheet" href="../../../css/manegment/medical_examination/statics.css?v=<?php echo time();?>">
+    <title>medical_examination</title>
 </head>
 <body>
     <div class="side-menu">
         <div class="brand-name">
-        <h2><img src="../../../icons/da.png" alt="" width="50px" height="50px">Register</h2>
+        <h2><img src="../../../icons/da.png" alt="" width="50px" height="50px">Medical Examination</h2>
                 </div>
         <ul>
             <a href="../statics/statics.php"><li class="active"><img src="../../../icons/statc1.png" alt="" width="40px" height="40px">Statics</li></a>
-            <a href="../add_subject/add_subject.php"><li><img src="../../../icons/sub2.png" alt="" width="40px" height="40px"> Add Subject</li></a>
-            <a href="../subjects_distribution/subjects_distribution.php"><li><img src="../../../icons/ds.png" alt="" width="40px" height="40px">Subject Distribution</li></a>
-            <a href="../fees_for_batchs/fees_for_batchs.php"><li><img src="../../../icons/fb.png" alt="" width="40px" height="40px">Fees For Batchs</li></a>
-            <a href="../exams/distribution_tetcher_for_subject/distribution_tetcher_for_subject.php"><li><img src="../../../icons/dt.png" alt="" width="40px" height="40px">Teacher Distribution</li></a>
+            <a href="../doctor/display_std_for_doctor_exm.php"><li><img src="../../../icons/doc.png" alt="" width="40px" height="40px"> Doctor</li></a>
+            <a href="../optics/display_std_for_optics_exm.php"><li><img src="../../../icons/ds.png" alt="" width="40px" height="40px"> Optics</li></a>
+            <a href="../psychoogist/display_std_for_psychologist_exm.php"><li><img src="../../../icons/op.png" alt="" width="40px" height="40px">Psychoogist</li></a>
+            <a href="../info_std_for_med/info_std_for_med.php"><li><img src="../../../icons/stdifo1.png" alt="" width="40px" height="40px">Students Information</li></a>
         </ul>
         </div>
     <div class="container">
@@ -47,7 +47,7 @@ $num_display_number_of_students_completed_medical = mysqli_num_rows($display_num
         <h3><a href="../../account/account.php"><img src="../../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_user ?></h3>
         </div>
         <div class="log">
-        <a href="../../login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+        <a href="../../medical_examination/login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
         </div>
         </div>
     </div>
@@ -55,38 +55,29 @@ $num_display_number_of_students_completed_medical = mysqli_num_rows($display_num
                 <div class="cards">
                 <div class="card">
                         <div class="box">
-                           <h3><?php echo $num_display_number_of_students; ?></h3>
-                            <h3>Number of students</h3>
+                           <center><h3><?php echo $num_display_number_of_students; ?></h3></center>
+                           <center><h3>Number of students</h3></center>
                         </div>
                         <div class="icon-case">
                             <!-- <img src="../../../icons/admin1.png" alt="" srcset=""  width="70px" height="70px"> -->
-                        </div>
-                        <div>
-                           <a href="#"><button class="btn btn-primary">View</button></a>
                         </div>
                     </div>
                     <div class="card">
                         <div class="box">
-                           <h3><?php echo $num_display_number_of_students_completed_medical; ?></h3>
-                            <h3>Number of students completed a medical examination</h3>
+                        <center><h3><?php echo $num_display_number_of_students_completed_medical; ?></h3></center>
+                        <center><h3>Number of students completed a medical examination</h3></center>
                         </div>
                         <div class="icon-case">
                             <!-- <img src="../../../icons/admin1.png" alt="" srcset=""  width="70px" height="70px"> -->
-                        </div>
-                        <div>
-                           <a href="#"><button class="btn btn-primary">View</button></a>
                         </div>
                     </div>
                     <div class="card">
                         <div class="box">
-                           <h3><?php echo $num_display_number_of_students - $num_display_number_of_students_completed_medical; ?></h3>
-                            <h3>Number of students left</h3>
+                        <center><h3><?php echo $num_display_number_of_students - $num_display_number_of_students_completed_medical; ?></h3></center>
+                        <center><h3>Number of students left</h3></center>
                         </div>
                         <div class="icon-case">
                             <!-- <img src="../../../icons/admin1.png" alt="" srcset=""  width="70px" height="70px"> -->
-                        </div>
-                        <div>
-                           <a href="#"><button class="btn btn-primary">View</button></a>
                         </div>
                     </div>
                    

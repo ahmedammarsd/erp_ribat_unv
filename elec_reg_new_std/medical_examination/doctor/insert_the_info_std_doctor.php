@@ -49,48 +49,78 @@ if(isset($_POST["submit"])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../css/all.min.css">
+    <link rel="stylesheet" href="../../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/manegment/medical_examination/insert_the_info_std_doctor.css?v=<?php echo time();?>">
     <title>كشف الطبيب</title>
 </head>
 <body>
-    <form action="" method="post">
+<div class="side-menu">
+        <div class="brand-name">
+        <h2><img src="../../../icons/da.png" alt="" width="50px" height="50px">Medical Examination</h2>
+                </div>
+        <ul>
+            <a href="../statics/statics.php"><li ><img src="../../../icons/statc1.png" alt="" width="40px" height="40px">Statics</li></a>
+            <a href="../doctor/display_std_for_doctor_exm.php"><li class="active"><img src="../../../icons/doc.png" alt="" width="40px" height="40px"> Doctor</li></a>
+            <a href="../optics/display_std_for_optics_exm.php"><li><img src="../../../icons/ds.png" alt="" width="40px" height="40px"> Optics</li></a>
+            <a href="../psychoogist/display_std_for_psychologist_exm.php"><li><img src="../../../icons/op.png" alt="" width="40px" height="40px">Psychoogist</li></a>
+            <a href="../info_std_for_med/info_std_for_med.php"><li><img src="../../../icons/stdifo1.png" alt="" width="40px" height="40px">Students Information</li></a>
+        </ul>
+        </div>
+    <div class="container">
+    <div class="header">
+        <div class="nav">
         <div>
-
-        رقم الاستمارة
+        <h3><a href="../../account/account.php"><img src="../../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_user ?></h3>
+        </div>
+        <div class="log">
+        <a href="../../login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+        </div>
+        </div>
+    </div>
+<div class="form">
+<form action="" method="post">
+<div class="row">
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead">Form Number</label>
         <input type="text" name="form_number"  value="<?php echo $form_number ?>" id="">
-        <br>
-             الاسم
-            <input type="text" name="name_std" value="<?php echo $name_std ?>" id="">
-            <br>
-            الكلية
-            <input type="text" name="college" value="<?php echo $college ?>" id="">
-            
-        </div>
-        <br>
-        <div>
-            الطبيب
-            <div>
-                هل عمل عملية قبل كدا؟
-                <textarea name="answer_q1" id="" cols="30" rows="10"></textarea>
-            </div>
-            <div>
-                هل لديه مرض مزمن
-                <textarea name="answer_q2" id="" cols="30" rows="10"></textarea>
-            </div>
-            <div>
-                هل يعاني من اي شي في الجسد 
-                <textarea name="answer_q3" id="" cols="30" rows="10"></textarea>
-            </div>
-            <div>
-               هل لديه اي مرض وراثي في الاسرة 
-                <textarea name="answer_q4" id="" cols="30" rows="10"></textarea>
-            </div>
-            <div>
-                نتيجة فحص الدم
-                <input type="text" name="bloode" id="">
-            </div>
-        </div>
-        <input type="submit" value="تاكيد" name="submit">
+    </div>
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead">Name</label>
+        <input type="text" name="name_std" value="<?php echo $name_std ?>" id="">
+    </div>
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead">College</label>
+        <input type="text" name="college" value="<?php echo $college ?>" id="">
+    </div>
         
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead">Doctor</label>
+    </div>
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead"> Did You Do Any Surgery Before? </label>
+        <textarea name="answer_q1" id="" cols="30" rows="10" class="form-control"></textarea>
+    </div>
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead">Do You Have a chronic Disease</label>
+        <textarea name="answer_q2" id="" cols="30" rows="10" class="form-control"></textarea>
+    </div>
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead"> Do You Suffer Form Injury In You Body</label>
+        <textarea name="answer_q3" id="" cols="30" rows="10" class="form-control"></textarea>
+    </div>
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead">Do You Have Any Genetic Disease In The Family</label>
+        <textarea name="answer_q4" id="" cols="30" rows="10" class="form-control"></textarea>
+    </div>
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead">Result Of Blood testing</label>
+        <input type="text" name="bloode" id="" class="form-control">
+    </div>
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <input type="submit" value="Dean" name="submit" class="btn btn-primary">
+    </div>
+</div>
     </form>
     
 </body>

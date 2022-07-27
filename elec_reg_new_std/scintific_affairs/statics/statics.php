@@ -35,6 +35,7 @@ $num_display_number_of_students_not_reviewed = mysqli_num_rows($display_number_o
         <ul>
             <a href="../statics/statics.php"><li class="active"><img src="../../../icons/statc1.png" alt="" width="40px" height="40px">Statics</li></a>
             <a href="../info_std_electronic_register/info_std_electronic_register.php"><li><img src="../../../icons/stdifo1.png" alt="" width="40px" height="40px"> Students Information</li></a>
+            <a href="../report_review_info_stds_done/report_review_info_stds_done.php"><li><img src="../../../icons/admin.png" alt="" width="40px" height="40px">Reports</li></a>
             <a href="../../admin/statics/statics.php"><li><img src="../../../icons/admin.png" alt="" width="40px" height="40px">Admin</li></a>
         </ul>
         </div>
@@ -53,38 +54,29 @@ $num_display_number_of_students_not_reviewed = mysqli_num_rows($display_number_o
                 <div class="cards">
                 <div class="card">
                         <div class="box">
-                           <h3><?php echo $num_display_number_of_students_registered; ?></h3>
-                            <h3>Number of students registered</h3>
+                         <center>  <h3><?php echo $num_display_number_of_students_registered; ?></h3></center>
+                         <center>  <h3>Number of students registered</h3></center>
                         </div>
                         <div class="icon-case">
                             <!-- <img src="../../../icons/admin1.png" alt="" srcset=""  width="70px" height="70px"> -->
-                        </div>
-                        <div>
-                           <a href="#"><button class="btn btn-primary">View</button></a>
                         </div>
                     </div>
                     <div class="card">
                         <div class="box">
-                           <h3><?php echo $num_display_number_of_students_reviewed; ?></h3>
-                            <h3>Number of students reviewed and confirmed</h3>
+                        <center><h3><?php echo $num_display_number_of_students_reviewed; ?></h3></center>
+                        <center><h3>Number of students reviewed and confirmed</h3></center>
                         </div>
                         <div class="icon-case">
                             <!-- <img src="../../../icons/admin1.png" alt="" srcset=""  width="70px" height="70px"> -->
-                        </div>
-                        <div>
-                           <a href="#"><button class="btn btn-primary">View</button></a>
                         </div>
                     </div>
                     <div class="card">
                         <div class="box">
-                           <h3><?php echo $num_display_number_of_students_not_reviewed; ?></h3>
-                            <h3>Number of students reviewed and not confirmed</h3>
+                        <center><h3><?php echo $num_display_number_of_students_not_reviewed; ?></h3></center>
+                        <center><h3>Number of students reviewed and not confirmed</h3></center>
                         </div>
                         <div class="icon-case">
                             <!-- <img src="../../../icons/admin1.png" alt="" srcset=""  width="70px" height="70px"> -->
-                        </div>
-                        <div>
-                           <a href="#"><button class="btn btn-primary">View</button></a>
                         </div>
                     </div>
               </div>  

@@ -25,7 +25,8 @@ $_SESSION["full_name_scientific_affairs"] = $name_user;
                 </div>
         <ul>
             <a href="../statics/statics.php"><li><img src="../../../icons/statc1.png" alt="" width="40px" height="40px">Statics</li></a>
-            <a href="../info_std_electronic_register/info_std_electronic_register.php"><li class="active"><img src="../../../icons/stdifo1.png" alt="" width="40px" height="40px"> Students Information</li></a>
+            <a href="../info_std_electronic_register/info_std_electronic_register.php"><li><img src="../../../icons/stdifo1.png" alt="" width="40px" height="40px"> Students Information</li></a>
+            <a href="#"><li class="active"><img src="../../../icons/admin.png" alt="" width="40px" height="40px">Reports</li></a>
             <a href="../../admin/statics/statics.php"><li><img src="../../../icons/admin.png" alt="" width="40px" height="40px">Admin</li></a>
         </ul>
         </div>

@@ -535,59 +535,53 @@ if(isset($_POST["addreg"])){
     </div> -->
     <div class="form">
     <form action="" method="post" enctype="multipart/form-data">
-        <div class="roww">
-            <div class="form-group">
+        <div class="row">
+            <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">Form Number </label>
                 <input type="text"  class="form-control" value="<?php echo $form_no; ?>" readonly>
             </div>
-            <div class="form-group">
+            <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">Name </label>
                 <input type="text"  class="form-control" value="<?php echo $name_std; ?>" readonly>
             </div>
-             <div  class="form-group">
+             <div  class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">College</label>
                 <input type="text" class="form-control" value="<?php echo $college; ?>" readonly>
             </div>
-        </div>
-        <div class="roww">
-            <div  class="form-group">
+            <div  class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">  Certificate Unv Type </label>
                 <input type="text"  class="form-control" value="<?php echo $type_certificate_unv; ?>" readonly>
             </div>
-            <div  class="form-group">
+            <div  class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">Department</label>
                 <input type="text"  class="form-control" value="<?php echo $department; ?>" readonly>
             </div>
-            <div  class="form-group">
+            <div  class="form-group col-lg-4 col-md-6 col-xs-12">
                  <label for="" class="lead"> Certificate Type</label>
                 <input type="text"  class="form-control" value="<?php echo $type_certifcate; ?>" readonly>
             </div>
-        </div>
-        <div class="roww">
-            <div class="form-group">
+            <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">The Course</label>
                 <input type="text" class="form-control" value="<?php echo $course; ?>" readonly>
             </div>
-            <div class="form-group">
+            <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">Certificate Rate</label>
                 <input type="text"   class="form-control" value="<?php echo $certifcate_rate; ?>" readonly>
             </div>
-            <div class="form-group">
+            <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Set Number</label>
                 <input type="text" class="form-control" value="<?php echo $set_number; ?>" readonly>
             </div>
-        </div>
         <hr>
-        <div class="roww">
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Nationality</label>
             <input type="text"  value="" class="form-control"  placeholder="Enter Your Nationality">
         </div>
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Nationality Number </label>
             <input type="text"  value="" class="form-control" placeholder="Enter Your Nationality Number">
         </div>
-        <div class="form-group bssa">
+        <div class="form-group  col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead"> Select  Gender</label>
             <input type="radio" name="gender" id="" value="none" checked hidden ><br>
             <input type="radio" name="gender" id="" value="male">
@@ -595,80 +589,69 @@ if(isset($_POST["addreg"])){
             <input type="radio" name="gender" id="" value="female">
             <label for="" class="lead">Female</label>
         </div>
-    </div>
-    <div class="roww">
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Religion </label>
             <input type="text"  value="" class="form-control"  placeholder="Enter Your Religion">
         </div>
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">State</label>
             <input type="text"  value="" class="form-control"  placeholder="Enter Your State">
         </div>
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">City</label>
             <input type="text"  value="" class="form-control"  placeholder="Enter Your City">
         </div>
-    </div>
-    <div class="roww">    
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Area</label>
             <input type="text"  value="" class="form-control"  placeholder="Enter Your Area">
         </div>
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Home Number</label>
             <input type="text"  value="" class="form-control"  placeholder="Enter Your Home Number">
         </div>
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Guardian Name</label>
             <input type="text"  value="" class="form-control"  placeholder="Enter Your Guardian Name">
         </div>
-    </div>
-    <div class="roww">
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Guardian Jop</label>
             <input type="text"  value="" class="form-control"  placeholder="Enter Your Guardian Jop">
         </div>
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Relatuve Relation</label>
             <input type="text"  value="" class="form-control"  placeholder="Enter Your Relatuve Relation">
         </div>
-        <div class="form-group" >
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Guardian Phone</label>
             <input type="text"  value="" class="form-control"  placeholder="Enter Your Guardian Phone">
         </div>
-    </div>
-    <div class="roww">
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead"> Student Phone</label>
             <input type="text"  value="" class="form-control"  placeholder="Enter Your Phone Number">
         </div>
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead"> Email</label>
             <input type="email"  value="" class="form-control"  placeholder="Enter Your Email">
         </div>
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Closest Relative Name</label>
             <input type="text"  value="" class="form-control"  placeholder="Enter Closest Relative Name">
         </div>
-    </div>
-    <div class="roww">
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Closest Relative Address</label>
             <input type="text"  value="" class="form-control"  placeholder="Enter Closest Relative Address">
         </div>
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Closest Relative Phone</label>
             <input type="text"  value="" class="form-control"  placeholder="Enter Closest Relative Phone">
         </div>
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Select Personal Photo</label>
             <input type="file" name="personalphoto" id="" class="form-select">
         </div>
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead"> Select Nationality Number Photo</label>
             <input type="file" name="photonationalitynumber" id="" class="form-select">
-        </div>
         </div>
         <br><hr>
         <div>
@@ -683,42 +666,43 @@ if(isset($_POST["addreg"])){
                 <input type="radio" name="brother" id="" value="no">
                 <label for="" class="lead">No</label>
             </div>
-        <div class="roww">    
-            <div class="form-group">
+        <div class="row">
+            <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">Brother Or Sister Name</label>
                 <input type="text" name="name_brother"  value=""  class="form-control" placeholder="Enter Your Brother Or Sister Name" >
             </div>
-            <div class="form-group">
+            <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">Univirsity Number</label>
                 <input type="text" name="unv_number"  value=""  class="form-control" placeholder="Enter His Univirsity Number" >
             </div>
-            <div>
+            <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead"> Select Univirsity Card Photo</label>
                 <input type="file" name="cardphoto" id="" class="form-select">
-            </div>
-        </div><br><hr>
+            </div><br><hr>
+        </div>
         <div>
         <label for="" class="lead">A 20% discount If You Father Or Mother Currently Working In Police :</label><br><br>
             <div>
             <label for="" class="lead">Is You Father Or Mother Currently Working In Police?</label>
                 <input type="radio" name="police" id="" value="none" checked hidden>
                 <br>
+            <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <input type="radio" name="police" id="" value="yes">
                 <label for="" class="lead">Yes</label>
                 <br>
                 <input type="radio" name="police" id="" value="no">
                 <label for="" class="lead">No</label>
+            </div>    
             </div>
-        <div class="roww">
-            <div class="form-group">
+            <div class="row">
+            <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead"> Father Or Mother Name</label>
                 <input type="text" name="nameoffatherpolice" id="" class="form-control" placeholder=" Enter Your Father Or Mother Name ">
             </div>
-            <div class="form-group">
+            <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">Select Proof Of Service Certificate</label>
                 <input type="file" name="servicessertificate" id="" class="form-select">
-            </div>
-        </div><br><hr>
+            </div><br><hr>
         <div>
         <label for="" class="lead">A 70% discount If You Father Or Mother Currently Working In Ribat University :</label><br><br>
            <div>
@@ -731,16 +715,16 @@ if(isset($_POST["addreg"])){
                 <input type="radio" name="manegment" id="" value="no">
                 <label for="" class="lead">No</label>
             </div>
-            <div class="roww">
-            <div class="form-group">
-            <label for="" class="lead"> Father Or Mother Name</label>
-            <input type="text" name="nameoffaterunv" id="" class="form-control" placeholder=" Enter Your Father Or Mother Name ">
+            <div class="row">
+                <div class="form-group col-lg-4 col-md-6 col-xs-12">
+                <label for="" class="lead"> Father Or Mother Name</label>
+                <input type="text" name="nameoffaterunv" id="" class="form-control" placeholder=" Enter Your Father Or Mother Name ">
+                </div>
+                <div class="form-group col-lg-4 col-md-6 col-xs-12">
+                    <label for="" class="lead">Select Proof Of Service Certificate</label>
+                    <input type="file" name="servicessertificateunv" id="" class="form-select">
+                </div>
             </div>
-            <div class="form-group">
-                <label for="" class="lead">Select Proof Of Service Certificate</label>
-                <input type="file" name="servicessertificateunv" id="" class="form-select">
-            </div>
-        </div>
         <div>
             <center><input type="submit" value="Regist" name="addreg" class="btn btn-primary"></center>
         </div>
