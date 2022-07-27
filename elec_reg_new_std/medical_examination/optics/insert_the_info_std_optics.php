@@ -47,35 +47,62 @@ if(isset($_POST["submit"])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>كشف البصريات</title>
+    <link rel="stylesheet" href="../../../css/all.min.css">
+    <link rel="stylesheet" href="../../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/manegment/medical_examination/insert_the_info_std_optics.css?v=<?php echo time();?>">
+    <title>Optics Examination </title>
 </head>
 <body>
-    <form action="" method="post">
+<div class="side-menu">
+        <div class="brand-name">
+        <h2><img src="../../../icons/da.png" alt="" width="50px" height="50px">Medical Examination</h2>
+                </div>
+        <ul>
+            <a href="../statics/statics.php"><li ><img src="../../../icons/statc1.png" alt="" width="40px" height="40px">Statics</li></a>
+            <a href="../doctor/display_std_for_doctor_exm.php"><li><img src="../../../icons/doc.png" alt="" width="40px" height="40px"> Doctor</li></a>
+            <a href="../optics/display_std_for_optics_exm.php"><li  class="active"><img src="../../../icons/ds.png" alt="" width="40px" height="40px"> Optics</li></a>
+            <a href="../psychoogist/display_std_for_psychologist_exm.php"><li><img src="../../../icons/op.png" alt="" width="40px" height="40px">Psychoogist</li></a>
+            <a href="../info_std_for_med/info_std_for_med.php"><li><img src="../../../icons/stdifo1.png" alt="" width="40px" height="40px">Students Information</li></a>
+        </ul>
+        </div>
+    <div class="container">
+    <div class="header">
+        <div class="nav">
         <div>
-
-        رقم الاستمارة
-        <input type="text" name="form_number"  value="<?php echo $form_number ?>" id="">
-        <br>
-             الاسم
-            <input type="text" name="name_std" value="<?php echo $name_std ?>" id="">
-            <br>
-            الكلية
-            <input type="text" name="college" value="<?php echo $college ?>" id="">
-            
+        <h3><a href="../../account/account.php"><img src="../../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_user ?></h3>
         </div>
-        <br>
-    <div>
-            البصريات
-            <div>
-                كشف النظر
-                <input type="number"  name="exm_eye" id="">
-            </div>
-            <div>
-                هل لديه اي اصابة في العين او اصابة حصلت قبل مدة؟
-                <textarea name="injurs_eye" id="" cols="30" rows="10"></textarea>
-            </div>
+        <div class="log">
+        <a href="../login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
         </div>
-        <input type="submit" value="تاكيد" name="submit">
+        </div>
+    </div>
+<div class="form">
+<form action="" method="post">
+<div class="row">
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead">Form Number</label>
+        <input type="text" name="form_number"  value="<?php echo $form_number ?>" id="" class="form-control" readonly>
+    </div>
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead">Name</label>
+        <input type="text" name="name_std" value="<?php echo $name_std ?>" id="" class="form-control" readonly>
+    </div>
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead">College</label>
+        <input type="text" name="college" value="<?php echo $college ?>" id="" class="form-control" readonly>
+    </div>      
+    <div class="form-group col-lg-6 col-md-6 col-xs-12">
+        <label for=""class="lead">Optics Detect</label>  
+        <input type="number"  name="exm_eye" id="" class="form-control">
+    </div>
+    <div class="form-group col-lg-6 col-md-6 col-xs-12">
+        <label for=""class="lead">Do He Has Any Eye Injuries or Disease?</label>
+        <textarea name="injurs_eye" id=""  class="form-control"></textarea>
+    </div>
+    <div class="form-group col-lg-12 col-md-12 col-xs-12">
+        <input type="submit" value="Done" name="submit" class="btn btn-primary">
+    </div>
+        </div>
         
     </form>
     

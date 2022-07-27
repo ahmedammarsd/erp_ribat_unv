@@ -12,33 +12,35 @@ $name_user = $_SESSION["full_name_doctor"] ;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../css/all.min.css">
     <link rel="stylesheet" href="../../../bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../css/manegment/scintific_affairs/info_std_electronic_register.css?v=<?php echo time();?>">
+    <link rel="stylesheet" href="../../../css/manegment/medical_examination/report_med_exam_info_stds_done.css?v=<?php echo time();?>">
     <title>Review Information Students</title>
 </head>
 <body>
 <div class="side-menu">
         <div class="brand-name">
-        <h2><img src="../../../icons/da.png" alt="" width="50px" height="50px">Scintific Affairs</h2>
+        <h2><img src="../../../icons/da.png" alt="" width="50px" height="50px">Medical Examination</h2>
                 </div>
         <ul>
             <a href="../statics/statics.php"><li><img src="../../../icons/statc1.png" alt="" width="40px" height="40px">Statics</li></a>
-            <a href="../info_std_electronic_register/info_std_electronic_register.php"><li><img src="../../../icons/stdifo1.png" alt="" width="40px" height="40px"> Students Information</li></a>
-            <a href="#"><li class="active"><img src="../../../icons/admin.png" alt="" width="40px" height="40px">Reports</li></a>
+            <a href="../doctor/display_std_for_doctor_exm.php"><li><img src="../../../icons/doc.png" alt="" width="40px" height="40px"> Doctor</li></a>
+            <a href="../optics/display_std_for_optics_exm.php"><li><img src="../../../icons/ds.png" alt="" width="40px" height="40px"> Optics</li></a>
+            <a href="../psychoogist/display_std_for_psychologist_exm.php"><li><img src="../../../icons/op.png" alt="" width="40px" height="40px">Psychoogist</li></a>
+            <a href="../report_med_exam_info_stds_done/report_med_exam_info_stds_done.php"><li class="active"><img src="../../../icons/stdifo1.png" alt="" width="40px" height="40px">Report</li></a>
             <a href="../../admin/statics/statics.php"><li><img src="../../../icons/admin.png" alt="" width="40px" height="40px">Admin</li></a>
+
         </ul>
         </div>
     <div class="container">
     <div class="header">
         <div class="nav">
         <div>
-        <h3><a href="../account/account.php"><img src="../../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_user ?></h3>
+        <h3><a href="../../account/account.php"><img src="../../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_user ?></h3>
         </div>
         <div class="log">
-        <a href="../../login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+        <a href="../../medical_examination/login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
         </div>
         </div>
     </div>
-
 <div class="form">
 <form action="" method="post">
     <div class="row">

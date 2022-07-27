@@ -48,44 +48,70 @@ if(isset($_POST["submit"])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>كشف الطبيب النفسي</title>
+    <link rel="stylesheet" href="../../../css/all.min.css">
+    <link rel="stylesheet" href="../../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/manegment/medical_examination/insert_the_info_std_psychologist.css?v=<?php echo time();?>">
+    <title>Psychoogist Examination</title>
 </head>
 <body>
-    <form action="" method="post">
-        <div>
-
-        رقم الاستمارة
-        <input type="text" name="form_number"  value="<?php echo $form_number ?>" id="">
-        <br>
-             الاسم
-            <input type="text" name="name_std" value="<?php echo $name_std ?>" id="">
-            <br>
-            الكلية
-            <input type="text" name="college" value="<?php echo $college ?>" id="">
-            
+<div class="side-menu">
+        <div class="brand-name">
+        <h2><img src="../../../icons/da.png" alt="" width="50px" height="50px">Medical Examination</h2>
+                </div>
+        <ul>
+            <a href="../statics/statics.php"><li ><img src="../../../icons/statc1.png" alt="" width="40px" height="40px">Statics</li></a>
+            <a href="../doctor/display_std_for_doctor_exm.php"><li class="active"><img src="../../../icons/doc.png" alt="" width="40px" height="40px"> Doctor</li></a>
+            <a href="../optics/display_std_for_optics_exm.php"><li><img src="../../../icons/ds.png" alt="" width="40px" height="40px"> Optics</li></a>
+            <a href="../psychoogist/display_std_for_psychologist_exm.php"><li><img src="../../../icons/op.png" alt="" width="40px" height="40px">Psychoogist</li></a>
+            <a href="../info_std_for_med/info_std_for_med.php"><li><img src="../../../icons/stdifo1.png" alt="" width="40px" height="40px">Students Information</li></a>
+        </ul>
         </div>
-        <br>
+    <div class="container">
+    <div class="header">
+        <div class="nav">
         <div>
-            الطبيب النفسي
-            <div>
-               رقم كم في الاسرة
-               <input type="number"name="answer_q1" id="">
-            </div>
-            <div>
-               هل ابواه منفصلين
-                <textarea name="answer_q2" id="" cols="30" rows="10"></textarea>
-            </div>
-            <div>
-               هل لديه مريض نفسي في الاسرة
-                <textarea name="answer_q3" id="" cols="30" rows="10"></textarea>
-            </div>
-            <div>
-              هل ذهبت او فكرة في ان تذهب الى طبيب نفسي
-                <textarea name="answer_q4" id="" cols="30" rows="10"></textarea>
-            </div>
+        <h3><a href="../../account/account.php"><img src="../../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_user ?></h3>
         </div>
-        <input type="submit" value="تاكيد" name="submit">
-        
+        <div class="log">
+        <a href="../login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+        </div>
+        </div>
+    </div>
+<div class="form">
+<form action="" method="post">
+<div class="row">
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead">Form Number</label>
+        <input type="text" name="form_number"  value="<?php echo $form_number ?>" id="" class="form-control" readonly>
+    </div>
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead">Name</label>
+        <input type="text" name="name_std" value="<?php echo $name_std ?>" id="" class="form-control" readonly>
+    </div>
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead">College</label>
+        <input type="text" name="college" value="<?php echo $college ?>" id="" class="form-control" readonly>
+    </div>  
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead ">Your rank in Family </label>      
+        <input type="number"name="answer_q1" id="" class="form-control bssa">
+    </div>
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead">Dose Your Parents Are Separate</label>
+        <textarea name="answer_q2" id="" class="form-control"></textarea>
+    </div>
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead">Do Yoy Have Mental Illness In The Famliy</label>
+        <textarea name="answer_q3" id="" class="form-control"></textarea>
+    </div>
+    <div class="form-group col-lg-12 col-md-12 col-xs-12">
+        <label for=""class="lead">Have You Ever Gone Or Thought About Goning To A Psychiatrist</label>
+        <textarea name="answer_q4" id="" class="form-control" ></textarea>
+    </div>
+    <div class="form-group col-lg-12 col-md-12 col-xs-12">
+        <input type="submit" value="Done" name="submit" class="btn btn-primary">
+    </div>
+</div>
     </form>
     
 </body>

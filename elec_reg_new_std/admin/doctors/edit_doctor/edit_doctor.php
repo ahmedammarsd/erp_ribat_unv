@@ -12,8 +12,8 @@ $name_user = $_SESSION["full_name_scientific_affairs"];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../../css/all.min.css">
     <link rel="stylesheet" href="../../../../bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../../css/manegment/edit_emp.css">
-    <title>edit information emp</title>
+    <link rel="stylesheet" href="../../../../css/manegment/admin/edit_doctor.css">
+    <title>edit information doctor</title>
 </head>
 <body>
 <div class="side-menu">
@@ -21,11 +21,13 @@ $name_user = $_SESSION["full_name_scientific_affairs"];
 <h2><img src="../../../../icons/da.png" alt="" width="50px" height="50px">Scientific Affairs</h2>
         </div>
             <ul>    
-            <a href="../../statics/statics.php"><li class="active"><img src="../../../../icons/statc1.png" alt="" width="40px" height="40px">Statics</li></a>
+            <a href="../../statics/statics.php"><li  class="active"><img src="../../../../icons/statc1.png" alt="" width="40px" height="40px">Statics</li></a>
+            <a href="../../registration_statistics/registration_statistics.php"><li><img src="../../../../icons/statc1.png" alt="" width="40px" height="40px">Registration Statics</li></a>
             <a href="../../employes/add_employe/add_emp.php"><li><img src="../../../../icons/eemp3.png" alt="" width="40px" height="40px"> Add Employe</li></a>
             <a href="../../doctors/add_doctor/add_doctor.php"><li><img src="../../../../icons/doc.png" alt="" width="40px" height="40px"> Add Doctor</li></a>
             <a href="../../admins/add_admin/add_admin.php"><li><img src="../../../../icons/admin.png" alt="" width="40px" height="40px">Add Admin</li></a>
             <a href="../../../scintific_affairs/info_std_electronic_register/info_std_electronic_register.php"><li><img src="../../../../icons/stdifo1.png" alt="" width="40px" height="40px"> Students Information</li></a>
+            <a href="../../../medical_examination/statics/statics.php"><li><img src="../../../../icons/doc.png" alt="" width="40px" height="40px">Medical Examination</li></a>
             </ul>
         </div>
         <div class="container">

@@ -208,193 +208,177 @@ if(isset($_POST["submit"])){
     </div>
     <div class="form">
     <form action="" method="post">
-        <div class="roww">
-            <div class="form-group">
+        <div class="row">
+            <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">Form Number </label>
                 <input type="text"  value="<?php echo $form_number  ?>" class="form-control" readonly>
             </div>
-            <div class="form-group">
+            <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">Name </label>
                 <input type="text" value="<?php echo $name_std  ?>" class="form-control" readonly>
             </div>
-             <div  class="form-group">
+             <div  class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">College</label>
                 <input type="text" value="<?php echo $the_college  ?>" class="form-control" readonly>
             </div>
-        </div>
-        <div class="roww">
-            <div  class="form-group">
+            <div  class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead"> Type Certificate Unv </label>
                 <input type="text"  value="<?php echo $type_certificate_unv  ?>" class="form-control" readonly>
             </div>
-            <div  class="form-group">
+            <div  class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">Department</label>
                 <input type="text"  value="<?php echo $the_department  ?>" class="form-control" readonly>
             </div>
-            <div  class="form-group">
+            <div  class="form-group col-lg-4 col-md-6 col-xs-12">
                  <label for="" class="lead"> Certificate Type</label>
                 <input type="text"  value="<?php echo $the_type_certificate  ?>" class="form-control" readonly>
             </div>
-        </div>
-        <div class="roww">
-            <div class="form-group">
+            <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">The Course</label>
                 <input type="text" value="<?php echo $the_course  ?>" class="form-control" readonly>
             </div>
-            <div class="form-group">
+            <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">Certificate Rate</label>
                 <input type="text"  value="<?php echo $the_certificate_rate  ?>" class="form-control" readonly>
             </div>
-            <div class="form-group">
+            <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Set Number</label>
                 <input type="text"  value="<?php echo $the_set_number  ?>" class="form-control" readonly>
             </div>
         </div>
-
         <hr>
-    <div class="roww">
-        <div class="form-group">
+    <div class="row">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Nationality Number </label>
             <input type="text"  value="<?php echo $nationality_number  ?>" class="form-control" readonly>
         </div>
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Gender</label>
             <input type="text"  value="<?php echo $gender  ?>" class="form-control" readonly>
         </div>
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Nationality</label>
             <input type="text"  value="<?php echo $nationality  ?>" class="form-control" readonly>
         </div>
-    </div>
-    <div class="roww">
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Religion </label>
             <input type="text"  value="<?php echo $religion  ?>" class="form-control" readonly>
         </div>
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">State</label>
             <input type="text"  value="<?php echo $state  ?>" class="form-control" readonly>
         </div>
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">City</label>
             <input type="text"  value="<?php echo $city  ?>" class="form-control" readonly>
         </div>
-    </div>
-    <div class="roww">    
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Area</label>
             <input type="text"  value="<?php echo $area  ?>" class="form-control" readonly>
         </div>
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Home Number</label>
             <input type="text"  value="<?php echo $home_number  ?>" class="form-control" readonly>
         </div>
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Guardian Name</label>
             <input type="text"  value="<?php echo $name_guardian  ?>" class="form-control" readonly>
         </div>
-    </div>
-    <div class="roww">
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Guardian Jop</label>
             <input type="text"  value="<?php echo $jop_guardian  ?>" class="form-control" readonly>
         </div>
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Relatuve Relation</label>
             <input type="text"  value="<?php echo $relatuve_relation  ?>" class="form-control" readonly>
         </div>
-        <div class="form-group" >
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Guardian Phone</label>
             <input type="text"  value="<?php echo $phone_guardian  ?>" class="form-control" readonly>
         </div>
-    </div>
-    <div class="roww">
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead"> Student Phone</label>
             <input type="text"  value="<?php echo $phone_std  ?>" class="form-control" readonly>
         </div>
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead"> Email</label>
             <input type="email"  value="<?php echo $email_std  ?>" class="form-control" readonly>
         </div>
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Closest Relative Name</label>
             <input type="text"  value="<?php echo $name_closest_relative  ?>" class="form-control" readonly>
         </div>
-    </div>
-    <div class="roww">
-        <div class="form-group">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Closest Relative Address</label>
             <input type="text"  value="<?php echo $address_closest_relative  ?>" class="form-control" readonly>
         </div>
-        <div class="form-group">
+        <div class="form-group col-lg-8  col-md-6 col-xs-12">
             <label for="" class="lead">Closest Relative Phone</label>
             <input type="text"  value="<?php echo $phone_closest_relative  ?>" class="form-control" readonly>
         </div>
-    </div>
-    <div class="roww">
-        <div class="form-group">
+        <div class="form-group col-lg-6 col-md-12 col-xs-12">
             <label for="" class="lead">Personal Photo</label>
-            <div style="width: 200px; height: 200px;" class="form-control">
+            <div style="width: 300px; height: 300px; margin:0 auto;" class="form-control">
            <img src="../../nstd_info_form/images_uplodes/<?php echo $personal_photo ?>" alt="none" width="100%" height="100%">
             </div>
         </div>
-        <div>
+        <div class="form-group col-lg-6 col-md-12 col-xs-12">
             <label for="" class="lead">Nationality Number Photo</label>
-            <div style="width: 200px; height: 200px;" class="form-control">
+            <div style="width: 300px; height: 300px; margin:0 auto;" class="form-control">
            <img src="../../nstd_info_form/images_uplodes/<?php echo $photo_nationality_number ?>" alt="none" width="100%" height="100%">
            </div>
         </div>
-        </div>
-        <br><HR>
+        <br><hr>
         <div>
         <label for="" class="lead">A 10% discount If You Have A Brother Or Sister Who Is Currently Studying At Ribat University :</label><br><br>
-        <div class="roww">    
-        <div class="form-group">
+</div>
+        <div class="row">    
+        <div class="form-group col-lg-6 col-md-6 col-xs-12">
                 <label for="" class="lead">Brother Or Sister Name</label>
                 <input type="text" name="name_brother"  value="<?php echo $name_of_brother  ?>"  class="form-control" readonly>
             </div>
-            <div class="form-group">
+            <div class="form-group col-lg-6 col-md-6 col-xs-12">
                 <label for="" class="lead">Univirsity Number</label>
                 <input type="text" name="unv_number"  value="<?php echo $univirsity_number  ?>"  class="form-control" readonly>
             </div>
-        </div>
-            <div class="form-group">
+            <div class="form-group col-lg-6 col-md-6 col-xs-12">
                 <label for="" class="lead">Univirsity Card Photo</label>
-                <div style="width: 200px; height: 200px;" class="form-control">
+                <div  style="width: 300px; height: 300px; margin:0 auto;" class="form-control">
            <img src="../../nstd_info_form/images_uplodes/<?php echo $card_photo ?>" alt="none" width="100%" height="100%">
-           </div>
-           </div>
-            
-        </div><hr>
+           </div> 
+</div>          
+        <hr>
         <div>
         <label for="" class="lead">A 20% discount If You Father Or Mother Currently Working In Police :</label><br><br>
-            <div class="form-group">
+        </div>
+        <div class="row">
+            <div class="form-group col-lg-9 col-md-12 col-xs-12">
                 <label for="" class="lead"> Father Or Mother Name</label>
                 <input type="text" name="name_father_police"  value="<?php echo $name_of_father_police  ?>" class="form-control" readonly>
             </div>
-            <div class="form-group"><br>
+            <div class="form-group col-lg-4 col-md-12 col-xs-12"><br>
             <label for="" class="lead">Proof Of Service Certificate</label>
-            <div style="width: 200px; height: 200px;" class="form-control">
+            <div style="width: 300px; height: 300px; margin:0 auto;" class="form-control">
            <img src="../../nstd_info_form/images_uplodes/<?php echo $services_certificate ?>" alt="none" width="100%" height="100%">
            </div>
             </div>
-        </div><hr>
-        <div>
-        <label for="" class="lead">A 70% discount If You Father Or Mother Currently Working In Ribat University :</label><br><br>
-            <div>
-            <label for="" class="lead"> Father Or Mother Name</label>
-                <input type="text" name="name_father_unv"  value="<?php echo $name_of_fater_unv  ?> " class="form-control" readonly>
-            </div>
-            <div>
-            <br>
-                <label for="" class="lead">Proof Of Service Certificate</label>
-                <div style="width: 200px; height: 200px;" class="form-control">
-           <img src="../../nstd_info_form/images_uplodes/<?php echo $services_certificate_unv ?>" alt="none" width="100%" height="100%"><br>
-           </div>
-            </div>
         </div>
-        <div>
+        <hr>
+<div class="row">   
+    <div>
+        <label for="" class="lead">A 70% discount If You Father Or Mother Currently Working In Ribat University :</label><br><br>
+    </div>
+    <div class="form-group col-lg-9 col-md-12 col-xs-12"><br>
+            <label for="" class="lead"> Father Or Mother Name</label>
+            <input type="text" name="name_father_unv"  value="<?php echo $name_of_fater_unv  ?> " class="form-control" readonly>
+    </div>
+    <div class="form-group col-lg-4 col-md-12 col-xs-12">
+                <label for="" class="lead">Proof Of Service Certificate</label>
+                <div style="width: 300px; height: 300px; margin:0 auto;" class="form-control">
+           <img src="../../nstd_info_form/images_uplodes/<?php echo $services_certificate_unv ?>" alt="none" width="100%" height="100%"><br>
+    </div>
+</div>
+<div class="form-group col-lg-9 col-md-12 col-xs-12"><br>
         <br>
         <label for="" class="lead"> Select Discount Percentage</label>
             <select name="descountrate" id="" class="form-select">
@@ -408,13 +392,14 @@ if(isset($_POST["submit"])){
                 <option value="100%">100%</option>
             </select>
         </div>
-        <div class="roww">
-        <div form="form-group ">
+</div>
+        <div class="row">
+        <div class="form-group col-lg-6 col-md-6 col-xs-6">
             <input type="submit" value="Confirm Data" name="submit" class='btn btn-primary' >
         </div>
-        <div class="foem-group">
+        <div class="form-group col-lg-6 col-md-6 col-xs-6">
             <?php
-            echo "<a href='un_submit_info.php?std_id=".$id_std."'><button  class='btn btn-primary '>Don't Confirm</button></a>";
+            echo "<a href='un_submit_info.php?std_id=".$id_std."'><button class='btn btn-primary'>Don't Confirm</button></a>";
             ?>
         </div>
         </div>

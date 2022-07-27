@@ -52,7 +52,7 @@ if(isset($_POST["submit"])){
     <link rel="stylesheet" href="../../../css/all.min.css">
     <link rel="stylesheet" href="../../../bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../../../css/manegment/medical_examination/insert_the_info_std_doctor.css?v=<?php echo time();?>">
-    <title>كشف الطبيب</title>
+    <title>G.Doctor Examination</title>
 </head>
 <body>
 <div class="side-menu">
@@ -74,7 +74,7 @@ if(isset($_POST["submit"])){
         <h3><a href="../../account/account.php"><img src="../../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_user ?></h3>
         </div>
         <div class="log">
-        <a href="../../login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+        <a href="../login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
         </div>
         </div>
     </div>
@@ -83,42 +83,38 @@ if(isset($_POST["submit"])){
 <div class="row">
     <div class="form-group col-lg-4 col-md-6 col-xs-12">
         <label for=""class="lead">Form Number</label>
-        <input type="text" name="form_number"  value="<?php echo $form_number ?>" id="">
+        <input type="text" name="form_number"  value="<?php echo $form_number ?>" id="" class="form-control" readonly>
     </div>
     <div class="form-group col-lg-4 col-md-6 col-xs-12">
         <label for=""class="lead">Name</label>
-        <input type="text" name="name_std" value="<?php echo $name_std ?>" id="">
+        <input type="text" name="name_std" value="<?php echo $name_std ?>" id="" class="form-control" readonly>
     </div>
     <div class="form-group col-lg-4 col-md-6 col-xs-12">
         <label for=""class="lead">College</label>
-        <input type="text" name="college" value="<?php echo $college ?>" id="">
-    </div>
-        
-    <div class="form-group col-lg-4 col-md-6 col-xs-12">
-        <label for=""class="lead">Doctor</label>
-    </div>
+        <input type="text" name="college" value="<?php echo $college ?>" id="" class="form-control" readonly>
+    </div>        
     <div class="form-group col-lg-4 col-md-6 col-xs-12">
         <label for=""class="lead"> Did You Do Any Surgery Before? </label>
-        <textarea name="answer_q1" id="" cols="30" rows="10" class="form-control"></textarea>
+        <textarea name="answer_q1" id=""  class="form-control"></textarea>
     </div>
     <div class="form-group col-lg-4 col-md-6 col-xs-12">
         <label for=""class="lead">Do You Have a chronic Disease</label>
-        <textarea name="answer_q2" id="" cols="30" rows="10" class="form-control"></textarea>
+        <textarea name="answer_q2" id=""  class="form-control bssa"></textarea>
     </div>
     <div class="form-group col-lg-4 col-md-6 col-xs-12">
         <label for=""class="lead"> Do You Suffer Form Injury In You Body</label>
-        <textarea name="answer_q3" id="" cols="30" rows="10" class="form-control"></textarea>
+        <textarea name="answer_q3" id=""  class="form-control"></textarea>
     </div>
     <div class="form-group col-lg-4 col-md-6 col-xs-12">
         <label for=""class="lead">Do You Have Any Genetic Disease In The Family</label>
-        <textarea name="answer_q4" id="" cols="30" rows="10" class="form-control"></textarea>
+        <textarea name="answer_q4" id=""  class="form-control"></textarea>
     </div>
     <div class="form-group col-lg-4 col-md-6 col-xs-12">
-        <label for=""class="lead">Result Of Blood testing</label>
+        <label for=""class="lead bssa">Result Of Blood testing</label>
         <input type="text" name="bloode" id="" class="form-control">
     </div>
-    <div class="form-group col-lg-4 col-md-6 col-xs-12">
-        <input type="submit" value="Dean" name="submit" class="btn btn-primary">
+    <div class="form-group">
+        <input type="submit" value="Done" name="submit" class="btn btn-primary">
     </div>
 </div>
     </form>

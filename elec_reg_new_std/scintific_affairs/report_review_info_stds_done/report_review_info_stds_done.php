@@ -16,7 +16,7 @@ $_SESSION["full_name_scientific_affairs"] = $name_user;
     <link rel="stylesheet" href="../../../css/all.min.css">
     <link rel="stylesheet" href="../../../bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../../../css/manegment/scintific_affairs/info_std_electronic_register.css?v=<?php echo time();?>">
-    <title>Review Information Students</title>
+    <title>Reports</title>
 </head>
 <body>
 <div class="side-menu">

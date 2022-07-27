@@ -20,7 +20,7 @@ $specialization = $_SESSION["specialization_doctor"];
     <link rel="stylesheet" href="../../../css/all.min.css">
     <link rel="stylesheet" href="../../../bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../../../css/manegment/medical_examination/display_std_for_doctor_exm.css?v=<?php echo time();?>">
-    <title>البصريات</title>
+    <title>Optics</title>
 </head>
 <body>
 <div class="side-menu">
@@ -32,7 +32,7 @@ $specialization = $_SESSION["specialization_doctor"];
             <a href="../doctor/display_std_for_doctor_exm.php"><li><img src="../../../icons/doc.png" alt="" width="40px" height="40px"> Doctor</li></a>
             <a href="../optics/display_std_for_optics_exm.php"><li class="active"><img src="../../../icons/ds.png" alt="" width="40px" height="40px"> Optics</li></a>
             <a href="../psychoogist/display_std_for_psychologist_exm.php"><li><img src="../../../icons/op.png" alt="" width="40px" height="40px">Psychoogist</li></a>
-            <a href="../info_std_for_med/info_std_for_med.php"><li><img src="../../../icons/stdifo1.png" alt="" width="40px" height="40px">Students Information</li></a>
+            <a href="../report_med_exam_info_stds_done/report_med_exam_info_stds_done.php"><li><img src="../../../icons/stdifo1.png" alt="" width="40px" height="40px">Report</li></a>
         </ul>
         </div>
     <div class="container">
@@ -69,7 +69,7 @@ $specialization = $_SESSION["specialization_doctor"];
     </select>
     </div>
     <div class="form-group col-lg-4 col-md-6 col-xs-12 my-5">
-        <input type="submit" value="Search" name="ser" class="btn btn-praimry">
+        <input type="submit" value="Search" name="ser" class="btn btn-primary">
     </div>
 </div>
 </form>
