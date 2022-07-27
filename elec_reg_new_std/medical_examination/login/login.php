@@ -8,6 +8,7 @@ if(isset($_POST["login"])){
                if(mysqli_num_rows($display_data_for_login_doctor) == 1){
                 header("location: ../statics/statics.php");
                 $_SESSION["user_doctor"] = $username;
+                $_SESSION["user_name_for_permsisson_doctor"] = $username;
                    }
         else{
             echo "<script>alert('Sorry, Error In Information')</script>";
