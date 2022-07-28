@@ -2,9 +2,10 @@
 include "../../connection/connection.php";
 
 session_start();
-//  $username = $_SESSION["username_tetcher"];
+$name_teacher =  $_SESSION["name_of_tetcher"];
 
-$name = $_SESSION["name_of_tetcher"]; 
+//  $username = $_SESSION["username_tetcher"];
+// $name = $_SESSION["name_of_tetcher"]; 
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,12 +13,36 @@ $name = $_SESSION["name_of_tetcher"];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/all.min.css">
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/manegment/teacher/subject.css?v=<?php echo time();?>">
     <title>Subjects</title>
 </head>
 <body>
-<h4>المواد التي تدرسها</h4>
+<div class="side-menu">
+        <div class="brand-name">
+        <h2><img src="../../icons/da.png" alt="" width="50px" height="50px">Teacher</h2>
+        </div>
+        <ul>
+            <a href="#"><li class="active"><img src="../../icons/statc1.png" alt="" width="40px" height="40px">Subjects</li></a>
+            <a href="../../manegment/register_manegment/exams/select_subject_for_check/select_subject_for_check.php"><li><img src="../../icons/statc1.png" alt="" width="40px" height="40px">مراقبة الامتحانات</li></a>
+
+        </ul>
+</div>
+<div class="container">
+    <div class="header">
+        <div class="nav">
+        <div>
+        <h3><a href="../profile_tetcher/profile_tetcher.php"><img src="../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_teacher ?></h3>
+        </div>
+        <div class="log">
+        <a href="../login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+        </div>
+        </div>
+</div>
+<div class="form">
     <?php
-    $display_subjects = mysqli_query($connection , "select name_subject, type_certifcate_unv , department ,batch ,study_year ,semester from distribution_subject where name_tetcher='$name' && complete_and_end_subject='none'");
+    $display_subjects = mysqli_query($connection , "select name_subject, type_certifcate_unv , department ,batch ,study_year ,semester from distribution_subject where name_tetcher='$name_teacher' && complete_and_end_subject='none'");
     if(mysqli_num_rows($display_subjects) == 0){
         echo "لا توجد مواد";
     }
@@ -31,15 +56,15 @@ $name = $_SESSION["name_of_tetcher"];
             $semester = $row2["semester"];
 
 
-            echo "<table cellpadding='20'>
+            echo "<table cellpadding='20' class='table table-striped table-hover'>
             <tr>
-              <td>اسم الماده : $name_subject </td>
-              <td>نوع الشهادة :$type_certificate</td>
-              <td>القسم :$department</td>
-              <td>الدفعة :$batch</td>
-              <td>السنة الدراسية :$study_year</td>
-              <td> السمستر :$semester</td>
-              <td><a href='../display_std_inf_for_results/display_std_inf_for_results.php?name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester'><button>ادخال الدرجات</button></a></td>
+              <td>Subject Name : $name_subject </td>
+              <td> Certificte Type : $type_certificate</td>
+              <td>Department :$department</td>
+              <td>Batch :$batch</td>
+              <td>Study Year:$study_year</td>
+              <td> Semester :$semester</td>
+              <td><a href='../display_std_inf_for_results/display_std_inf_for_results.php?name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester'><button class='btn btn-primary'>Enter Degree</button></a></td>
               </form>
             </tr>
             </table>";

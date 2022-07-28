@@ -133,24 +133,49 @@ if(isset($_POST["check_info_std"])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>التسجيل الالكتروني</title>
+    <link rel="stylesheet" href="../../css/all.min.css">
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/manegment/student/elec_reg.css?v=<?php echo time();?>">
+    <title>elec_reg</title>
 </head>
 <body>
-    <form action="" method="post">
-        <div> 
-            <label for="">الرقم الجامعي</label>
-            <input type="text" name="unv_id" value="<?php echo $unv_id ?>" id="" readonly>
+<div class="side-menu">
+        <div class="brand-name">
+        <h2><img src="../../icons/da.png" alt="" width="50px" height="50px">Student</h2>
         </div>
-        <div>
-            <label for="">الاسم</label>
-            <input type="text" name="name_std" value="<?php echo $name_std ?>" id="" readonly>
+        <ul>
+        <a href="../display_result/display_result.php"><li><img src="../../icons/statc1.png" alt="" width="40px" height="40px">Result</li></a>
+        <a href="../elec_reg/elec_reg.php"><li class="active"><img src="../../icons/statc1.png" alt="" width="40px" height="40px">Register</li></a>   
+        </ul>
+</div>
+<div class="container">
+    <div class="header">
+        <div class="nav">
+            <div>
+            <h3><a href="../profile_std/profile_std.php"><img src="../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name ?></h3>
+            </div>
+            <div class="log">
+            <a href="../login_std/login_std.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+            </div>
         </div>
-        <div>
-            <label for="">الحالة</label>
-            <input type="text" name="name_std" value="<?php echo $status ?>" id="" readonly>
-        </div>
-        <div>
-            <input type="submit" value="متابعة التسجيل" name="check_info_std">
+    </div>
+<div class="form">
+<form action="" method="post">
+<div class="row">
+    <div class="form-group col-lg-12 col-md-6 col-xs-12">
+        <label for=""class="lead">UNV ID </label>
+        <input type="text" name="unv_id" value="<?php echo $unv_id ?>" id="" class="form-control" readonly>
+    </div>
+    <div class="form-group col-lg-12 col-md-6 col-xs-12">
+        <label for=""class="lead">Name</label>
+        <input type="text" name="name_std" value="<?php echo $name_std ?>" id="" class="form-control" readonly>
+    </div>
+    <div class="form-group col-lg-12 col-md-6 col-xs-12">
+        <label for=""class="lead">Status </label>
+        <input type="text" name="name_std" value="<?php echo $status ?>" id="" class="form-control" readonly>
+    </div>
+    <div class="form-group col-lg-12 col-md-12 col-xs-12">
+            <input type="submit" value="Continue Registre" name="check_info_std" class="btn btn-primary">
         </div>
     </form>
 </body>

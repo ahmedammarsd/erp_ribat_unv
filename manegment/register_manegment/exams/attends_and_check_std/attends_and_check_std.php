@@ -7,6 +7,9 @@
   وبعد تحديد الطلاب الحاضرين والغياب ايضا يقوم بعرض بياناتهم في نفس الصفحة للتاكيد
 */
 include "../../../../connection/connection.php";
+session_start();
+$name_teacher =  $_SESSION["name_of_tetcher"];
+
 $name_subject = $_GET["name_subject"];
 $type_certificate = $_GET["type_certificate"];
 $department = $_GET["department"];
@@ -21,22 +24,37 @@ $type_exam = $_GET["type_exam"];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../css/all.min.css">
+    <link rel="stylesheet" href="../../../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../css/manegment/teacher/attends_and_check_std.css?v=<?php echo time();?>">
     <title>جدول الطلاب لامتحان مادة <?php echo $name_subject ?></title>
 </head>
 <body>
+<div class="container">
+    <div class="header">
+        <div class="nav">
+        <div>
+        <h3><a href="../../../../tetcher/profile_tetcher/profile_tetcher.php"><img src="../../../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_teacher ?></h3>
+        </div>
+        <div class="log">
+        <a href="../../../../tetcher/login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+        </div>
+        </div>
+</div>
+<div class="form">
 <?php
 if($type_exam == "normal"){
     echo " <h2>جدول الطلاب لامتحان مادة  $name_subject </h2>
     <br>
-    <table cellpadding='15'>
+    <table cellpadding='15' class='table table-success table-hover'>
      <tr>
-     <th>الرقم الجامعي</th>
-     <th>اسم الطالب</th>
-     <th>الكلية</th>
-     <th>نوع الشهادة</th>
-     <th>القسم</th>
-     <th>الدفعة</th>
-     <th></th>
+     <th>UNV_ID</th>
+     <th>Std_Name</th>
+     <th>College</th>
+     <th>Certifcate  Type</th>
+     <th>Department</th>
+     <th>Batch</th>
+      <th></th>
      </tr>";
      if($semester == 1){
      $display_students_for_degree = mysqli_query($connection , "select unv_id ,name_std ,college ,type_certifcate_unv ,department ,batch from students where type_certifcate_unv='$type_certificate' && department='$department' && batch='$batch' && confirm_pay_s1='done'");
@@ -95,18 +113,21 @@ else{
  echo "</table>";
  $total_of_all_students = mysqli_num_rows($display_students_for_degree);
  echo "<h2>عدد الطلاب الكلي</h2>" . $total_of_all_students;
+ echo"</div>";
 //---------------------------------------------------------------------------------------------------------------------
- echo "<hr>
+
+echo "<hr>
+<div class='form'>;
  <h2>قائمة الطلاب الحاضرين لامتحان مادة  $name_subject</h2>
     <br>
-    <table cellpadding='15'>
+    <table cellpadding='15'class='table table-success table-hover'>
      <tr>
-     <th>الرقم الجامعي</th>
-     <th>اسم الطالب</th>
-     <th>الكلية</th>
-     <th>نوع الشهادة</th>
-     <th>القسم</th>
-     <th>الدفعة</th>
+     <th>UNV_ID</th>
+     <th>Std_Name</th>
+     <th>College</th>
+     <th>Certifcate  Type</th>
+     <th>Department</th>
+     <th>Batch</th>
      <th></th>
      </tr>";
      $display_students_for_submit_exam = mysqli_query($connection , "select unv_id , name_std , type_certifcate_unv , department ,batch from submit_std_and_result_subjects where type_certifcate_unv='$type_certificate' && department='$department' && batch='$batch' && study_year='$study_year' && semester='$semester' && name_subject='$name_subject' && type_exam='$type_exam' && come_to_exam_in_first_time='yes' ");
@@ -130,18 +151,20 @@ else{
  echo "</table>";
  $total_of_submit_students = mysqli_num_rows($display_students_for_submit_exam);
  echo "<h2>عدد الطلاب الحاضرين</h2>" . $total_of_submit_students;
+ echo "</div> ";
  //---------------------------------------------------------------------------------------------------------------------
  echo "<hr>
+ <div class='form'>
  <h2>قائمة الطلاب الغائبين لامتحان مادة  $name_subject </h2>
     <br>
-    <table cellpadding='15'>
+    <table cellpadding='15' class='table table-success table-hover'>
      <tr>
-     <th>الرقم الجامعي</th>
-     <th>اسم الطالب</th>
-     <th>الكلية</th>
-     <th>نوع الشهادة</th>
-     <th>القسم</th>
-     <th>الدفعة</th>
+     <th>UNV_ID</th>
+     <th>Std_Name</th>
+     <th>College</th>
+     <th>Certifcate  Type</th>
+     <th>Department</th>
+     <th>Batch</th>
      <th></th>
      </tr>
     ";
@@ -175,14 +198,20 @@ echo "<hr>";
 elseif($type_exam == "sub_exams"){
     echo " <h2>جدول الطلاب لامتحان ملحق مادة  $name_subject </h2>
     <br>
-    <table cellpadding='15'>
+    <table cellpadding='15' class='table table-success table-hover'>
      <tr>
-     <th>الرقم الجامعي</th>
-     <th>اسم الطالب</th>
-     <th>الكلية</th>
-     <th>نوع الشهادة</th>
-     <th>القسم</th>
-     <th>الدفعة</th>
+     <td>$unv_id</td>
+     <td>$name_std</td>
+     <td>$type_certifcate_unv</td>
+     <td>$department</td>
+     <td>$batch</td>
+
+     <th>UNV_ID</th>
+     <th>Std_Name</th>
+     <th>College</th>
+     <th>Certifcate  Type</th>
+     <th>Department</th>
+     <th>Batch</th>
      <th></th>
      </tr>";
 
@@ -266,13 +295,13 @@ elseif($type_exam == "sub_exams"){
 echo "<hr>
  <h2>قائمة الطلاب الحاضرين لامتحان ملحق مادة  $name_subject</h2>
     <br>
-    <table cellpadding='15'>
+    <table cellpadding='15' class='table table-success table-hover'>
      <tr>
-     <th>الرقم الجامعي</th>
-     <th>اسم الطالب</th>
-     <th>نوع الشهادة</th>
-     <th>القسم</th>
-     <th>الدفعة</th>
+     <th>UNV_ID</th>
+     <th>Std_Name</th>
+     <th>Certifcate  Type</th>
+     <th>Department</th>
+     <th>Batch</th>
      <th></th>
      </tr>";
      $display_students_for_submit_exam = mysqli_query($connection , "select unv_id , name_std , type_certifcate_unv , department ,batch from submit_std_and_result_subjects where type_certifcate_unv='$type_certificate' && department='$department' && batch='$batch' && study_year='$study_year' && semester='$semester' && name_subject='$name_subject' && type_exam2='$type_exam' && come_to_exam_in_second_time='yes' ");
@@ -293,19 +322,21 @@ echo "<hr>
      "; 
      }
  echo "</table>";
+
  $total_of_submit_students = mysqli_num_rows($display_students_for_submit_exam);
  echo "<h2>عدد الطلاب الحاضرين</h2>" . $total_of_submit_students;
  //------------------------------------------------------------------------------------------
+ echo"<div class='form'>";
  echo "<hr>
  <h2>قائمة الطلاب الغائبين لامتحان ملحق مادة  $name_subject </h2>
     <br>
-    <table cellpadding='15'>
+    <table cellpadding='15' class='table table-success table-hover'>
      <tr>
-     <th>الرقم الجامعي</th>
-     <th>اسم الطالب</th>
-     <th>نوع الشهادة</th>
-     <th>القسم</th>
-     <th>الدفعة</th>
+     <th>UNV_ID</th>
+     <th>Std_Name</th>
+     <th>Certifcate  Type</th>
+     <th>Department</th>
+     <th>Batch</th>
      <th></th>
      </tr>
     ";
@@ -333,7 +364,7 @@ echo "<h2>عدد الطلاب الغائبين</h2>" . $total_of_absence_student
 ?>
 
 <hr>
-<a href="../select_subject_for_check/select_subject_for_check.php"><button>رجوع</button></a>
+<a href="../select_subject_for_check/select_subject_for_check.php"><button class="btn btn-primary">Back</button></a>
 </body>
 </html>
 

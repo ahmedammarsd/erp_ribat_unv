@@ -61,57 +61,65 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الصفحة الشخصية الطالب</title>
+    <link rel="stylesheet" href="../../css/all.min.css">
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/manegment/student/profile_std.css?v=<?php echo time();?>">
+    <title>profile_std</title>
 </head>
 <body>
-          <div>
-            
-            <div style="width: 200px; height: 200px;">
-           <img src="../../elec_reg_new_std/nstd_info_form/images_uplodes/<?php echo $personal_photo ?>" alt="none" width="100%" height="100%">
-           </div>
+<div class="side-menu">
+        <div class="brand-name">
+        <h2><img src="../../icons/da.png" alt="" width="50px" height="50px">Student</h2>
         </div>
-        <div>
-            الاسم :
-            <?php
-            echo $name_std;
-            ?> 
-            
+        <ul>
+        <a href="../display_result/display_result.php"><li><img src="../../icons/statc1.png" alt="" width="40px" height="40px">Result</li></a>
+        <a href="../elec_reg/elec_reg.php"><li><img src="../../icons/statc1.png" alt="" width="40px" height="40px">Register</li></a>   
+        </ul>
+</div>
+<div class="container">
+    <div class="header">
+        <div class="nav">
+            <div>
+            <h3><a href="../profile_std/profile_std.php"><img src="../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name ?></h3>
+            </div>
+            <div class="log">
+            <a href="../login_std/login_std.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+            </div>
         </div>
-        <div>
-            الرقم الجامعي :
-            <?php
-            echo $unv_id;
-            ?> 
-            
-        </div>
-        <div>
-            الكلية :
-            <?php
-            echo $college;
-            ?> 
-            
-        </div>
-        <div>
-            القسم :
-            <?php
-            echo $department;
-            ?> 
-            
-        </div>
-        <div>
-            الشهادة :
-            <?php
-            echo $type_certifcate_unv;
-            ?> 
-            
-        </div>
-        <hr>
-        <div>
-            سنة القبول  :
-            <?php echo $year_admisson;?> 
-        </div>
-        <div>
-            السنة الدراسية  :
+    </div>
+<div class="form">
+<div class="row">
+    <div class="form-group col-lg-4 col-md-6 col-xs-12 bssa">
+        <img src="../../elec_reg_new_std/nstd_info_form/images_uplodes/<?php echo $personal_photo ?>" alt="none" width="100%" height="100%">
+    </div>
+
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead">Name </label>
+        <input type="text" name="username" id="" class="form-control" value="<?php echo $name_std;?>" readonly>
+    </div>
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead">UNV ID </label>
+        <input type="text" name="username" id="" class="form-control" value="<?php echo $unv_id;?>" readonly>
+    </div>
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead">College </label>
+        <input type="text" name="username" id="" class="form-control" value="<?php echo $college;?>" readonly>
+    </div>
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead">Department </label>
+        <input type="text" name="username" id="" class="form-control" value="<?php echo $department;?>" readonly>
+    </div>
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead">Certifcate Type </label>
+        <input type="text" name="username" id="" class="form-control" value="<?php echo $type_certifcate_unv;?>" readonly>
+    </div>
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead">Admisson Year </label>
+        <input type="text" name="username" id="" class="form-control" value="<?php echo $year_admisson;?>" readonly>
+    </div>
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead">Academic Year </label>
+        <input type="text" name="username" id="" class="form-control" value="
             <?php  if($confirm_pay_s3 == "none" && $confirm_pay_s4 == "none" && $confirm_pay_s5 == "none" && $confirm_pay_s6 == "none" && $confirm_pay_s7 == "none" && $confirm_pay_s8 == "none"){
                 echo "الاولى ";
             }
@@ -124,10 +132,11 @@ session_start();
             else{
                 echo "  الرابعة";
             }
-            ?> 
+            ?> " readonly>
         </div>
-        <div>
-            السمستر الحالي  :
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead"> Current Semester </label>
+        <input type="text" name="username" id="" class="form-control" value="
             <?php  if($confirm_pay_s2 == "none" && $confirm_pay_s3 == "none" && $confirm_pay_s4 == "none" && $confirm_pay_s5 == "none" && $confirm_pay_s6 == "none" && $confirm_pay_s7 == "none" && $confirm_pay_s8 == "none"){
                 echo "الاول ";
                 $TGPA = $GPA_S1 ;
@@ -168,15 +177,15 @@ session_start();
                 $TGPA = $GPA_S8 ;
                 $semester = 8;
             }
-            ?> 
+            ?> " readonly>
         </div>
-        <div>
-            المعدل التراكمي  :
-            <?php echo $TGPA ?>
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead">GPA </label>
+        <input type="text" name="username" id="" class="form-control" value="<?php echo $TGPA;?>" readonly>
         </div>
-        <hr>
-        <div>
-        الرسوم الدراسية  :
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead"> Study Fees </label>
+        <input type="text" name="username" id="" class="form-control" value="
         <?php
         echo $register_fee + $year_fee;
         $_SESSION["TGPA"] = $TGPA;
@@ -186,17 +195,11 @@ session_start();
         $_SESSION["type_certifcate_unv"] = $type_certifcate_unv;
         $_SESSION["department"] = $department;
         $_SESSION["batch"] = $batch ;
-        ?>
+        ?> " readonly>
         </div>
-        <hr>
-        <div>
-            <a href='../change_password/change_password.php'><input type='submit' value='تغيير كلمة السر'></a>
-            
+        <div class="form-group col-lg-4 col-md-6 col-xs-12 my-5">
+            <a href='../change_password/change_password.php'><input type='submit' value='Change Password' class="btn btn-danger"></a>    
         </div>
-        <hr>
-        <div>
-            <a href='../elec_reg/elec_reg.php'><input type='submit' value='تسجيل'></a>
-            
-        </div>
+</div>
 </body>
 </html>

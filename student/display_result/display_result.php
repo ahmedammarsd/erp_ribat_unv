@@ -24,14 +24,39 @@ $batch = $row_std["batch"];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>النتيجة</title>
+    <link rel="stylesheet" href="../../css/all.min.css">
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/manegment/student/display_result.css?v=<?php echo time();?>">
+    <title>result</title>
 </head>
 <body>
-    <form action="" method="post">
+<div class="side-menu">
+        <div class="brand-name">
+        <h2><img src="../../icons/da.png" alt="" width="50px" height="50px">Student</h2>
+        </div>
+        <ul>
+        <a href="../display_result/display_result.php"><li class="active"><img src="../../icons/statc1.png" alt="" width="40px" height="40px">Result</li></a>
+        <a href="../elec_reg/elec_reg.php"><li><img src="../../icons/statc1.png" alt="" width="40px" height="40px">Register</li></a>   
+        </ul>
+</div>
+<div class="container">
+    <div class="header">
+        <div class="nav">
             <div>
-                السمستر
-                <select name="semester" id="">
-                    <option value="none">---select semester---</option>
+            <h3><a href="../profile_std/profile_std.php"><img src="../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name ?></h3>
+            </div>
+            <div class="log">
+            <a href="../login_std/login_std.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+            </div>
+        </div>
+    </div>
+<div class="form">
+<form action="" method="post">
+<div class="row">
+         <div class="form-group col-lg-6 col-md-6 col-xs-12">
+         <label for=""class="lead">Semester</label>
+                <select name="semester" id="" class="form-select">
+                    <option value="none"> Select Semester </option>
                     <option value="1">S1</option>
                     <option value="2">S2</option>
                     <option value="3">S3</option>
@@ -42,8 +67,8 @@ $batch = $row_std["batch"];
                     <option value="8">S8</option>
                 </select>
             </div>
-            <div>
-                <input type="submit" value="بحث" name="result">
+            <div class="form-group col-lg-4 col-md-6 col-xs-12 my-5">
+                <input type="submit" value="Search" name="result" class="btn btn-primary">
             </div>
     </form>
     <?php

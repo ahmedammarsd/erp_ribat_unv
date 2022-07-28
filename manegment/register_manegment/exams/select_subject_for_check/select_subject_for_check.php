@@ -4,9 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الامتحان</title>
+    <link rel="stylesheet" href="../../../../css/all.min.css">
+    <link rel="stylesheet" href="../../../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../css/manegment/teacher/subject.css?v=<?php echo time();?>">
+    <title>Exams</title>
 </head>
 <body>
+<div class="side-menu">
+        <div class="brand-name">
+        <h2><img src="../../../../icons/da.png" alt="" width="50px" height="50px">Teacher</h2>
+        </div>
+        <ul>
+        <a href="../../../../tetcher/subjects/subjects.php"><li><img src="../../../../icons/statc1.png" alt="" width="40px" height="40px">Subjects</li></a>
+        <a href="#"><li class="active"><img src="../../../../icons/statc1.png" alt="" width="40px" height="40px">مراقبة الامتحانات</li></a>
+        
+            
+        </ul>
+</div>
+<div class="container">
+    <div class="header">
+        <div class="nav">
+        <div>
+        <h3><a href="../../../../tetcher/profile_tetcher/profile_tetcher.php"><img src="../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name ?></h3>
+        </div>
+        <div class="log">
+        <a href="../../../../tetcher/login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+        </div>
+        </div>
+</div>
+<div class="form">
 <?php
 include "../../../../connection/connection.php";
 
@@ -30,16 +56,16 @@ $date = date("Y-m-d");
             $type_exam = $row2["type_exam"];
             if($type_exam == "normal"){$type =  "امتحان نهاية سمستر";} if($type_exam == "sub_exams"){$type = "امتحان ملحق";}
 
-            echo "<table cellpadding='20'>
+            echo "<table cellpadding='20' class='table table-success table-hover'>
             <tr>
-              <td>اسم الماده : $name_subject </td>
-              <td>نوع الشهادة :$type_certificate</td>
-              <td>القسم :$department</td>
-              <td>الدفعة :$batch</td>
-              <td>السنة الدراسية :$study_year</td>
-              <td> السمستر :$semester</td>
-              <td>$type<td>
-              <td><a href='../attends_and_check_std/attends_and_check_std.php?name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam'><button>مراقبة ومراجعة الحضور</button></a></td>
+            <td>Subject Name  $name_subject </td>
+            <td> Certificte Type  $type_certificate</td>
+            <td>Department $department</td>
+            <td>Batch $batch</td>
+            <td>Study Year$study_year</td>
+            <td> Semester $semester</td>
+            <td>$type<td>
+              <td><a href='../attends_and_check_std/attends_and_check_std.php?name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam'><button  class='btn btn-primary'>View</button></a></td>
             </tr>
             </table>";
         }
@@ -48,7 +74,9 @@ $date = date("Y-m-d");
 
 
 ?>
-<hr>
-<a href="../../../../tetcher/profile_tetcher/profile_tetcher.php"><button>رجوع</button></a>
+
+<!-- <a href="../../../../tetcher/profile_tetcher/profile_tetcher.php"><button class="btn btn-primary">رجوع</button></a> -->
+</div>
+</div>
 </body>
 </html>

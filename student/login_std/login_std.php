@@ -1,21 +1,24 @@
 <?php
 include "../../connection/connection.php";
+
 session_start();
 if(isset($_POST["login"])){
-    $username = $_POST["username"];
+    $unv_id = $_POST["unv_id"];
     $password = $_POST["password"];
-    $_SESSION["username_tetcher"] = $username;
 
-    $display_data_tetcher= "select username , password from tetchers where username='$username' and password='$password'";
+    $_SESSION["unv_id"] = $unv_id;
+
+    $display_data_from_unv = "select unv_id , name_std from students where unv_id='$unv_id' and password='$password'";
    
-    if(mysqli_num_rows(mysqli_query($connection , $display_data_tetcher)) > 0) {
-       //echo "<script>alert('SUCCESSEFULY')</script>";
-        header("location: ../profile_tetcher/profile_tetcher.php");
+    if(mysqli_num_rows(mysqli_query($connection , $display_data_from_unv)) > 0) {
+      // echo "<script>alert('SUCCESSEFULY')</script>";
+         header("location: ../profile_std/profile_std.php");
     }
     else{
-        echo "<script>alert('عذرا يوجد خطا في اسم المستخدم او كلمة المرور')</script>";
+        echo "<script>alert('عذرا يوجد خطا في الرقم الجامعي او اسم الطالب')</script>";
     }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -26,8 +29,8 @@ if(isset($_POST["login"])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/all.min.css">
     <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="../../css/manegment/login.css?v=<?php echo time();?>">
-    <title>login</title>
+    <link rel="stylesheet" href="../../css/manegment/student/login_std.css?v=<?php echo time();?>">
+    <title>Student Login</title>
 </head>
 <body>
 <div class="header">
@@ -36,7 +39,7 @@ if(isset($_POST["login"])){
             <h3>RIBAT UNVIRSITY</h3>
         </div>
         <div>
-           <h3>TEACHER</h3>
+           <h3>STUDENT</h3>
         </div>
     </div>
 </div>
@@ -47,7 +50,7 @@ if(isset($_POST["login"])){
              </div>
              </center>
         <div class="form-group">
-            <label for=""  class="lead">Username</label>
+            <label for=""  class="lead">UNV ID</label>
             <i class="fa-solid fa-user fa-1x"></i>
             <input type="text" name="username" id="" class="form-control" required>
         </div>

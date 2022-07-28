@@ -1,6 +1,7 @@
 <?php
 include "../../connection/connection.php";
-
+session_start();
+$name_teacher =  $_SESSION["name_of_tetcher"];
 $name_subject = $_GET["name_subject"];
 $type_certificate = $_GET["type_certificate"];
 $department = $_GET["department"];
@@ -17,18 +18,45 @@ $semester = $_GET["semester"];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/all.min.css">
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/manegment/teacher/display_std_inf_for_results.css?v=<?php echo time();?>">
     <title>جدول الطلاب لامتحان مادة <?php echo $name_subject ?></title>
 </head>
 <body>
-    <form action="" method="post">
+<div class="side-menu">
+        <div class="brand-name">
+        <h2><img src="../../icons/da.png" alt="" width="50px" height="50px">Teacher</h2>
+        </div>
+        <ul>
+        <a href="../subjects/subjects.php"><li class="active"><img src="../../icons/statc1.png" alt="" width="40px" height="40px">Subjects</li></a>
+        <a href="../../manegment/register_manegment/exams/select_subject_for_check/select_subject_for_check.php"><li><img src="../../icons/statc1.png" alt="" width="40px" height="40px">مراقبة الامتحانات</li></a>
+        </ul>
+</div>
+<div class="container">
+    <div class="header">
+        <div class="nav">
         <div>
-        <select name="type_exam" id="">
+        <h3><a href="../profile_tetcher/profile_tetcher.php"><img src="../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_teacher ?></h3>
+        </div>
+        <div class="log">
+        <a href="../login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+        </div>
+        </div>
+</div>
+<div class="form">
+<form action="" method="post">
+<div class="row">
+    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for=""class="lead">Select Exam Type </label>
+        <select name="type_exam" id="" class="form-select">
+            <option value="">Select Exam Type</option>
             <option value="normal">امتحان نهاية سمستر <?php echo $semester ?></option>
             <option value="sub_exams">امتحان ملحق سمستر <?php echo $semester ?></option>
         </select>
         </div>
-        <div>
-            <input type="submit" value="بحث" name="submit" id="btn">
+        <div class="form-group col-lg-4 col-md-6 col-xs-12 my-5">
+            <input type="submit" value="Search" name="submit" id="btn" class="btn btn-primary">
         </div>
     </form>
     
@@ -44,14 +72,14 @@ $semester = $_GET["semester"];
        else{
        echo "<h2>جدول الطلاب لامتحان مادة <?php echo $name_subject ?></h2>
        <br>";
-        echo "<table cellpadding='15'>
+        echo "<table cellpadding='15' class='table table-striped table-hover'>
         <tr>
-        <th>الرقم الجامعي</th>
-        <th>اسم الطالب</th>
-        <th>نوع الشهادة</th>
-        <th>القسم</th>
-        <th>الدفعة</th>
-        <th>الدرجة في مادة  $name_subject </th>
+        <th>UNV ID</th>
+        <th>Name</th>
+        <th> Certificte Type : $type_certificate</th>
+        <th>Department :$department</th>
+        <th>Batch</th>
+        <th>Subject Degree:  $name_subject </th>
         <th></th>
         </tr>
         ";
@@ -100,7 +128,7 @@ while($row=mysqli_fetch_array($display_students_for_degree)){
        else{
        echo "<h2>جدول الطلاب لامتحان مادة <?php echo $name_subject ?></h2>
        <br>";
-        echo "<table cellpadding='15'>
+        echo "<table cellpadding='15' class='table table-striped table-hover'>
         <tr>
         <th>الرقم الجامعي</th>
         <th>اسم الطالب</th>
@@ -129,7 +157,7 @@ while($row=mysqli_fetch_array($display_students_for_degree)){
    <td>$department</td>
    <td>$batch</td>
    <td><span style='color:blue;'>$degree_exam</span></td>
-   <td><a href='../insert_degree_subject/insert_degree_subject.php?unv_id=$unv_id&name_std=$name_std&name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam'><button>ادخال الدرجة</button></a></td>
+   <td><a href='../insert_degree_subject/insert_degree_subject.php?unv_id=$unv_id&name_std=$name_std&name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam'><button class='btn btn-primary'>ادخال الدرجة</button></a></td>
    </tr>
   
    ";
@@ -146,7 +174,7 @@ while($row=mysqli_fetch_array($display_students_for_degree)){
   //بعد اكتمال ادخال الدرجات يظهر زر لتاكيد البيانات وارسالها الى المسجل
   if($number_of_complete_result == 0){
       echo "<form action='submit_and_send_result.php?name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam' method='post'>
-      <input type='submit' name='submit_result' value='تاكيد النتيجة'>
+      <input type='submit' name='submit_result' value='Conform' class='btn btn-primary'>
       </form>";
   }
   
