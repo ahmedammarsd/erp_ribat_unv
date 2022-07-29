@@ -43,7 +43,7 @@ $date = date("Y-m-d");
 
     $display_subjects = mysqli_query($connection , "select name_subject, type_certificate , department ,batch ,study_year ,semester , type_exam from distribution_tetcher_exams where name_tetcher='$name' && date_of_exam='$date'");
     if(mysqli_num_rows($display_subjects) == 0){
-        echo "لا توجد مواد";
+        echo "<label class='lead'>No Subject<label>";
     }
     else{
         while($row2 = mysqli_fetch_array($display_subjects)){
