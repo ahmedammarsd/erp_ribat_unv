@@ -23,7 +23,7 @@ $num_workers = mysqli_num_rows($display_num_user_worker);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../css/all.min.css">
     <link rel="stylesheet" href="../../../bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../css/manegment/statics.css?v=<?php echo time();?>">
+    <link rel="stylesheet" href="../../../css/manegment/ac.statics.css?v=<?php echo time();?>">
     <title>Document</title>
 </head>
 <body>
@@ -53,9 +53,9 @@ $num_workers = mysqli_num_rows($display_num_user_worker);
         </div>
     </div>
 <div class="content">
-<div class="roww">
+<div class="row">            
                 <div class="cards">
-                    <div class="card">
+                    <div class="card col-lg-4 col-md-6 col-xs-12">
                         <div class="box"><br>
                             <h3>Dialy Reports</h3>
                         </div>
@@ -66,7 +66,7 @@ $num_workers = mysqli_num_rows($display_num_user_worker);
                            <a href="../reports/dialy_reports/dialy_reports.php"><button class="btn btn-primary">View</button></a>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card col-lg-4 col-md-6 col-xs-12">
                         <div class="box"><br>
                             <h3>Query Dialy Reports</h3>
                         </div>
@@ -77,7 +77,7 @@ $num_workers = mysqli_num_rows($display_num_user_worker);
                            <a href="../reports/dialy_reports/query_daialy_reports.php"><button class="btn btn-primary">View</button></a>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card col-lg-4 col-md-6 col-xs-12">
                         <div class="box"><br>
                             <h3>Period Reports</h3>
                         </div>
@@ -88,9 +88,10 @@ $num_workers = mysqli_num_rows($display_num_user_worker);
                            <a href="../reports/period_reports/period_reports.php"><button class="btn btn-primary">View</button></a>
                         </div>
                     </div>
-                    </div>
-                <div class="roww">
-                    <div class="card">
+                </div></div>
+<div class="cards bssa">
+
+                    <div class="card col-lg-4 col-md-6 col-xs-12">
                         <div class="box"><br>
                             <h3>Salary</h3>
                         </div>
@@ -101,7 +102,7 @@ $num_workers = mysqli_num_rows($display_num_user_worker);
                             <a href="../reports/salary/salary.php"><button class="btn btn-primary">View</button></a>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card col-lg-4 col-md-6 col-xs-12">
                         <div class="box"><br>
                             <h3>Payments</h3>
                         </div>
@@ -112,7 +113,7 @@ $num_workers = mysqli_num_rows($display_num_user_worker);
                             <a href="../reports/payment_std/payment_std.php"><button class="btn btn-primary">View</button></a>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card col-lg-4 col-md-6 col-xs-12">
                         <div class="box"><br>
                             <h3>Query Student</h3>
                         </div>

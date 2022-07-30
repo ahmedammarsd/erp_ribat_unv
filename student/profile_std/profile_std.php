@@ -93,11 +93,11 @@ session_start();
         <img src="../../elec_reg_new_std/nstd_info_form/images_uplodes/<?php echo $personal_photo ?>" alt="none" width="100%" height="100%">
     </div>
 
-    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+    <div class="form-group col-lg-4 col-md-6 col-xs-12 my-5">
         <label for=""class="lead">Name </label>
         <input type="text" name="username" id="" class="form-control" value="<?php echo $name_std;?>" readonly>
     </div>
-    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+    <div class="form-group col-lg-4 col-md-6 col-xs-12 my-5">
         <label for=""class="lead">UNV ID </label>
         <input type="text" name="username" id="" class="form-control" value="<?php echo $unv_id;?>" readonly>
     </div>
