@@ -35,8 +35,8 @@ $batch = $row_std["batch"];
         <h2><img src="../../icons/da.png" alt="" width="50px" height="50px">Student</h2>
         </div>
         <ul>
-        <a href="../display_result/display_result.php"><li class="active"><img src="../../icons/statc1.png" alt="" width="40px" height="40px">Result</li></a>
-        <a href="../elec_reg/elec_reg.php"><li><img src="../../icons/statc1.png" alt="" width="40px" height="40px">Register</li></a>   
+        <a href="../display_result/display_result.php"><li class="active"><img src="../../icons/re.png" alt="" width="40px" height="40px">Result</li></a>
+        <a href="../elec_reg/elec_reg.php"><li><img src="../../icons/reg.png" alt="" width="40px" height="40px">Register</li></a>   
         </ul>
 </div>
 <div class="container">
