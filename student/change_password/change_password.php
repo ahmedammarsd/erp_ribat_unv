@@ -1,7 +1,7 @@
 <?php
 include "../../connection/connection.php";
 session_start();
-
+$name_std = $row["name_std"];
 $unv_id = $_SESSION["unv_id"];
 
 $display_password = mysqli_query($connection , "select password from students where unv_id='$unv_id'");
@@ -14,19 +14,19 @@ if(isset($_POST["change"])){
     $confirm_password = $_POST["confirm_password"];
 
     if($old_password != $password){
-        echo "<script>alert('عذرا الرمز القديم غير صحيح')</script>";
+        echo "<script>alert('Sorry, The Current Password Is Incorrect')</script>";
     }
     else{
         if($new_password != $confirm_password){
-            echo "<script>alert('عذرا الرمز الجديد غير متطابق')</script>";
+            echo "<script>alert('Sorry, The New Password Does Not Match')</script>";
         }
         elseif($new_password == $confirm_password){
             $update_password = mysqli_query($connection , "update students set password='$new_password' where unv_id='$unv_id'");
             if($update_password){
-                echo "<script>alert('تم تغيير الرمز بنجاح')</script>";
+                echo "<script>alert('Password Changed Successfully')</script>";
             }
             else{
-                echo "<script>alert('عذرا لم يتم تغيير الرمز')</script>";
+                echo "<script>alert('Sorry, The Password Has Not Been Changed')</script>";
             }
         }
     }
@@ -59,7 +59,7 @@ if(isset($_POST["change"])){
     <div class="header">
         <div class="nav">
             <div>
-            <h3><a href="../profile_std/profile_std.php"><img src="../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name ?></h3>
+            <h3><a href="../profile_std/profile_std.php"><img src="../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_std ?></h3>
             </div>
             <div class="log">
             <a href="../login_std/login_std.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
@@ -69,7 +69,7 @@ if(isset($_POST["change"])){
 <div class="form-change">
     <form action="" method="post">
         <div  class="form-group">
-            <label for="" class="lead">Password Now</label>
+            <label for="" class="lead">Current Password </label>
             <input type="password" name="old_password" id="" required class="form-control">
         </div>
         <div  class="form-group">

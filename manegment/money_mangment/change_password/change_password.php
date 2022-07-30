@@ -79,19 +79,19 @@ if(isset($_POST["change"])){
         </div>
         <div class="form-change">
     <form action="" method="post">
-        <div  class="form-group">
+        <div  class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Password Now</label>
             <input type="password" name="old_password" id="" required class="form-control">
         </div>
-        <div  class="form-group">
+        <div  class="form-group col-lg-4 col-md-6 col-xs-12">
         <label for="" class="lead">New Password</label>
             <input type="password" name="new_password" id="" required class="form-control">
         </div>
-        <div  class="form-group">
+        <div  class="form-group col-lg-4 col-md-6 col-xs-12">
         <label for="" class="lead">Confirm New Password</label>
             <input type="password" name="confirm_password" id="" required class="form-control">
         </div>
-        <div  class="form-group">
+        <div  class="form-group col-lg-4 col-md-6 col-xs-12">
             <input type="submit" name="change" value="Change" class="btn btn-primary">
         </div>
     </form>

@@ -18,7 +18,7 @@ if($type_exam == "normal"){
 $dispaly_data_std_for_check_if_exisit = mysqli_query($connection, "select * from submit_std_and_result_subjects where unv_id='$unv_id' && name_std='$name_std' && type_certifcate_unv='$type_certificate' && department='$department' && batch='$batch' && study_year='$study_year' && semester='$semester' && name_subject='$name_subject' && type_exam='$type_exam'");
 
 if(mysqli_num_rows($dispaly_data_std_for_check_if_exisit) == 1){
-    echo "<script>alert('عذرا تم تاكيد حضور الطالب مسبقا');
+    echo "<script>alert('Sorry, Student Attendance Has Already Been Confirmed');
     window.location.href='attends_and_check_std.php?unv_id=$unv_id&name_std=$name_std&name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam'</script>";
    // header("location: attends_and_check_std.php?unv_id=$unv_id&name_std=$name_std&name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam");
 }
@@ -47,14 +47,14 @@ if(isset($_POST["submit_password"])){
             $insert_data_std = mysqli_query($connection , "insert into submit_std_and_result_subjects (unv_id,name_std,type_certifcate_unv,department,batch,study_year,semester,name_subject,come_to_exam_in_first_time , type_exam,number_of_hour_subject , date ,hour)
             value ('$unv_id2','$name_std2','$type_certificate2','$department2','$batch','$study_year','$semester','$name_subject2','yes','$type_exam','$value_hour2','$date','$hour') ");
         if($insert_data_std){
-       echo "<script>alert('تم تاكيد حضور الطالب');
+       echo "<script>alert('Student Attendance Confirmed');
        window.location.href='attends_and_check_std.php?unv_id=$unv_id&name_std=$name_std&name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam'</script>";
        // header("location: attends_and_check_std.php?unv_id=$unv_id&name_std=$name_std&name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam");
         }
         }
      }
      else{
-         echo "<script>alert('عذرا يوجد خطا في  كلمة المرور')</script>";
+         echo "<script>alert('Sorry, There Is An Error In The Password')</script>";
      }
 }
 }
@@ -67,7 +67,7 @@ elseif($type_exam == "sub_exams"){
     $dispaly_data_std_for_check_if_exisit = mysqli_query($connection, "select * from submit_std_and_result_subjects where unv_id='$unv_id' && name_std='$name_std' && type_certifcate_unv='$type_certificate' && department='$department' && batch='$batch' && study_year='$study_year' && semester='$semester' && name_subject='$name_subject' && type_exam2='$type_exam'");
 
 if(mysqli_num_rows($dispaly_data_std_for_check_if_exisit) == 1){
-    echo "<script>alert('عذرا تم تاكيد حضور الطالب لامتحان الملحق مسبقا');
+    echo "<script>alert('Sorry, The Student's Attendance Of The Supplement Exam Has Already Been Confirmed');
     window.location.href='attends_and_check_std.php?unv_id=$unv_id&name_std=$name_std&name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam'</script>";
     //header("location: attends_and_check_std.php?unv_id=$unv_id&name_std=$name_std&name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam");
 }
@@ -90,13 +90,13 @@ if(mysqli_num_rows($dispaly_data_std_for_check_if_exisit) == 1){
         if(mysqli_num_rows($dispaly_password_for_submit) == 1) {
             $update_data = mysqli_query($connection , "update submit_std_and_result_subjects set come_to_exam_in_second_time='yes' ,type_exam2='sub_exams' where unv_id='$unv_id' && name_std='$name_std' && type_certifcate_unv='$type_certificate' && department='$department' && batch='$batch' && study_year='$study_year' && semester='$semester' && name_subject='$name_subject'");
              if($update_data){
-                echo "<script>alert('تم تاكيد حضور الطالب لامتحان الملحق');
+                echo "<script>alert('The Student Has Been Confirmed To Attend The Supplementary Exam');
                 window.location.href='attends_and_check_std.php?unv_id=$unv_id&name_std=$name_std&name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam'</script>";
              //header("location: attends_and_check_std.php?unv_id=$unv_id&name_std=$name_std&name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam");
              }
          }
          else{
-             echo "<script>alert('عذرا يوجد خطا في  كلمة المرور')</script>";
+             echo "<script>alert('Sorry, There Is An Error In The Password')</script>";
          }
     }
 }
@@ -113,7 +113,7 @@ if(mysqli_num_rows($dispaly_data_std_for_check_if_exisit) == 1){
     <link rel="stylesheet" href="../../../../css/all.min.css">
     <link rel="stylesheet" href="../../../../bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../../../../css/manegment/teacher/submit_std.css?v=<?php echo time();?>">
-    <title>تاكيد حضور الطالب</title>
+    <title>Confirmation of student attendance</title>
 </head>
 <body>
 <div class="container">

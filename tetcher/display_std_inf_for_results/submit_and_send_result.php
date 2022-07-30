@@ -26,17 +26,17 @@ if($type_exam == "normal"){
          if($number_of_std == $number_of_std_pass_exam){
             $update_to_end_the_subject = mysqli_query($connection , "update distribution_subject set complete_and_end_subject='done' where type_certifcate_unv='$type_certificate' && department='$department' && batch='$batch' && semester='$semester' && name_subject='$name_subject' && name_tetcher='$username'");
             if($update_to_end_the_subject){
-                echo "<script>alert('تم تاكيد درجات المادة بنجاح');
+                echo "<script>alert('Subject Grades Have Been Confirmed Successfully');
                 window.location.href='display_std_inf_for_results.php?name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam';</script>";
            // header("location: display_std_inf_for_results.php?name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam'");
             }
             else{
-                echo "<script>alert('عذرا لم يتم تاكيد النتيجة الرجاء الاتصال بالمطور')</script>";
+                echo "<script>alert('Sorry, The Result Is Not Confirmed. Please Contact The Developer')</script>";
             }
          }
     }
     else{
-        echo "<script>alert('عذرا لم يتم تاكيد النتيجة الرجاء الاتصال بالمطور')</script>";
+        echo "<script>alert('Sorry, The Result Is Not Confirmed. Please Contact The Developer')</script>";
     }
 }
 }
@@ -45,13 +45,13 @@ if( $type_exam == "sub_exams"){
     $update_and_send_result_to_register = mysqli_query($connection , "update submit_std_and_result_subjects set check_tetcher2='done' where type_certifcate_unv='$type_certificate' && department='$department' && batch='$batch' && semester='$semester' && name_subject='$name_subject' && type_exam2='$type_exam' && come_to_exam_in_second_time='yes'");
     if($update_and_send_result_to_register){
         $update_to_end_the_subject = mysqli_query($connection , "update distribution_subject set complete_and_end_subject='done' where type_certifcate_unv='$type_certificate' && department='$department' && batch='$batch' && semester='$semester' && name_subject='$name_subject' && name_tetcher='$username'");
-        echo "<script>alert('تم تاكيد درجات الملحق بنجاح');
+        echo "<script>alert('Supplementary Scores Confirmed Successfully');
         window.location.href='display_std_inf_for_results.php?name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam';</script>";
    
       // header("location: display_std_inf_for_results.php?name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam'");
     }
     else{
-        echo "<script>alert('عذرا لم يتم تاكيد النتيجة الرجاء الاتصال بالمطور')</script>";
+        echo "<script>alert('Sorry, The Result Is Not Confirmed. Please Contact The Developer')</script>";
     }
 }
 }
@@ -62,16 +62,16 @@ if( $type_exam == "sub_exams"){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تاكيد النتيجة</title>
+    <title>Confirm The Result</title>
 </head>
 <body>
-    <h2>هل انت متاكد من تاكيد هذه الدرجات</h2>
+    <h2>Are You Sure You Can Confirm These Scores?</h2>
     <form action="" method="post">
         <div>
-            <button name="submit">تاكيد</button>
+            <button name="submit">Confirm</button>
         </div>
         <?php 
-       echo "<a href='display_std_inf_for_results.php?name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam'>رجوع</a>";
+       echo "<a href='display_std_inf_for_results.php?name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam'>Back</a>";
         ?>
     </form>
 </body>

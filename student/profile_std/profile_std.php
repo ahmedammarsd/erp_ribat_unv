@@ -80,7 +80,7 @@ session_start();
     <div class="header">
         <div class="nav">
             <div>
-            <h3><a href="../profile_std/profile_std.php"><img src="../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name ?></h3>
+            <h3><a href="../profile_std/profile_std.php"><img src="../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_std ?></h3>
             </div>
             <div class="log">
             <a href="../login_std/login_std.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
@@ -121,16 +121,16 @@ session_start();
         <label for=""class="lead">Academic Year </label>
         <input type="text" name="username" id="" class="form-control" value="
             <?php  if($confirm_pay_s3 == "none" && $confirm_pay_s4 == "none" && $confirm_pay_s5 == "none" && $confirm_pay_s6 == "none" && $confirm_pay_s7 == "none" && $confirm_pay_s8 == "none"){
-                echo "الاولى ";
+                echo " First ";
             }
             elseif($confirm_pay_s5 == "none" && $confirm_pay_s6 == "none" && $confirm_pay_s7 == "none" && $confirm_pay_s8 == "none"){
-                echo "الثانية ";
+                echo " Second ";
             }
             elseif($confirm_pay_s7 == "none" && $confirm_pay_s8 == "none"){
-                echo "الثالثة ";
+                echo " Third ";
             }
             else{
-                echo "  الرابعة";
+                echo "  Fourth";
             }
             ?> " readonly>
         </div>
@@ -138,42 +138,42 @@ session_start();
         <label for=""class="lead"> Current Semester </label>
         <input type="text" name="username" id="" class="form-control" value="
             <?php  if($confirm_pay_s2 == "none" && $confirm_pay_s3 == "none" && $confirm_pay_s4 == "none" && $confirm_pay_s5 == "none" && $confirm_pay_s6 == "none" && $confirm_pay_s7 == "none" && $confirm_pay_s8 == "none"){
-                echo "الاول ";
+                echo "First ";
                 $TGPA = $GPA_S1 ;
                 $semester = 1;
             }
             elseif($confirm_pay_s3 == "none" && $confirm_pay_s4 == "none" && $confirm_pay_s5 == "none" && $confirm_pay_s6 == "none" && $confirm_pay_s7 == "none" && $confirm_pay_s8 == "none"){
-                echo "الثاني ";
+                echo "Second ";
                 $TGPA = $GPA_S2 ;
                 $semester = 2;
             }
             elseif($confirm_pay_s4 == "none" && $confirm_pay_s5 == "none" && $confirm_pay_s6 == "none" && $confirm_pay_s7 == "none" && $confirm_pay_s8 == "none"){
-                echo "الثالث ";
+                echo "Third ";
                 $TGPA = $GPA_S4 ;
                 $semester = 3;
             }
             elseif($confirm_pay_s5 == "none" && $confirm_pay_s6 == "none" && $confirm_pay_s7 == "none" && $confirm_pay_s8 == "none"){
-                echo "الرابع ";
+                echo "Fourth ";
                 $TGPA = $GPA_S4 ;
                 $semester = 4;
             }
             elseif($confirm_pay_s6 == "none" && $confirm_pay_s7 == "none" && $confirm_pay_s8 == "none"){
-                echo "الخامس ";
+                echo "Fifth ";
                 $TGPA = $GPA_S5 ;
                 $semester = 5;
             }
             elseif($confirm_pay_s7 == "none" && $confirm_pay_s8 == "none"){
-                echo "السادس ";
+                echo "Sixth ";
                 $TGPA = $GPA_S6 ;
                 $semester = 6;
             }
             elseif($confirm_pay_s8 == "none"){
-                echo "السابع ";
+                echo "Seventh ";
                 $TGPA = $GPA_S7 ;
                 $semester = 7;
             }
             else{
-                echo "  الثامن";
+                echo "Eight";
                 $TGPA = $GPA_S8 ;
                 $semester = 8;
             }

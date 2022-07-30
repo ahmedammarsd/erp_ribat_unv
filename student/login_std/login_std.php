@@ -14,7 +14,7 @@ if(isset($_POST["login"])){
 
     }
     else{
-        echo "<script>alert('عذرا يوجد خطا في الرقم الجامعي او اسم الطالب')</script>";
+        echo "<script>alert('Sorry, There Is An Error In The UNV ID Or Password')</script>";
     }
 }
 

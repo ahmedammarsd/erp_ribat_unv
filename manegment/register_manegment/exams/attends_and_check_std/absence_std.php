@@ -47,7 +47,7 @@ elseif(isset($_POST["submit_absence"])){
          }
      
      else{
-         echo "<script>alert('عذرا يوجد خطا في الادخال')</script>";
+         echo "<script>alert('Sorry, There Was An Entry Error')</script>";
      }
         }
     
@@ -96,7 +96,7 @@ if(mysqli_num_rows($dispaly_data_std_for_check_if_exisit) == 1){
              }
          }
          else{
-             echo "<script>alert('عذرا يوجد خطا في  كلمة المرور')</script>";
+             echo "<script>alert('Sorry, There Is An Error In The Password')</script>";
          }
     }
 }
@@ -112,7 +112,7 @@ if(mysqli_num_rows($dispaly_data_std_for_check_if_exisit) == 1){
     <link rel="stylesheet" href="../../../../css/all.min.css">
     <link rel="stylesheet" href="../../../../bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../../../../css/manegment/teacher/absence_std.css?v=<?php echo time();?>">
-    <title>تاكيد حضور الطالب</title>
+    <title>Confirmation of student attendance</title>
 </head>
 <body>
 <div class="container">

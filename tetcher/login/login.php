@@ -13,7 +13,7 @@ if(isset($_POST["login"])){
         header("location: ../profile_tetcher/profile_tetcher.php");
     }
     else{
-        echo "<script>alert('عذرا يوجد خطا في اسم المستخدم او كلمة المرور')</script>";
+        echo "<script>alert('Sorry, There Is An Error In The Username Or Password')</script>";
     }
 }
 ?>

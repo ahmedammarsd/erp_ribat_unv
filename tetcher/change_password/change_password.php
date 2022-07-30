@@ -16,19 +16,19 @@ if(isset($_POST["change"])){
     $confirm_password = $_POST["confirm_password"];
 
     if($old_password != $password){
-        echo "<script>alert('عذرا الرمز القديم غير صحيح')</script>";
+        echo "<script>alert('Sorry, The Current Password Is Incorrect')</script>";
     }
     else{
         if($new_password != $confirm_password){
-            echo "<script>alert('عذرا الرمز الجديد غير متطابق')</script>";
+            echo "<script>alert('Sorry, The New Password Does Not Match')</script>";
         }
         elseif($new_password == $confirm_password){
             $update_password = mysqli_query($connection , "update tetchers set password='$new_password' where username='$username'");
             if($update_password){
-                echo "<script>alert('تم تغيير الرمز بنجاح')</script>";
+                echo "<script>alert('Password Changed Successfully')</script>";
             }
             else{
-                echo "<script>alert('عذرا لم يتم تغيير الرمز')</script>";
+                echo "<script>alert('Sorry, The Password Has Not Been Changed')</script>";
             }
         }
     }

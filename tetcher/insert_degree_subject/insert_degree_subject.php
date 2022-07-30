@@ -59,7 +59,7 @@ if(isset($_POST["degree_exam"])){
          header("location: ../display_std_inf_for_results/display_std_inf_for_results.php?unv_id=$unv_id&name_std=$name_std&name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam");
          }
          else{
-            echo "<script>alert('عذرا يوجد خطا في  الادخال')</script>";
+            echo "<script>alert('Sorry, There Was An Entry Error')</script>";
 }
 }
 }
@@ -110,7 +110,7 @@ if($type_exam == "sub_exams"){
              header("location: ../display_std_inf_for_results/display_std_inf_for_results.php?unv_id=$unv_id&name_std=$name_std&name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam");
              }
              else{
-                echo "<script>alert('عذرا يوجد خطا في  الادخال')</script>";
+                echo "<script>alert('Sorry, There Was An Entry Error')</script>";
     }
     }
     }

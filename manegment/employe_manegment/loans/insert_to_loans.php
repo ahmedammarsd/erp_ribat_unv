@@ -223,14 +223,14 @@ elseif($workerid){
         <h2><img src="../../../icons/da.png" alt="" width="50px" height="50px">Human Resource</h2>
                 </div>
         <ul>
-            <a href="../statics/statics.php"><li><img src="../../../icons/statc1.png" alt="" width="40px" height="40px">Statics</li></a>
-            <a href="../employes/add_employe/add_emp.php"><li><img src="../../../icons/emp00.png" alt="" width="40px" height="40px"> Add Employe </li></a>
-            <a href="../tetchers/add_tetchers/add_tetcher.php"><li><img src="../../../icons/ath.png" alt="" width="40px" height="40px">Add Tetcher</li></a>
+        <a href="../statics/statics.php"><li><img src="../../../icons/statc1.png" alt="" width="40px" height="40px">Statics</li></a>
+            <a href="../employes/add_employe/add_emp.php"><li><img src="../../../icons/eemp.png" alt="" width="40px" height="40px"> Add Employe </li></a>
+            <a href="../tetchers/add_tetchers/add_tetcher.php"><li><img src="../../../icons/thh.png" alt="" width="40px" height="40px">Add Tetcher</li></a>
             <a href="../workers/add_workers/add_worker.php"><li><img src="../../../icons/wok1.png" alt="" width="40px" height="40px">Add Worker</li></a>
-            <a href="../expenses/expenses.php"><li><img src="../../../icons/wok1.png" alt="" width="40px" height="40px">Expenses</li></a>
-            <a href="../loans/loans.php"><li class="active"><img src="../../../icons/wok1.png" alt="" width="40px" height="40px">loans</li></a>
-            <a href="../mustahqat/add_mustahq.php"><li><img src="../../../icons/wok1.png" alt="" width="40px" height="40px">mustahq</li></a>
-            <a href="../salary/salary.php"><li><img src="../../../icons/wok1.png" alt="" width="40px" height="40px">salary</li></a>
+            <a href="../expenses/expenses.php"><li><img src="../../../icons/Expenses.png" alt="" width="40px" height="40px">Expenses</li></a>
+            <a href="../loans/loans.php"><li class="active"><img src="../../../icons/loans.png" alt="" width="40px" height="40px">loans</li></a>
+            <a href="../mustahqat/add_mustahq.php"><li><img src="../../../icons/mustahq.png" alt="" width="40px" height="40px">mustahq</li></a>
+            <a href="../salary/salary.php"><li><img src="../../../icons/salary2.png" alt="" width="40px" height="40px">salary</li></a>
 
         </ul>
         </div>
@@ -247,35 +247,32 @@ elseif($workerid){
     </div>
     <div class="form">
     <form action="" method="post">
-        <div class="roww">
-            <div class="form-group">
+        <div class="row">
+            <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">Name</label>
                 <input type="text" name="name" value="<?php if($employeid) {echo $inp_name;}
                 if($tetcherid){echo $inp_name;} if($workerid){echo $inp_name;} ?>" id="" class="form-control" redonly>
             </div>
-            <div class="form-group">
+            <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">Jop Type</label>
                 <input type="text" name="jop" id="" value="<?php if($employeid) {echo $inp_jop;}
                 if($tetcherid){echo "tetcher";} if($workerid){echo "worker";} ?>" class="form-control" redonly>
             </div>
-            <div class="form-group">
+            <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">Phone Number</label>
                 <input type="text" name="phonenumber" value="<?php if($employeid){echo $inp_phone;}
                 if($tetcherid){echo $inp_phone;}  if($workerid){echo $inp_phone;} ?>" class="form-control" id="" redonly>
             </div>
-        </div>
-        <div class="roww">
-            <div class="form-group">
+            <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">maximun Loan</label>
                 <input type="text" name="bigloans" id="" value="<?php if($employeid){echo $big_value_loans;}
                 if($tetcherid){echo $big_value_loans;}  if($workerid){echo $big_value_loans;} ?>" id="" class="form-control" redonly>
             </div>
-            <div class="form-group bssa">
+            <div class="form-group  col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">Loan Value</label>
                 <input type="text" name="valueofloans" class="form-control" placeholder=" Enter Loan Value">
             </div>
-        </div>
-            <div class="form-group">
+            <div class="form-group col-lg-12 col-md-12 col-xs-12">
                 <input type="submit" value="Send" name="submitt"  class="btn btn-primary">
             </div>
         <div>

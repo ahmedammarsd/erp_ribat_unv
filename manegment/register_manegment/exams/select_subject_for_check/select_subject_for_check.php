@@ -16,7 +16,7 @@
         </div>
         <ul>
         <a href="../../../../tetcher/subjects/subjects.php"><li><img src="../../../../icons/statc1.png" alt="" width="40px" height="40px">Subjects</li></a>
-        <a href="#"><li class="active"><img src="../../../../icons/statc1.png" alt="" width="40px" height="40px">مراقبة الامتحانات</li></a>
+        <a href="#"><li class="active"><img src="../../../../icons/statc1.png" alt="" width="40px" height="40px">Exam Control</li></a>
         
             
         </ul>
@@ -54,7 +54,7 @@ $date = date("Y-m-d");
             $study_year = $row2["study_year"];
             $semester = $row2["semester"];
             $type_exam = $row2["type_exam"];
-            if($type_exam == "normal"){$type =  "امتحان نهاية سمستر";} if($type_exam == "sub_exams"){$type = "امتحان ملحق";}
+            if($type_exam == "normal"){$type =  "Semester Final Exam";} if($type_exam == "sub_exams"){$type = "Supplement Exam";}
 
             echo "<table cellpadding='20' class='table table-success table-hover'>
             <tr>

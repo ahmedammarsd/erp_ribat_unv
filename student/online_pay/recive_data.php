@@ -17,14 +17,14 @@ $semester_reg_pay =$_SESSION["semester_reg_pay"];
     $date = date("Y-m-d");
     $time = date("h:m:s");
     if($bank == "none"){
-        echo "<script>alert('عذرا الرجاء تحديد البنك');
+        echo "<script>alert('Sorry Please Select The Bank');
         window.location.href='online_pay.php';</script>";
     }
     elseif($bank == "krt"){
        //عرض معلومات الحساب لاتمام ملية الدفع
        $display_info_account = mysqli_query($connection , "select * from khartoum_bank where account_number='$account_number' && ipan_code='$ipan'");
        if(mysqli_num_rows($display_info_account) == 0 ){
-        echo "<script>alert('عذرا خطا في معلومات الحساب');
+        echo "<script>alert('Sorry, Wrong Account Information');
         window.location.href='online_pay.php'</script>";
        }
        elseif(mysqli_num_rows($display_info_account) == 1){
@@ -35,7 +35,7 @@ $semester_reg_pay =$_SESSION["semester_reg_pay"];
            $balance_main = mysqli_fetch_array($display_balance_main_account)["total"];
            echo $balance_main;
            if($total_price > $clint_balance){
-             echo "<script>alert('عذرا الرجاء مراحعة حسابك');
+             echo "<script>alert('Sorry, Please Check Your Account');
                 window.location.href='online_pay.php';</script>";
            }
            else{
@@ -49,81 +49,81 @@ $semester_reg_pay =$_SESSION["semester_reg_pay"];
                      if($semester_reg_pay == 1){
                          $update_to_confirm_pay_semester = mysqli_query($connection , "update students set confirm_pay_s1='done' where unv_id='$unv_id'");
                          if($update_to_confirm_pay_semester){
-                            echo "<script>alert('تم التسجيل بنجاح');
+                            echo "<script>alert('Successfully Registered');
                             window.location.href='../profile_std/profile_std.php';</script>";
                          }
                          else{
-                            echo "<script>alert('عذرا يوجد خطا في عملية التسجيل')</script>";
+                            echo "<script>alert('Sorry, There Was An Error In The Registration Process')</script>";
                          }
                      }
                      elseif($semester_reg_pay == 2){
                         $update_to_confirm_pay_semester = mysqli_query($connection , "update students set confirm_pay_s2='done' where unv_id='$unv_id'");
                         if($update_to_confirm_pay_semester){
-                           echo "<script>alert('تم التسجيل بنجاح');
+                           echo "<script>alert('Successfully Registered');
                            window.location.href='../profile_std/profile_std.php';</script>";
                         }
                         else{
-                           echo "<script>alert('عذرا يوجد خطا في عملية التسجيل')</script>";
+                           echo "<script>alert('Sorry, There Was An Error In The Registration Process')</script>";
                         }
                     }
                     elseif($semester_reg_pay == 3){
                         $update_to_confirm_pay_semester = mysqli_query($connection , "update students set confirm_pay_s3='done' where unv_id='$unv_id'");
                         if($update_to_confirm_pay_semester){
-                           echo "<script>alert('تم التسجيل بنجاح');
+                           echo "<script>alert('Successfully Registered');
                            window.location.href='../profile_std/profile_std.php';</script>";
                         }
                         else{
-                           echo "<script>alert('عذرا يوجد خطا في عملية التسجيل')</script>";
+                           echo "<script>alert('Sorry, There Was An Error In The Registration Process')</script>";
                         }
                     }
                     elseif($semester_reg_pay == 4){
                         $update_to_confirm_pay_semester = mysqli_query($connection , "update students set confirm_pay_s4='done' where unv_id='$unv_id'");
                         if($update_to_confirm_pay_semester){
-                           echo "<script>alert('تم التسجيل بنجاح');
+                           echo "<script>alert('Successfully Registered');
                            window.location.href='../profile_std/profile_std.php';</script>";
                         }
                         else{
-                           echo "<script>alert('عذرا يوجد خطا في عملية التسجيل')</script>";
+                           echo "<script>alert('Sorry, There Was An Error In The Registration Process')</script>";
                         }
                     }
                     elseif($semester_reg_pay == 5){
                         $update_to_confirm_pay_semester = mysqli_query($connection , "update students set confirm_pay_s5='done' where unv_id='$unv_id'");
                         if($update_to_confirm_pay_semester){
-                           echo "<script>alert('تم التسجيل بنجاح');
+                           echo "<script>alert('Successfully Registered');
                            window.location.href='../profile_std/profile_std.php';</script>";
                         }
                         else{
-                           echo "<script>alert('عذرا يوجد خطا في عملية التسجيل')</script>";
+                           echo "<script>alert('Sorry, There Was An Error In The Registration Process')</script>";
                         }
                     }
                     elseif($semester_reg_pay == 6){
                         $update_to_confirm_pay_semester = mysqli_query($connection , "update students set confirm_pay_s6='done' where unv_id='$unv_id'");
                         if($update_to_confirm_pay_semester){
-                           echo "<script>alert('تم التسجيل بنجاح');
+                           echo "<script>alert('Successfully Registered');
                            window.location.href='../profile_std/profile_std.php';</script>";
                         }
                         else{
-                           echo "<script>alert('عذرا يوجد خطا في عملية التسجيل')</script>";
+                           echo "<script>alert('Sorry, There Was An Error In The Registration Process')</script>";
                         }
                     }
                     elseif($semester_reg_pay == 7){
                         $update_to_confirm_pay_semester = mysqli_query($connection , "update students set confirm_pay_s7='done' where unv_id='$unv_id'");
                         if($update_to_confirm_pay_semester){
-                           echo "<script>alert('تم التسجيل بنجاح');
+                           echo "<script>alert('Successfully Registered');
                            window.location.href='../profile_std/profile_std.php';</script>";
                         }
                         else{
-                           echo "<script>alert('عذرا يوجد خطا في عملية التسجيل')</script>";
+                           echo "<script>alert('Sorry, There Was An Error In The Registration Process')</script>";
                         }
                     }
                     elseif($semester_reg_pay == 8){
                         $update_to_confirm_pay_semester = mysqli_query($connection , "update students set confirm_pay_s8='done' where unv_id='$unv_id'");
                         if($update_to_confirm_pay_semester){
-                           echo "<script>alert('تم التسجيل بنجاح');
+                           echo "<script>alert('Successfully Registered');
                            window.location.href='../profile_std/profile_std.php';</script>";
                         }
                         else{
-                           echo "<script>alert('عذرا يوجد خطا في عملية التسجيل')</script>";
+                           echo "<script>alert('Sorry, There Was An Error In The Registration Process')</script>";
                         }
                     }
                     

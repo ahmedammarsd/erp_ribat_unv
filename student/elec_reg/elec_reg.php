@@ -106,19 +106,19 @@ if(isset($_POST["check_info_std"])){
          //window.location.href='../profile_std/profile_std.php';</script>";
      //}
      if($TGPA_S == 'none' || $TGPA_S=='0.00'){
-        echo "<script>alert('عذرا لم يتم فتح التسجيل بعد')</script>";
+        echo "<script>alert('Sorry, Registration Is Not Open Yet')</script>";
     }
     elseif($semester == 2 && $TGPA < 2.00){
-        echo "<script>alert('عذرا معدلك التراكمي اقل من 2.00')</script>";
+        echo "<script>alert('Sorry, Your GPA Is Less Than 2.00')</script>";
     }
     elseif($semester == 4 && $TGPA < 2.00){
-        echo "<script>alert('عذرا معدلك التراكمي اقل من 2.00')</script>";
+        echo "<script>alert('Sorry, Your GPA Is Less Than 2.00')</script>";
     }
     elseif($semester == 6 && $TGPA < 2.00){
-        echo "<script>alert('عذرا معدلك التراكمي اقل من 2.00')</script>";
+        echo "<script>alert('Sorry, Your GPA Is Less Than 2.00')</script>";
     }
     elseif($num_subject > 0){
-        echo "<script>alert('عذرا لديك امتحانات ملاحق لايمكنك التسجيل')</script>";
+        echo "<script>alert('Sorry, You Have Supplementary Exams, You Can't Register')</script>";
     }
     else{
         $_SESSION["status"] = $status;

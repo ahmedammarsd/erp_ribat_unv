@@ -1,6 +1,7 @@
 <?php
 include "../../connection/connection.php";
 session_start();
+$name_std = $row["name_std"];
 $unv_id = $_SESSION["unv_id"];
 /*
 تجربة لعمل مقارنة بين التوارخ
@@ -43,7 +44,7 @@ $batch = $row_std["batch"];
     <div class="header">
         <div class="nav">
             <div>
-            <h3><a href="../profile_std/profile_std.php"><img src="../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name ?></h3>
+            <h3><a href="../profile_std/profile_std.php"><img src="../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_std ?></h3>
             </div>
             <div class="log">
             <a href="../login_std/login_std.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
@@ -76,7 +77,7 @@ $batch = $row_std["batch"];
         $semester = $_POST["semester"];
         $display_subject_and_degree = mysqli_query($connection , "select name_subject ,degree_exam,number_of_hour_subject , number_of_points from submit_std_and_result_subjects where unv_id='$unv_id' && semester='$semester' && check_tetcher='done'");
         if(mysqli_num_rows($display_subject_and_degree) == 0 ){
-            echo "عذرا لم يتم اعلان النتيجة حتى الان";
+            echo "Sorry The Result Has Not Been Announced Yet";
         }
         else{
             while($row = mysqli_fetch_array($display_subject_and_degree)){
@@ -126,14 +127,14 @@ $batch = $row_std["batch"];
                 $total_points = mysqli_fetch_array($display_sum_points)["points"];
                // echo $hours ."<br>";
                 $SGPA =  $total_points/$hours;
-                echo " المعدل الفصلي :". round($SGPA,2) . "<br>";
+                echo " Semester Average :". round($SGPA,2) . "<br>";
             
                // لحدي هنا يتم عرض النتيجة على حسب السمستر والمعدل الفصلي
         //------------------------------------------------------------------------------------------------------------------------------------ 
           //---------------------------------------------------------------------------------------------------------------------------------      
           $display_if_have_degree_less_50 = mysqli_query($connection , "select degree_exam from submit_std_and_result_subjects where unv_id='$unv_id' && semester='$semester' && degree_exam < 50");
           if(mysqli_num_rows($display_if_have_degree_less_50) > 0 ){
-           echo "ملحق <br>";
+           echo "Supplement <br>";
            // في حالة لديه ملحق
            $display_subject_and_degree = mysqli_query($connection , "select name_subject ,degree_exam2,number_of_hour_subject , number_of_points_2 from submit_std_and_result_subjects where unv_id='$unv_id' && semester='$semester' && degree_exam < 50 && check_tetcher2='done'");
            while($row2 = mysqli_fetch_array($display_subject_and_degree)){
@@ -486,8 +487,8 @@ $batch = $row_std["batch"];
        }
    }
    */
-   echo "الفصلي ". $display_GPA_S . "<br>";
-   echo "التراكمي ". $display_TGPA . "<br>";
+   echo "Semester ". $display_GPA_S . "<br>";
+   echo "GPA ". $display_TGPA . "<br>";
         
         }
         }

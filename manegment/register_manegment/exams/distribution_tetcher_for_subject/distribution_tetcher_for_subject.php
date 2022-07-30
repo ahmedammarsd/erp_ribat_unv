@@ -18,57 +18,57 @@ if(isset($_POST["add_info_exams"])){
     $hours = date("h:m:s");
 
     if($name_subject2 == "none"){
-        echo "<script>alert('عذرا الرجاء تحديد المادة')</script>";
+        echo "<script>alert('Sorry, Please Select The Subject ')</script>";
     }
     elseif($name_tetcher == "none"){
-        echo "<script>alert('عذرا الرجاء تحديد الاستاذ')</script>";
+        echo "<script>alert('Sorry, Please Select A Teacher')</script>";
     }
     elseif($type_certificate == "none"){
-        echo "<script>alert('عذرا الرجاء تحديد الشهادة')</script>";
+        echo "<script>alert('Sorry, please Select The Certificate')</script>";
     }
     elseif($department == "none"){
-        echo "<script>alert('عذرا الرجاء تحديد القسم')</script>";
+        echo "<script>alert('Sorry, Please Select The Department')</script>";
     }
     elseif($batch == "none"){
-        echo "<script>alert('عذرا الرجاء تحديد الدفعة')</script>";
+        echo "<script>alert('Sorry, Please Select The Batch')</script>";
     }
     elseif($study_year == "none"){
-        echo "<script>alert('عذرا الرجاء تحديد السنة الدراسية')</script>";
+        echo "<script>alert('Sorry, Please Select The Study Year')</script>";
     }
     elseif($semester == "none"){
-        echo "<script>alert('عذرا الرجاء تحديد السمستر')</script>";
+        echo "<script>alert('Sorry, please select a Semester')</script>";
     }
     elseif($type_exams == "none"){
-        echo "<script>alert('عذرا الرجاء تحديد السمستر')</script>";
+        echo "<script>alert('Sorry, please select a Semester')</script>";
     }
-    elseif($study_year == "الاولى" && ($semester == 3 || $semester == 4 || $semester == 5 || $semester == 6 || $semester == 7 || $semester == 8)){
+    elseif($study_year == "First" && ($semester == 3 || $semester == 4 || $semester == 5 || $semester == 6 || $semester == 7 || $semester == 8)){
        // if($semester == 3 || $semester == 4 || $semester == 5 || $semester == 6 || $semester == 7 || $semester == 8){
-        echo "<script>alert('عذرا السنة الاولى تقبل السمستر الاول والثاني فقط')</script>";
+        echo "<script>alert('Sorry, The First Year Only Accepts The First nd Second Semester')</script>";
        // }
     }
-    elseif($study_year == "الثانية" && ($semester == 1 || $semester == 2 || $semester == 5 || $semester == 6 || $semester == 7 || $semester == 8)){
+    elseif($study_year == "Second" && ($semester == 1 || $semester == 2 || $semester == 5 || $semester == 6 || $semester == 7 || $semester == 8)){
        // if($semester == 1 || $semester == 2 || $semester == 5 || $semester == 6 || $semester == 7 || $semester == 8){
-        echo "<script>alert('عذرا السنة الثانية تقبل السمستر الثالث والرابع فقط')</script>";
+        echo "<script>alert('Sorry, The Second Year Only Accepts The Third And Fourth Semester')</script>";
        // }
     }
-    elseif($study_year == "الثالثة"  && ($semester == 1 || $semester == 2 || $semester == 3 || $semester == 4 || $semester == 7 || $semester == 8)){
+    elseif($study_year == "Third"  && ($semester == 1 || $semester == 2 || $semester == 3 || $semester == 4 || $semester == 7 || $semester == 8)){
         //if($semester == 1 || $semester == 2 || $semester == 3 || $semester == 4 || $semester == 7 || $semester == 8){
-        echo "<script>alert('عذرا السنة الثالثة تقبل السمستر الخامس والسادس فقط')</script>";
+        echo "<script>alert('Sorry, The Third Year Only Accepts The Fifth Snd Sixth Semester')</script>";
         //}
     }
-    elseif($study_year == "الرابعة" && ($semester == 1 || $semester == 2 || $semester == 3 || $semester == 4 || $semester == 5 || $semester == 6)){
+    elseif($study_year == "Fourth" && ($semester == 1 || $semester == 2 || $semester == 3 || $semester == 4 || $semester == 5 || $semester == 6)){
       //  if($semester == 1 || $semester == 2 || $semester == 3 || $semester == 4 || $semester == 5 || $semester == 6){
-        echo "<script>alert('عذرا السنة الرابعة تقبل السمستر السابع والثامن فقط')</script>";
+        echo "<script>alert('Sorry, The Fourth Year Only Accepts The Seventh And Eighth Semester')</script>";
        // }
     }
     else{
        $insert_data = mysqli_query($connection , "insert into distribution_tetcher_exams (name_subject , name_tetcher , type_certificate ,department, batch ,study_year, semester,type_exam, date_of_exam , username, year, date, hours)
                value ('$name_subject2','$name_tetcher','$type_certificate','$department','$batch','$study_year','$semester','$type_exams','$date_of_exam','$username','$year','$date','$hours')");
        if($insert_data){
-           echo "<script>alert('تم التحديد بنجاح')</script>";
+           echo "<script>alert('Successfully Selected')</script>";
        }      
        else{
-          echo "<script>alert('عذرا حدث خطا في التحديد')</script>";
+          echo "<script>alert('Sorry, There Was An Error In The Selection')</script>";
        }  
     }
     
@@ -83,7 +83,7 @@ if(isset($_POST["add_info_exams"])){
     <link rel="stylesheet" href="../../../../css/all.min.css">
     <link rel="stylesheet" href="../../../../bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../../../../css/manegment/Register/distribution_tetcher_for_subject.css?v=<?php echo time();?>">
-    <title>توزيع المراقبين على الامتحانات</title>
+    <title>distribution_tetcher_for_subject</title>
 </head>
 <body>
 <div class="side-menu">
