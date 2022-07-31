@@ -1,8 +1,8 @@
 <?php
 include "../../connection/connection.php";
 session_start();
-$name_std = $row["name_std"];
 $unv_id = $_SESSION["unv_id"];
+$name_std = $_SESSION["name_std"];
 /*
 تجربة لعمل مقارنة بين التوارخ
 $date1 = date("Y-m-d");
@@ -71,6 +71,7 @@ $batch = $row_std["batch"];
             <div class="form-group col-lg-4 col-md-6 col-xs-12 my-5">
                 <input type="submit" value="Search" name="result" class="btn btn-primary">
             </div>
+  </div>
     </form>
     <?php
     if(isset($_POST["result"])){
@@ -80,6 +81,7 @@ $batch = $row_std["batch"];
             echo "Sorry The Result Has Not Been Announced Yet";
         }
         else{
+            echo "<table class='table table-primary'>";
             while($row = mysqli_fetch_array($display_subject_and_degree)){
                 $name_subject = $row["name_subject"];
                 $degree_exam = $row["degree_exam"];
@@ -111,14 +113,13 @@ $batch = $row_std["batch"];
                 }
                // $number_points =$number_of_hour_subject* $points;
                 echo "
-                <table cellpadding='20'>
                 <tr>
                 <td>$name_subject</td>
                 <td><span style='color:blue;'>$result</span></td>
                 </tr>
-                </table>
                 ";
           }
+          echo "</table>";
           //عرض مجموع ساعات المواد
           $display_sum_hours = mysqli_query($connection , "select sum(number_of_hour_subject) AS hours from distribution_subject where batch='$batch' && type_certifcate_unv='$type_certifcate_unv' && department='$department' && semester='$semester'");
           //عرض مجموع نقاط الطالب
@@ -137,6 +138,7 @@ $batch = $row_std["batch"];
            echo "Supplement <br>";
            // في حالة لديه ملحق
            $display_subject_and_degree = mysqli_query($connection , "select name_subject ,degree_exam2,number_of_hour_subject , number_of_points_2 from submit_std_and_result_subjects where unv_id='$unv_id' && semester='$semester' && degree_exam < 50 && check_tetcher2='done'");
+           echo " <table class='table table-primary'>";
            while($row2 = mysqli_fetch_array($display_subject_and_degree)){
             $name_subject = $row2["name_subject"];
             $degree_exam = $row2["degree_exam2"];
@@ -168,14 +170,13 @@ $batch = $row_std["batch"];
             }
            // $number_points =$number_of_hour_subject* $points;
             echo "
-            <table cellpadding='20'>
             <tr>
             <td>$name_subject</td>
             <td><span style='color:blue;'>$result</span></td>
             </tr>
-            </table>
             ";
         }
+        echo "</table>";
         //اضافة عدد الساعات والنقاط الى المعدلات
            //عرض مجموع ساعات المواد
            $display_sum_hours_sub = mysqli_query($connection , "select sum(number_of_hour_subject) AS hours from distribution_subject where batch='$batch' && type_certifcate_unv='$type_certifcate_unv' && department='$department' && semester='$semester'");
@@ -283,7 +284,6 @@ $batch = $row_std["batch"];
 
                 $display_GPA_S = round($row["GPA_S2"],2);
                 $display_TGPA = round($TGPA,2);
-    
             }
         }
             //------------------------------------
@@ -489,12 +489,10 @@ $batch = $row_std["batch"];
    */
    echo "Semester ". $display_GPA_S . "<br>";
    echo "GPA ". $display_TGPA . "<br>";
-        
         }
         }
-       
-
-    
     ?>
+</div>
+</div>
 </body>
 </html>

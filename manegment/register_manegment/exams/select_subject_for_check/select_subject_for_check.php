@@ -1,3 +1,11 @@
+<?php
+include "../../../../connection/connection.php";
+
+session_start();
+ $name = $_SESSION["name_of_tetcher"];
+
+$date = date("Y-m-d");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +33,7 @@
     <div class="header">
         <div class="nav">
         <div>
-        <h3><a href="../../../../tetcher/profile_tetcher/profile_tetcher.php"><img src="../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name ?></h3>
+        <h3><a href="../../../../tetcher/profile_tetcher/profile_tetcher.php"><img src="../../../../icons/account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name ?></h3>
         </div>
         <div class="log">
         <a href="../../../../tetcher/login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
@@ -34,12 +42,6 @@
 </div>
 <div class="form">
 <?php
-include "../../../../connection/connection.php";
-
-session_start();
- $name = $_SESSION["name_of_tetcher"];
-
-$date = date("Y-m-d");
 
     $display_subjects = mysqli_query($connection , "select name_subject, type_certificate , department ,batch ,study_year ,semester , type_exam from distribution_tetcher_exams where name_tetcher='$name' && date_of_exam='$date'");
     if(mysqli_num_rows($display_subjects) == 0){

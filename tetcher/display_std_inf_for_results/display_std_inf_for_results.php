@@ -30,7 +30,7 @@ $semester = $_GET["semester"];
         </div>
         <ul>
         <a href="../subjects/subjects.php"><li class="active"><img src="../../icons/statc1.png" alt="" width="40px" height="40px">Subjects</li></a>
-        <a href="../../manegment/register_manegment/exams/select_subject_for_check/select_subject_for_check.php"><li><img src="../../icons/statc1.png" alt="" width="40px" height="40px">Exam control</li></a>
+        <a href="../../manegment/register_manegment/exams/select_subject_for_check/select_subject_for_check.php"><li><img src="../../icons/statc1.png" alt="" width="40px" height="40px">Exam Control</li></a>
         </ul>
 </div>
 <div class="container">
