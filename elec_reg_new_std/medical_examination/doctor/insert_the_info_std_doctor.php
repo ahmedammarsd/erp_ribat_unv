@@ -1,23 +1,20 @@
 <?php
 include "../../../connection/connection.php";
+session_start();
 $id_std = $_GET["std_id"];
 $name_user = $_SESSION["full_name_doctor"] ;
 $specialization = $_SESSION["specialization_doctor"];
-
-if($specialization !== "GP"){
-     echo "<script>alert('Sorry, You don\'t have permissions');
-window.location.href='../statics/statics.php'</script>";
- }
-
 $dispaly_name_and_college_std = mysqli_query($connection , "select form_number ,name_std , college from new_std_form_info where id= '$id_std'");
 $row = mysqli_fetch_array($dispaly_name_and_college_std);
 $form_number = $row["form_number"];
 $name_std = $row["name_std"];
 $college = $row["college"];
 
-
-
-if(isset($_POST["submit"])){
+if($specialization != "GP"){
+     echo "<script>alert('Sorry, You don\'t have permissions');
+window.location.href='../statics/statics.php'</script>";
+ }
+if(isset($_POST["med_doctor"])){
     $name_std1 = $_POST["name_std"];
     $college1 = $_POST["college"];
     $form_number1 = $_POST["form_number"];
@@ -30,19 +27,22 @@ if(isset($_POST["submit"])){
     $hours = date("h:m:s");
     $year = date("y");
     
-    $insert_info_med = mysqli_query($connection , "insert into med_doctor (form_number,name, college, answer_q1 , answer_q2 , answer_q3, answer_q4,result_bloode , date , hours , year) value ('$form_number1','$name_std1','$college1','$answer_q1','$answer_q2', '$answer_q3' , '$answer_q4', '$bloode' ,'$date','$hours','$year')");
+    $insert_info_med = mysqli_query($connection , "insert into med_doctor (form_number , name , college , answer_q1 , answer_q2 , answer_q3, answer_q4, result_bloode , date , hours , year) 
+    value ('$form_number1','$name_std1','$college1','$answer_q1','$answer_q2', '$answer_q3' , '$answer_q4', '$bloode' ,'$date' , '$hours' , '$year' )");
     if($insert_info_med){
-        $update_med_optics_submit = mysqli_query($connection , "update new_std_form_info set doctor='done' where id='$id_std' ");
-        if($update_med_optics_submit){
+        $update_med_doctor_submit = mysqli_query($connection , "update new_std_form_info set doctor='done' where id='$id_std' ");
+        if($update_med_doctor_submit){
             echo "<script>alert('تمت الكشف  بنجاح');
                 window.location.href='display_std_for_doctor_exm.php';</script>";
            // header("location: display_std_for_doctor_exm.php");
         }
+        else{
+            echo "<script>alert('noooooooooooooooooooooo')</script>";
+            echo "fdsjfhd";
+        }
     }
 }
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,26 +95,26 @@ if(isset($_POST["submit"])){
     </div>        
     <div class="form-group col-lg-4 col-md-6 col-xs-12">
         <label for=""class="lead"> Did You Do Any Surgery Before? </label>
-        <textarea name="answer_q1" id=""  class="form-control"></textarea>
+        <textarea name="answer_q1" id=""  class="form-control" required></textarea>
     </div>
     <div class="form-group col-lg-4 col-md-6 col-xs-12">
         <label for=""class="lead">Do You Have a chronic Disease</label>
-        <textarea name="answer_q2" id=""  class="form-control bssa"></textarea>
+        <textarea name="answer_q2" id=""  class="form-control bssa" required></textarea>
     </div>
     <div class="form-group col-lg-4 col-md-6 col-xs-12">
         <label for=""class="lead"> Do You Suffer Form Injury In You Body</label>
-        <textarea name="answer_q3" id=""  class="form-control"></textarea>
+        <textarea name="answer_q3" id=""  class="form-control" required></textarea>
     </div>
     <div class="form-group col-lg-4 col-md-6 col-xs-12">
         <label for=""class="lead">Do You Have Any Genetic Disease In The Family</label>
-        <textarea name="answer_q4" id=""  class="form-control"></textarea>
+        <textarea name="answer_q4" id=""  class="form-control" required></textarea>
     </div>
     <div class="form-group col-lg-4 col-md-6 col-xs-12">
         <label for=""class="lead bssa">Result Of Blood testing</label>
-        <input type="text" name="bloode" id="" class="form-control">
+        <input type="text" name="bloode" id="" class="form-control" required>
     </div>
     <div class="form-group">
-        <input type="submit" value="Done" name="submit" class="btn btn-primary">
+        <input type="submit" name="med_doctor" value="Done" class="btn btn-primary">
     </div>
 </div>
     </form>

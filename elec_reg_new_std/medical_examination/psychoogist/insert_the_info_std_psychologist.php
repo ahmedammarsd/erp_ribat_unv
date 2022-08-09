@@ -94,7 +94,7 @@ if(isset($_POST["submit"])){
     </div>  
     <div class="form-group col-lg-4 col-md-6 col-xs-12">
         <label for=""class="lead ">Your rank in Family </label>      
-        <input type="number"name="answer_q1" id="" class="form-control bssa">
+        <input type="number"name="answer_q1" id="" class="form-control">
     </div>
     <div class="form-group col-lg-4 col-md-6 col-xs-12">
         <label for=""class="lead">Dose Your Parents Are Separate</label>
