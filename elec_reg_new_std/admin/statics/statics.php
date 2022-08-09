@@ -1,21 +1,23 @@
 <?php
 include "../../../connection/connection.php";
 session_start();
-//checl username for permission
+error_reporting(0);
+//check username for permission
 $username_permission = $_SESSION["user_name_for_permsisson"];
 $display_data_for_login_admin = mysqli_query($connection ,"select * from scientific_affairs_admins where username='$username_permission'");
 if(mysqli_num_rows($display_data_for_login_admin) == 0){
     echo "<script>alert('Sorry, You don\'t have permissions');
        window.location.href='../../scintific_affairs/statics/statics.php';</script>";
        }
+  //-------------------------------------------------------     
 $username_doctor = $_SESSION["user_name_for_permsisson_doctor"]; 
-if($username_doctor !== ""){
+if($username_doctor != ""){
     echo "<script>alert('Sorry, You don\'t have permissions');
     window.location.href='../../medical_examination/statics/statics.php';</script>";
 }     
 //------
 $user_name =$_SESSION["user_admin_scientific_affairs"]; 
-$display_info_user = mysqli_query($connection , "select full_name from scientific_affairs_admins where username='$user_name'");
+$display_info_user = mysqli_query($connection , "select * from scientific_affairs_admins where username='$user_name'");
 $name_user = mysqli_fetch_array($display_info_user)["full_name"];
 $_SESSION["full_name_scientific_affairs"] = $name_user;
 
