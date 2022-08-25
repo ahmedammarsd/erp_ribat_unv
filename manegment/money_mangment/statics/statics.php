@@ -32,7 +32,7 @@ $num_workers = mysqli_num_rows($display_num_user_worker);
         <h2><img src="../../../icons/da.png" alt="" width="50px" height="50px">Accountant</h2>
                 </div>
         <ul>
-            <a href="../statics/statics.php"><li class="active"><img src="../../../icons/statc1.png" alt="" width="40px" height="40px">Statics</li></a>
+            <a href="../statics/statics.php"><li class="active"><img src="../../../icons/statc1.png" alt="" width="40px" height="40px">Reports</li></a>
             <a href="../feeding_safe_unv/feeding_safe.php"><li><img src="../../../icons/safe_in.png" alt="" width="40px" height="40px"> Feeding Safe </li></a>
             <a href="../submit_expenses/submit_expenses.php"><li><img src="../../../icons/Expenses.png" alt="" width="40px" height="40px">Expenses</li></a>
             <a href="../submit_loans/submit_loans.php"><li><img src="../../../icons/loans1.png" alt="" width="40px" height="40px">Loans</li></a>
@@ -68,7 +68,7 @@ $num_workers = mysqli_num_rows($display_num_user_worker);
                     </div>
                     <div class="card col-lg-4 col-md-6 col-xs-12">
                         <div class="box"><br>
-                            <h3>Query Dialy Reports</h3>
+                            <center><h3>Query Dialy Reports</h3></center>
                         </div>
                         <div class="icon-case">
                             <img src="../../../icons/loans2.png" alt="" srcset=""  width="70px" height="70px">
@@ -89,9 +89,8 @@ $num_workers = mysqli_num_rows($display_num_user_worker);
                         </div>
                     </div>
                 </div></div>
-<div class="cards bssa">
-
-                    <div class="card col-lg-4 col-md-6 col-xs-12">
+                    <div class="cards bssa ">
+                    <div class="card bssa2 col-lg-4 col-md-6 col-xs-12 bssa2">
                         <div class="box"><br>
                             <h3>Salary</h3>
                         </div>

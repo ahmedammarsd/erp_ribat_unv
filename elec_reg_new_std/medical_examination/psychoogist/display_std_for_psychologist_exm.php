@@ -39,10 +39,10 @@ $specialization = $_SESSION["specialization_doctor"];
     <div class="header">
         <div class="nav">
         <div>
-        <h3><a href="../../account/account.php"><img src="../../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_user ?></h3>
+        <h3><a href="../account/account.php"><img src="../../../icons/account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_user ?></h3>
         </div>
-        <div class="log">
-        <a href="../../medical_examination/login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+        <div>
+        <a href="../login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
         </div>
         </div>
     </div>
@@ -89,17 +89,17 @@ if(isset($_POST["ser"])){
     $type_certificate_unv = $_POST["type_certificate_unv"];
     if($college == "none"){
         echo "<script>alert('Sorry, please select college');
-        window.location.href='display_std_for_doctor_exm.php';</script>";
+        window.location.href='display_std_for_psychologist_exm.php';</script>";
        }
        elseif($type_certificate_unv == "none"){
         echo "<script>alert('Sorry, please select type certificate');
-        window.location.href='display_std_for_doctor_exm.php';</script>";
+        window.location.href='display_std_for_psychologist_exm.php';</script>";
        }
     else{   
     $display_data = mysqli_query($connection , "select id,form_number,name_std,college,type_certificate_unv,department from new_std_form_info where review ='good' && college='$college' && type_certificate_unv = '$type_certificate_unv'  && doctor= 'none' && year='$year' ");
     if(mysqli_num_rows($display_data) == 0){
         echo "<script>alert('Sorry, no student');
-        window.location.href='display_std_for_doctor_exm.php';</script>";
+        window.location.href='display_std_for_psychologist_exm.php';</script>";
     }
     else{
         // لو الالمتغير الفوق دا صحيح سوف يتم عرض البيانات

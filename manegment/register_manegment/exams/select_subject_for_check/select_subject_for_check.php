@@ -24,7 +24,7 @@ $date = date("Y-m-d");
         </div>
         <ul>
         <a href="../../../../tetcher/subjects/subjects.php"><li><img src="../../../../icons/statc1.png" alt="" width="40px" height="40px">Subjects</li></a>
-        <a href="#"><li class="active"><img src="../../../../icons/statc1.png" alt="" width="40px" height="40px">Exam Control</li></a>
+        <a href="#"><li class="active"><img src="../../../../icons/statc1.png" alt="" width="40px" height="40px">Exams Control</li></a>
         
             
         </ul>

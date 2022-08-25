@@ -69,7 +69,7 @@ $num_doctor = mysqli_num_rows($display_num_doctor);
                 <div class="cards">
                 <div class="card">
                         <div class="box">
-                           <h3><?php echo $num_admins; ?></h3>
+                           <h3 class="bssa"><?php echo $num_admins; ?></h3>
                             <h3>Admins</h3>
                         </div>
                         <div class="icon-case">
@@ -81,7 +81,7 @@ $num_doctor = mysqli_num_rows($display_num_doctor);
                     </div>
                     <div class="card">
                         <div class="box">
-                            <h3><?php echo $num_emp; ?></h3>
+                            <h3 class="bssa"><?php echo $num_emp; ?></h3>
                             <h3>Employes</h3>
                         </div>
                         <div class="icon-case">
@@ -93,7 +93,7 @@ $num_doctor = mysqli_num_rows($display_num_doctor);
                     </div>
                     <div class="card">
                         <div class="box">
-                        <h3><?php echo $num_doctor; ?></h3>
+                        <h3 class="bssa"><?php echo $num_doctor; ?></h3>
                             <h3>Doctors</h3>
                         </div>
                         <div class="icon-case">

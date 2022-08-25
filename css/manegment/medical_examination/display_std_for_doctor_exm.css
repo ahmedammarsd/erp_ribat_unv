@@ -139,13 +139,6 @@ h2 {
     color: #0e6a93;
 }
 
-.log {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #0e6a93;
-}
 
 .container .form {
     margin-top: 95px;

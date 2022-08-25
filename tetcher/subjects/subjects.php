@@ -25,7 +25,7 @@ $name_teacher =  $_SESSION["name_of_tetcher"];
         </div>
         <ul>
             <a href="#"><li class="active"><img src="../../icons/statc1.png" alt="" width="40px" height="40px">Subjects</li></a>
-            <a href="../../manegment/register_manegment/exams/select_subject_for_check/select_subject_for_check.php"><li><img src="../../icons/statc1.png" alt="" width="40px" height="40px">Exam Control</li></a>
+            <a href="../../manegment/register_manegment/exams/select_subject_for_check/select_subject_for_check.php"><li><img src="../../icons/statc1.png" alt="" width="40px" height="40px">Exams Control</li></a>
 
         </ul>
 </div>
@@ -44,7 +44,7 @@ $name_teacher =  $_SESSION["name_of_tetcher"];
     <?php
     $display_subjects = mysqli_query($connection , "select name_subject, type_certifcate_unv , department ,batch ,study_year ,semester from distribution_subject where name_tetcher='$name_teacher' && complete_and_end_subject='none'");
     if(mysqli_num_rows($display_subjects) == 0){
-        echo "لا توجد مواد";
+        echo "<label class='lead'>No Subject</label>";
     }
     else{
         while($row2 = mysqli_fetch_array($display_subjects)){

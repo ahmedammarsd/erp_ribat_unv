@@ -23,7 +23,7 @@ $display_username = mysqli_query($connection , "select full_name from employes")
         <h2><img src="../../../../icons/da.png" alt="" width="50px" height="50px">Accountant</h2>
                 </div>
         <ul>
-            <a href="../../statics/statics.php"><li  class="active"><img src="../../../../icons/statc1.png" alt="" width="40px" height="40px">Statics</li></a>
+            <a href="../../statics/statics.php"><li  class="active"><img src="../../../../icons/statc1.png" alt="" width="40px" height="40px">Reports</li></a>
             <a href="../../feeding_safe_unv/feeding_safe.php"><li><img src="../../../../icons/safe_in.png" alt="" width="40px" height="40px"> Feeding Safe </li></a>
             <a href="../../submit_expenses/submit_expenses.php"><li><img src="../../../../icons/Expenses.png" alt="" width="40px" height="40px">Expenses</li></a>
             <a href="../../submit_loans/submit_loans.php"><li><img src="../../../../icons/loans1.png" alt="" width="40px" height="40px">Loans</li></a>

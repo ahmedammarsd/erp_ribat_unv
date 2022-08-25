@@ -1,22 +1,27 @@
-*{
+* {
     box-sizing: border-box;
 }
-body{
+
+body {
     min-height: 100vh;
-   font-family: Tahoma, Geneva, Verdana, sans-serif
+    font-family: Tahoma, Geneva, Verdana, sans-serif
 }
-a{
+
+a {
     text-decoration: none;
     color: #f5f6fa;
 }
-li{
+
+li {
     list-style: none;
 }
+
 h2 {
     color: #f5f6fa;
     font-size: 20px;
 }
-.side-menu{
+
+.side-menu {
     position: fixed;
     background: #0e6a93;
     /*background: rgba(0,0,0,0.4)*/
@@ -25,7 +30,8 @@ h2 {
     display: flex;
     flex-direction: column;
 }
-.side-menu .brand-name{
+
+.side-menu .brand-name {
     height: 10vh;
     display: flex;
     align-items: right;
@@ -33,49 +39,57 @@ h2 {
     padding-top: 5px;
     margin-bottom: 25px;
     cursor: pointer;
-    border-bottom:5px solid #f5f6fa;
+    border-bottom: 5px solid #f5f6fa;
     box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.8);
 }
+
 .side-menu li {
     font-size: 19px;
     padding: 10px;
     margin-left: -25px;
     margin-bottom: 13px;
     display: flex;
-    align-items:center;
-    border-left:5px solid #f5f6fa;
-   /* box-shadow: 0 4px 8px 0 #0e1c36;*/
+    align-items: center;
+    border-left: 5px solid #f5f6fa;
+    /* box-shadow: 0 4px 8px 0 #0e1c36;*/
     cursor: pointer;
 }
-.side-menu li i{
-  color: white;
+
+.side-menu li i {
+    color: white;
 }
-.side-menu li img{
+
+.side-menu li img {
     margin-right: 16px;
 }
-.side-menu  li:hover{
-    background: #f5f6fa ;
-    color: #0e6a93;
-    border-left:5px solid #0e6a93;
-    outline:3px solid #afcbff;
-}
-.side-menu .active{
+
+.side-menu li:hover {
     background: #f5f6fa;
     color: #0e6a93;
-    border-left:5px solid #0e6a93;
-    outline:3px solid #f5f6fa;
+    border-left: 5px solid #0e6a93;
+    outline: 3px solid #afcbff;
 }
-.side-menu img{
+
+.side-menu .active {
+    background: #f5f6fa;
+    color: #0e6a93;
+    border-left: 5px solid #0e6a93;
+    outline: 3px solid #f5f6fa;
+}
+
+.side-menu img {
     /*mix-blend-mode: multiply;*/
     margin-left: 10px;
-   /* border: 1px solid green;
+    /* border: 1px solid green;
     padding: 3px;
     border-radius: 50%;*/
 }
-.side-menu .brand-name h2{
+
+.side-menu .brand-name h2 {
     font-size: 20px;
 }
-.side-menu .brand-name h2 img{
+
+.side-menu .brand-name h2 img {
     mix-blend-mode: multiply;
     margin-right: 2px;
     margin-top: 1px;
@@ -83,14 +97,16 @@ h2 {
     margin-bottom: 5px;
     padding: 5px;
 }
-.container{
+
+.container {
     position: absolute;
     right: 0;
     width: 81vw;
     height: 100vh;
     background-color: #f5f6fa;
 }
-.container .header{
+
+.container .header {
     position: fixed;
     top: 0;
     right: 0;
@@ -102,46 +118,54 @@ h2 {
     justify-content: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-.container .header .nav{
+
+.container .header .nav {
     width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.container .header .nav h3{
+
+.container .header .nav h3 {
     color: #0e6a93;
     font-size: 20px;
     margin-top: 10px;
     cursor: pointer;
 }
-.container .header .nav h3 img{
+
+.container .header .nav h3 img {
     margin-bottom: 10px;
     cursor: pointer;
 }
-.fa-solid{
+
+.fa-solid {
     color: #0e6a93;
     font-size: 30px;
 }
-.log{
+
+.log {
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: #0e6a93;
 }
-.container .content{
+
+.container .content {
     position: relative;
     margin-top: -10px;
     min-height: 90vh;
 }
-.container .content .cards{
+
+.container .content .cards {
     padding: 20px 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
 }
-.container .content .cards .card{
+
+.container .content .cards .card {
     width: 300px;
     height: 250px;
     background-color: white;
@@ -151,17 +175,21 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-left:5px solid #0e6a93;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-left: 5px solid #0e6a93;
+    border-radius: 10px;
     color: #0e6a93;
 }
-.container .content .cards .card .box h1{
-   padding-left: 40px;
+
+.bssa {
+    padding-left: 40px;
 }
-.container .content .cards .card .icon-case img{
+
+.container .content .cards .card .icon-case img {
     mix-blend-mode: multiply;
 }
-.btn{
+
+.btn {
     width: 150px;
     background-color: #0e6a93;
 

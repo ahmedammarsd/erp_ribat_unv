@@ -11,7 +11,7 @@ $name_user = $_SESSION["full_name"];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../../css/all.min.css">
     <link rel="stylesheet" href="../../../../bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../../css/manegment/add_worker.css">
+    <link rel="stylesheet" href="../../../../css/manegment/mustahqat.css">
     <title>Document</title>
 </head>
 <body>
@@ -47,22 +47,22 @@ $name_user = $_SESSION["full_name"];
         <div class='roww'>
                 <div class="form-group">
                     <label for="" class="lead">Full Name</label>
-                        <input type="text" name="fullname" id="" placeholder="Enter Full Name" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                <label for="" class="lead"> Phone Number</label>
+                    <input type="text" name="fullname" id="" placeholder="Enter Full Name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="" class="lead"> Phone Number</label>
                     <input type="number" name="phone" id=""  placeholder="Enter Phone Number" class="form-control" required>
                 </div>
         </div>
         <div class='roww'>
-        <div class="form-group">
-            <label for="" class="lead">Address</label>
-                <input type="text" name="address" id=""  placeholder="Enter Address" class="form-control" required>
-            </div>
-            <div class="form-group">
-            <label for="" class="lead"> Salary</label>
-                <input type="number" name="salary" id=""  placeholder="Enter Salary" class="form-control" required>
-            </div>
+                <div class="form-group">
+                    <label for="" class="lead">Address</label>
+                    <input type="text" name="address" id=""  placeholder="Enter Address" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="" class="lead"> Salary</label>
+                    <input type="number" name="salary" id=""  placeholder="Enter Salary" class="form-control" required>
+                </div>
         </div>
             <div>
                 <input type="submit" value="Add" name="addworker" class='btn btn-primary'>

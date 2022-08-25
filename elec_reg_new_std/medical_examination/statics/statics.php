@@ -39,20 +39,19 @@ $num_display_number_of_students_completed_medical = mysqli_num_rows($display_num
             <a href="../psychoogist/display_std_for_psychologist_exm.php"><li><img src="../../../icons/op.png" alt="" width="40px" height="40px">Psychoogist</li></a>
             <a href="../report_med_exam_info_stds_done/report_med_exam_info_stds_done.php"><li><img src="../../../icons/stdifo1.png" alt="" width="40px" height="40px">Report</li></a>
             <a href="../../admin/statics/statics.php"><li><img src="../../../icons/admin.png" alt="" width="40px" height="40px">Admin</li></a>
-
         </ul>
         </div>
-    <div class="container">
-    <div class="header">
-        <div class="nav">
-        <div>
-        <h3><a href="../../account/account.php"><img src="../../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_user ?></h3>
+        <div class="container">
+        <div class="heder">
+            <div class="nav">
+                <div>
+                <h3><a href="../account/account.php"><img src="../../../icons/account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_user ?></h3>
+                </div>
+                <div>
+                <a href="../login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+                </div>
+            </div>
         </div>
-        <div class="log">
-        <a href="../../medical_examination/login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
-        </div>
-        </div>
-    </div>
 <div class="content">
                 <div class="cards">
                 <div class="card">

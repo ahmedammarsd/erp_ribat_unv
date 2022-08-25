@@ -13,7 +13,7 @@ $name_admin = $_SESSION["full_name_scientific_affairs"];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../../css/all.min.css">
     <link rel="stylesheet" href="../../../../bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../../css/manegment/edit_emp.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../../../../css/manegment/admin/edit_admin.css?v=<?php echo time(); ?>">
     <title>Edit Information Admin</title>
 </head>
 <body>
@@ -36,7 +36,7 @@ $name_admin = $_SESSION["full_name_scientific_affairs"];
             <div class="header">
                 <div class="nav">
                 <div>
-                <h3> <a href="../../account/account.php"><img src="../../../../icons/account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_user ?></h3>
+                <h3> <a href="../../account/account.php"><img src="../../../../icons/account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_admin ?></h3>
                 </div>
                 <div class="log">
                 <a href="../../../login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
@@ -44,7 +44,7 @@ $name_admin = $_SESSION["full_name_scientific_affairs"];
                 </div>
             </div>
     <div class="info-std">
-    <table class="table table-dark table-hover">
+    <table class="table table-striped table-hover">
         <tr>
             <th>ID</th>
             <th>FULL NAME</th>
@@ -83,8 +83,8 @@ $name_admin = $_SESSION["full_name_scientific_affairs"];
                    echo "<td>".$hours."</td>";
                   
                   
-                   echo "<td><a href='display_for_editt.php?updateid=".$id."'><button  class='btn btn-primary'>UPDATE</button></a>
-                             <a href='display_for_deletet.php?delid=".$id."'><button class='btn btn-danger'>DELETE</button></a></td>";
+                   echo "<td><a href='display_for_editt.php?updateid=".$id."'><button  class='btn btn-primary'><img src='../../../../icons/u2.png' width='17px' height='20px'></button></a>
+                             <a href='display_for_deletet.php?delid=".$id."'><button class='btn btn-danger'><img src='../../../../icons/d.png' width='17px' height='20px'></button></a></td>";
                    echo "<tr>";
                 }
             }

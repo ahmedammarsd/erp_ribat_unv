@@ -56,46 +56,46 @@ else{
 //echo $num_subject;
 
 if($confirm_pay_s1 == "none"){
-    $status = "التسجيل ودفع رسوم السمستر الاول";
+    $status = "Register And Pay The Fees For The first Semester";
     $semester_reg_pay =1;
 }
 elseif($confirm_pay_s1 == "done" && $confirm_pay_s2 == "none"){
-    $status = "التسجيل ودفع رسوم السمستر الثاني";
+    $status = "Register And Pay The Fees For The second Semester";
     $semester_reg_pay =2;
     $TGPA_S = $GPA_S1;
 }
 elseif($confirm_pay_s1 == "done" && $confirm_pay_s2 == "done" && $confirm_pay_s3 == "none" ){
-    $status = "التسجيل ودفع رسوم السمستر الثالث";
+    $status = "Register And Pay The Fees For The Third Semester";
     $semester_reg_pay =3;
     $TGPA_S = $GPA_S2;
 }
 elseif($confirm_pay_s1 == "done" && $confirm_pay_s2 == "done" && $confirm_pay_s3 == "done" && $confirm_pay_s4 == 'none' ){
-    $status = "التسجيل ودفع رسوم السمستر الرابع";
+    $status = "Register And Pay The Fees For The Fourth Semester";
     $$semester_reg_pay =4;
     $TGPA_S = $GPA_S3;
 }
 elseif($confirm_pay_s1 == "done" && $confirm_pay_s2 == "done" && $confirm_pay_s3 == "done" && $confirm_pay_s4 == 'done' && $confirm_pay_s5 == 'none' ){
-    $status = "التسجيل ودفع رسوم السمستر الخامس";
+    $status = "Register And Pay The Fees For The Fifth Semester";
     $semester_reg_pay =5;
     $TGPA_S = $GPA_S4;
 }
 elseif($confirm_pay_s1 == "done" && $confirm_pay_s2 == "done" && $confirm_pay_s3 == "done" && $confirm_pay_s4 == 'done' && $confirm_pay_s5 == 'done' && $confirm_pay_s6 == 'none' ){
-    $status = "التسجيل ودفع رسوم السمستر السادس";
+    $status = "Register And Pay The Fees For The Sixth Semester";
     $semester_reg_pay =6;
     $TGPA_S = $GPA_S5;
 }
 elseif($confirm_pay_s1 == "done" && $confirm_pay_s2 == "done" && $confirm_pay_s3 == "done" && $confirm_pay_s4 == 'done' && $confirm_pay_s5 == 'done' && $confirm_pay_s6 == 'done' && $confirm_pay_s7 == "none" ){
-    $status = "التسجيل ودفع رسوم السمستر السابع";
+    $status = "Register And Pay The Fees For The Seventh Semester";
     $semester_reg_pay =6;
     $TGPA_S = $GPA_S6;
 }
 elseif($confirm_pay_s1 == "done" && $confirm_pay_s2 == "done" && $confirm_pay_s3 == "done" && $confirm_pay_s4 == 'done' && $confirm_pay_s5 == 'done' && $confirm_pay_s6 == 'done' && $confirm_pay_s7 == "done" && $confirm_pay_s8 == "none" ){
-    $status = "التسجيل ودفع رسوم السمستر الثامن";
+    $status = "Register And Pay The Fees For The Eight Semester";
     $semester_reg_pay =8;
     $TGPA_S = $GPA_S7;
 }
 elseif($confirm_pay_s1 == "done" && $confirm_pay_s2 == "done" && $confirm_pay_s3 == "done" && $confirm_pay_s4 == 'done' && $confirm_pay_s5 == 'done' && $confirm_pay_s6 == 'done' && $confirm_pay_s7 == "done" && $confirm_pay_s8 == "done" ){
-    $status = "لقد اكملت دفع رسوم كل السمسترات";
+    $status = "You have Completed Paying All The Fees";
 }
 if(isset($_POST["check_info_std"])){
      //عرض البيانات في حالة اذا الطالب كان مسجل

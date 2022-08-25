@@ -106,8 +106,8 @@ h2 {
     background-color: #f5f6fa;
 }
 
-.container .header {
-    position: fixed;
+.container .heder {
+    position: static;
     top: 0;
     right: 0;
     width: 81vw;
@@ -119,26 +119,26 @@ h2 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.container .header .nav {
+.container .heder .nav {
     width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.container .header .nav h3 {
+.container .heder .nav h3 {
     color: #0e6a93;
     font-size: 20px;
     margin-top: 10px;
     cursor: pointer;
 }
 
-.container .header .nav h3 img {
+.container .heder .nav h3 img {
     margin-bottom: 10px;
     cursor: pointer;
 }
 
-.fa-solid {
+.container .heder .nav .fa-solid {
     color: #0e6a93;
     font-size: 30px;
 }
@@ -164,12 +164,13 @@ h2 {
     padding: 5px;
     padding-bottom: 10px;
     margin: 95px 10px;
-    margin-top: 100px;
+    margin-top: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-left: 5px solid #0e6a93;
+    border-radius: 10px;
     color: #0e6a93;
 }
 

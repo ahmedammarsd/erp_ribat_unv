@@ -55,7 +55,7 @@ $num_display_number_of_students_not_reviewed = mysqli_num_rows($display_number_o
                 <div class="card">
                         <div class="box">
                          <center>  <h3><?php echo $num_display_number_of_students_registered; ?></h3></center>
-                         <center>  <h3>Number of students registered</h3></center>
+                         <center>  <h3>Number Of Students Registered</h3></center>
                         </div>
                         <div class="icon-case">
                             <!-- <img src="../../../icons/admin1.png" alt="" srcset=""  width="70px" height="70px"> -->
@@ -64,7 +64,7 @@ $num_display_number_of_students_not_reviewed = mysqli_num_rows($display_number_o
                     <div class="card">
                         <div class="box">
                         <center><h3><?php echo $num_display_number_of_students_reviewed; ?></h3></center>
-                        <center><h3>Number of students reviewed and confirmed</h3></center>
+                        <center><h3>Number Of Students Reviewed And Confirmed</h3></center>
                         </div>
                         <div class="icon-case">
                             <!-- <img src="../../../icons/admin1.png" alt="" srcset=""  width="70px" height="70px"> -->
@@ -73,7 +73,7 @@ $num_display_number_of_students_not_reviewed = mysqli_num_rows($display_number_o
                     <div class="card">
                         <div class="box">
                         <center><h3><?php echo $num_display_number_of_students_not_reviewed; ?></h3></center>
-                        <center><h3>Number of students reviewed and not confirmed</h3></center>
+                        <center><h3>Number Of Students Reviewed And Not Confirmed</h3></center>
                         </div>
                         <div class="icon-case">
                             <!-- <img src="../../../icons/admin1.png" alt="" srcset=""  width="70px" height="70px"> -->

@@ -54,7 +54,7 @@ if(isset($_POST["change"])){
 <body>
 <div class="side-menu">
 <div class="brand-name">
-    <h2><img src="../../../icons/da.png" alt="" width="50px" height="50px">Accountant</h2>
+    <h2><img src="../../../icons/da.png" alt="" width="50px" height="50px">Register</h2>
             </div>
         <ul>
         <a href="../statics/statics.php"><li><img src="../../../icons/statc1.png" alt="" width="40px" height="40px">Statics</li></a>

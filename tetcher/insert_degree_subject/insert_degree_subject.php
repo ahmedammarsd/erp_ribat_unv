@@ -135,7 +135,8 @@ if($type_exam == "sub_exams"){
         <h2><img src="../../icons/da.png" alt="" width="50px" height="50px">Teacher</h2>
         </div>
         <ul>
-            <a href="../statics/statics.php"><li><img src="../../icons/statc1.png" alt="" width="40px" height="40px">Statics</li></a>
+        <a href="../subjects/subjects.php"><li class="active"><img src="../../icons/statc1.png" alt="" width="40px" height="40px">Subjects</li></a>
+        <a href="../../manegment/register_manegment/exams/select_subject_for_check/select_subject_for_check.php"><li><img src="../../icons/statc1.png" alt="" width="40px" height="40px">Exams Control</li></a>
         </ul>
 </div>
 <div class="container">

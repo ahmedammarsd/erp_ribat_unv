@@ -170,12 +170,13 @@ h2 {
     justify-content: space-between;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-left: 5px solid #0e6a93;
+    border-radius: 10px;
     color: #0e6a93;
 }
 
-.container .content .cards .card .box h1 {
+/* .container .content .cards .card .box h1 {
     padding-left: 40px;
-}
+} */
 
 .container .content .cards .card .icon-case img {
     mix-blend-mode: multiply;
