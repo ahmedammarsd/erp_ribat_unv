@@ -1,6 +1,7 @@
 <?php
 include "../../../connection/connection.php";
 session_start();
+// error_reporting(0);
 $user_name =$_SESSION["user_doctor"]; 
 $display_info_user = mysqli_query($connection , "select full_name,specialization from medical_exam_doctors where username='$user_name'");
 $row_info = mysqli_fetch_array($display_info_user);
@@ -8,7 +9,10 @@ $name_user = $row_info["full_name"];
 $specialization = $row_info["specialization"];
 $_SESSION["full_name_doctor"] = $name_user;
 $_SESSION["specialization_doctor"] = $specialization;
-
+$name_user_admin = $_SESSION["full_name_scientific_affairs"] ;
+if ($name_user_admin != ""){
+    $name_user = $_SESSION["full_name_scientific_affairs"];
+}
 $display_number_of_students = mysqli_query($connection , "select * from new_std_form_info");
 $num_display_number_of_students = mysqli_num_rows($display_number_of_students);
 

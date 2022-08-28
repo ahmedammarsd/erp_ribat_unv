@@ -54,8 +54,8 @@ $batch = $row_std["batch"];
 <div class="form">
 <form action="" method="post">
 <div class="row">
-         <div class="form-group col-lg-6 col-md-6 col-xs-12">
-         <label for=""class="lead">Semester</label>
+            <div class="form-group col-lg-6 col-md-6 col-xs-12">
+                <label for=""class="lead">Semester</label>
                 <select name="semester" id="" class="form-select">
                     <option value="none"> Select Semester </option>
                     <option value="1">S1</option>
@@ -71,8 +71,8 @@ $batch = $row_std["batch"];
             <div class="form-group col-lg-4 col-md-6 col-xs-12 my-5">
                 <input type="submit" value="Search" name="result" class="btn btn-primary">
             </div>
-  </div>
-    </form>
+</div>
+</form> 
     <?php
     if(isset($_POST["result"])){
         $semester = $_POST["semester"];

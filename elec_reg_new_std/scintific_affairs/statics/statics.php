@@ -1,10 +1,15 @@
 <?php
 include "../../../connection/connection.php";
 session_start();
+// error_reporting(0);
 $user_name =$_SESSION["user_admin_scientific_affairs"]; 
 $display_info_user = mysqli_query($connection , "select full_name from scientific_affairs_admins where username='$user_name'");
 $name_user = mysqli_fetch_array($display_info_user)["full_name"];
 $_SESSION["full_name_scientific_affairs"] = $name_user;
+$name_user_admin = $_SESSION["full_name_scientific_affairs"] ;
+if ($name_user_admin != ""){
+    $name_user = $_SESSION["full_name_scientific_affairs"];
+}
 
 $display_number_of_students_registered = mysqli_query($connection , "select * from new_std_form_info");
 $num_display_number_of_students_registered = mysqli_num_rows($display_number_of_students_registered);

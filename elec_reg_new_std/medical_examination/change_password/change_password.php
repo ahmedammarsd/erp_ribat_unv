@@ -7,9 +7,13 @@ $display_data = mysqli_query($connection ,"select * from medical_exam_doctors wh
 $row = mysqli_fetch_array($display_data);
 $name_user =$row["full_name"];
 
-
-
 $display_password = mysqli_query($connection , "select password from medical_exam_doctors where full_name='$full_name'");
+$full_name = $_SESSION["full_name_scientific_affairs"];
+$display_data = mysqli_query($connection ,"select * from scientific_affairs_admins where full_name='$full_name'");
+$row = mysqli_fetch_array($display_data);
+$name_user =$row["full_name"];
+
+$display_password = mysqli_query($connection , "select password from scientific_affairs_admins where full_name='$full_name'");
 $row = mysqli_fetch_array($display_password);
 $password = $row["password"];
 
@@ -37,6 +41,10 @@ if(isset($_POST["change"])){
     }
 }
 
+$name_user_admin = $_SESSION["full_name_scientific_affairs"] ;
+if ($name_user_admin != ""){
+    header("location: ../../admin/change_password/change_password.php");
+}
 ?>
 
 <!DOCTYPE html>
