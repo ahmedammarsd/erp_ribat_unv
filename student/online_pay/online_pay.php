@@ -1,5 +1,7 @@
 <?php
 session_start();
+$unv_id = $_SESSION["unv_id"];
+$name_std = $_SESSION["name_std"];
 $register_fee = $_SESSION["register_fee"] ;
 $year_fee=$_SESSION["year_fee"];
 $semester_reg_pay = $_SESSION["semester_reg_pay"];
@@ -33,7 +35,7 @@ $fee_semester = $year_fee/2;
     <div class="header">
         <div class="nav">
             <div>
-            <h3><a href="../profile_std/profile_std.php"><img src="../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name ?></h3>
+            <h3><a href="../profile_std/profile_std.php"><img src="../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_std ?></h3>
             </div>
             <div class="log">
             <a href="../login_std/login_std.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
@@ -41,7 +43,7 @@ $fee_semester = $year_fee/2;
         </div>
     </div>
 <div class="form">
-<form action="" method="post">
+<form action="recive_data.php" method="post">
 <div class="row">
          <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for=""class="lead">Select Bank</label>

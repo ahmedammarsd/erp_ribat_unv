@@ -9,7 +9,7 @@ $date1 = date("Y-m-d");
 $date2 = "2022-06-10    ";
 if($date1 <= $date2){
     echo "goood";
-}
+} 
 */
 //عرض بعض معلومات الطلبة واستخدام المتغيرات في لحساب عدد ساعات المواد
 $display_info_std = mysqli_query($connection , "select type_certifcate_unv , department, batch from students where unv_id='$unv_id'");
