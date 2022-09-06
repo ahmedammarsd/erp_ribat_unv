@@ -71,7 +71,7 @@ elseif($confirm_pay_s1 == "done" && $confirm_pay_s2 == "done" && $confirm_pay_s3
 }
 elseif($confirm_pay_s1 == "done" && $confirm_pay_s2 == "done" && $confirm_pay_s3 == "done" && $confirm_pay_s4 == 'none' ){
     $status = "Register And Pay The Fees For The Fourth Semester";
-    $$semester_reg_pay =4;
+    $semester_reg_pay =4;
     $TGPA_S = $GPA_S3;
 }
 elseif($confirm_pay_s1 == "done" && $confirm_pay_s2 == "done" && $confirm_pay_s3 == "done" && $confirm_pay_s4 == 'done' && $confirm_pay_s5 == 'none' ){
