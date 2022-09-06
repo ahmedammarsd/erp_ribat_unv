@@ -107,7 +107,7 @@ h2 {
 }
 
 .container .heder {
-    position: static;
+    position: fixed;
     top: 0;
     right: 0;
     width: 81vw;
@@ -117,6 +117,7 @@ h2 {
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    z-index: 50;
 }
 
 .container .heder .nav {

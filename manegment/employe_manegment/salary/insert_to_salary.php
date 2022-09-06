@@ -270,7 +270,7 @@ if($workerid){
             <a href="../expenses/expenses.php"><li><img src="../../../icons/Expenses.png" alt="" width="40px" height="40px">Expenses</li></a>
             <a href="../loans/loans.php"><li><img src="../../../icons/loans.png" alt="" width="40px" height="40px">loans</li></a>            
             <a href="../mustahqat/add_mustahq.php"><li><img src="../../../icons/mustahq.png" alt="" width="40px" height="40px">mustahq</li></a>
-            <a href="#"><li class="active"><img src="../../../icons/salary2.png" alt="" width="40px" height="40px">salary</li></a>
+            <a href="../salary/salary.php"><li class="active"><img src="../../../icons/salary2.png" alt="" width="40px" height="40px">salary</li></a>
 
       </ul>
 </div>
@@ -325,7 +325,7 @@ if($workerid){
             </div>
     
             <div class="form-group">
-                <input type="submit" value="Confirm" name="submit" class="btn btn-primary">
+                <input type="submit" value="Send" name="submit" class="btn btn-primary">
             </div>
     </form>
     </div>
