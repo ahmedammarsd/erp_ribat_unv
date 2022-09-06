@@ -82,7 +82,7 @@ if(isset($_POST["change"])){
         <div class="form-change">
     <form action="" method="post">
         <div  class="form-group">
-            <label for="" class="lead">Password Now</label>
+            <label for="" class="lead">Curent Password</label>
             <input type="password" name="old_password" id="" required class="form-control">
         </div>
         <div  class="form-group">
