@@ -8,6 +8,11 @@ $name_user = $_SESSION["full_name_doctor"] ;
    $phone_number = $row["phone_number"];
    $email = $row["email"];
    $address = $row["address"];
+   $name_user_admin = $_SESSION["full_name_scientific_affairs"];
+   if ($name_user_admin != ""){
+    header("location: ../../scintific_affairs/account/account.php");
+   }
+
  ?>
 <!DOCTYPE html>
 <html lang="en">
