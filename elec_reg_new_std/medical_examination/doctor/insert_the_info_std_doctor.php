@@ -32,7 +32,7 @@ if(isset($_POST["med_doctor"])){
     if($insert_info_med){
         $update_med_doctor_submit = mysqli_query($connection , "update new_std_form_info set doctor='done' where id='$id_std' ");
         if($update_med_doctor_submit){
-            echo "<script>alert('تمت الكشف  بنجاح');
+            echo "<script>alert('Detection Successfully');
                 window.location.href='display_std_for_doctor_exm.php';</script>";
            // header("location: display_std_for_doctor_exm.php");
         }
@@ -93,25 +93,25 @@ if(isset($_POST["med_doctor"])){
         <label for=""class="lead">College</label>
         <input type="text" name="college" value="<?php echo $college ?>" id="" class="form-control" readonly>
     </div>        
-    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+    <div class="form-group col-lg-4 col-md-6 col-xs-12 bssa">
         <label for=""class="lead"> Did You Do Any Surgery Before? </label>
         <textarea name="answer_q1" id=""  class="form-control" required></textarea>
     </div>
-    <div class="form-group col-lg-4 col-md-6 col-xs-12">
-        <label for=""class="lead">Do You Have a chronic Disease</label>
-        <textarea name="answer_q2" id=""  class="form-control bssa" required></textarea>
+    <div class="form-group col-lg-4 col-md-6 col-xs-12 bssa">
+        <label for=""class="lead">Do You Have a chronic Disease?</label>
+        <textarea name="answer_q2" id=""  class="form-control" required></textarea>
     </div>
     <div class="form-group col-lg-4 col-md-6 col-xs-12">
-        <label for=""class="lead"> Do You Suffer Form Injury In You Body</label>
+        <label for=""class="lead"> Do You Suffer Form Injury In You Body?</label>
         <textarea name="answer_q3" id=""  class="form-control" required></textarea>
     </div>
     <div class="form-group col-lg-4 col-md-6 col-xs-12">
-        <label for=""class="lead">Do You Have Any Genetic Disease In The Family</label>
+        <label for=""class="lead">Do You Have Any Genetic Disease In The Family?</label>
         <textarea name="answer_q4" id=""  class="form-control" required></textarea>
     </div>
-    <div class="form-group col-lg-4 col-md-6 col-xs-12">
-        <label for=""class="lead bssa">Result Of Blood testing</label>
-        <input type="text" name="bloode" id="" class="form-control" required>
+    <div class="form-group col-lg-4 col-md-6 col-xs-12 bssa">
+        <label for=""class="lead ">Result Of Blood testing?</label>
+        <textarea name="bloode" id=""  class="form-control" required></textarea>
     </div>
     <div class="form-group">
         <input type="submit" name="med_doctor" value="Done" class="btn btn-primary">

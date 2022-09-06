@@ -32,7 +32,7 @@ if(isset($_POST["submit"])){
     if($insert_info_med){
         $update_med_optics_submit = mysqli_query($connection , "update new_std_form_info set optic='done' where id='$id_std' ");
         if($update_med_optics_submit){
-            echo "<script>alert('تمت الكشف  بنجاح');
+            echo "<script>alert('Detection Successfully');
             window.location.href='display_std_for_optics_exm.php';</script>";
            // header("location: display_std_for_optics_exm.php");
         }

@@ -33,7 +33,7 @@ if(isset($_POST["submit"])){
     if($insert_info_med){
         $update_med_optics_submit = mysqli_query($connection , "update new_std_form_info set psychologist='done' where id='$id_std' ");
         if($update_med_optics_submit){
-            echo "<script>alert('تمت الكشف  بنجاح');
+            echo "<script>alert('Detection Successfully');
             window.location.href='display_std_for_psychologist_exm.php';</script>";
             //header("location: display_std_for_psychologist_exm.php");
         }
@@ -60,9 +60,9 @@ if(isset($_POST["submit"])){
                 </div>
         <ul>
             <a href="../statics/statics.php"><li ><img src="../../../icons/statc1.png" alt="" width="40px" height="40px">Statics</li></a>
-            <a href="../doctor/display_std_for_doctor_exm.php"><li class="active"><img src="../../../icons/doc.png" alt="" width="40px" height="40px"> Doctor</li></a>
+            <a href="../doctor/display_std_for_doctor_exm.php"><li><img src="../../../icons/doc.png" alt="" width="40px" height="40px"> Doctor</li></a>
             <a href="../optics/display_std_for_optics_exm.php"><li><img src="../../../icons/ds.png" alt="" width="40px" height="40px"> Optics</li></a>
-            <a href="../psychoogist/display_std_for_psychologist_exm.php"><li><img src="../../../icons/op.png" alt="" width="40px" height="40px">Psychoogist</li></a>
+            <a href="../psychoogist/display_std_for_psychologist_exm.php"><li class="active"><img src="../../../icons/op.png" alt="" width="40px" height="40px">Psychoogist</li></a>
             <a href="../info_std_for_med/info_std_for_med.php"><li><img src="../../../icons/stdifo1.png" alt="" width="40px" height="40px">Students Information</li></a>
         </ul>
         </div>
@@ -70,7 +70,7 @@ if(isset($_POST["submit"])){
     <div class="header">
         <div class="nav">
         <div>
-        <h3><a href="../../account/account.php"><img src="../../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_user ?></h3>
+        <h3><a href="../account/account.php"><img src="../../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_user ?></h3>
         </div>
         <div class="log">
         <a href="../login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
@@ -92,11 +92,11 @@ if(isset($_POST["submit"])){
         <label for=""class="lead">College</label>
         <input type="text" name="college" value="<?php echo $college ?>" id="" class="form-control" readonly>
     </div>  
-    <div class="form-group col-lg-4 col-md-6 col-xs-12">
-        <label for=""class="lead ">Your rank in Family </label>      
-        <input type="number"name="answer_q1" id="" class="form-control">
+    <div class="form-group col-lg-4 col-md-6 col-xs-12 bssa">
+        <label for=""class="lead ">Your rank in Family </label>    
+        <textarea name="answer_q1" id="" class="form-control"></textarea>  
     </div>
-    <div class="form-group col-lg-4 col-md-6 col-xs-12">
+    <div class="form-group col-lg-4 col-md-6 col-xs-12 bssa">
         <label for=""class="lead">Dose Your Parents Are Separate</label>
         <textarea name="answer_q2" id="" class="form-control"></textarea>
     </div>
