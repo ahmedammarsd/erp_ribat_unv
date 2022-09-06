@@ -61,7 +61,7 @@ if(isset($_POST["submit"])){
       //$try to insert with condition =  mysqli_query($connection , "insert into new_std_form_info (notes_not_submit) value ('ahmed_ammar f') where id='$id_std'");
         $update_for_submit_the_info = mysqli_query($connection , "update new_std_form_info set review = 'good' where id='$id_std'");
     if($update_for_submit_the_info){
-      echo "<script>alert('تم تاكيد البيانات')</script>";
+      echo "<script>alert('Successfully Review  Student Information')</script>";
        // header("location: ../info_std_electronic_register/info_std_electronic_register.php");
        
     }
@@ -74,7 +74,7 @@ if(isset($_POST["submit"])){
             $update_for_submit_the_info = mysqli_query($connection , "update new_std_form_info set review = 'good' where id='$id_std'");
             $update_for_submit_the_info_descount = mysqli_query($connection , "update new_std_form_info set descount_rate = '$value_daescount' where id='$id_std'");
             if($update_for_submit_the_info){
-              echo "<script>alert('تم تاكيد البيانات')</script>";
+              echo "<script>alert('Successfully Review  Student Information')</script>";
                // header("location: ../info_std_electronic_register/info_std_electronic_register.php");
                
             }
@@ -90,7 +90,7 @@ if(isset($_POST["submit"])){
             $update_for_submit_the_info = mysqli_query($connection , "update new_std_form_info set review = 'good' where id='$id_std'");
             $update_for_submit_the_info_descount = mysqli_query($connection , "update new_std_form_info set descount_rate = '$value_daescount' where id='$id_std'");
             if($update_for_submit_the_info){
-              echo "<script>alert('تم تاكيد البيانات')</script>";
+              echo "<script>alert('Successfully Review  Student Information')</script>";
                // header("location: ../info_std_electronic_register/info_std_electronic_register.php");
                
             }
@@ -106,7 +106,7 @@ if(isset($_POST["submit"])){
             $update_for_submit_the_info = mysqli_query($connection , "update new_std_form_info set review = 'good' where id='$id_std'");
             $update_for_submit_the_info_descount = mysqli_query($connection , "update new_std_form_info set descount_rate = '$value_daescount' where id='$id_std'");
             if($update_for_submit_the_info){
-              echo "<script>alert('تم تاكيد البيانات')</script>";
+              echo "<script>alert('Successfully Review  Student Information')</script>";
                // header("location: ../info_std_electronic_register/info_std_electronic_register.php");
                
             }
@@ -122,7 +122,7 @@ if(isset($_POST["submit"])){
             $update_for_submit_the_info = mysqli_query($connection , "update new_std_form_info set review = 'good' where id='$id_std'");
             $update_for_submit_the_info_descount = mysqli_query($connection , "update new_std_form_info set descount_rate = '$value_daescount' where id='$id_std'");
             if($update_for_submit_the_info){
-              echo "<script>alert('تم تاكيد البيانات')</script>";
+              echo "<script>alert('Successfully Review  Student Information')</script>";
                // header("location: ../info_std_electronic_register/info_std_electronic_register.php");
                
             }
@@ -138,7 +138,7 @@ if(isset($_POST["submit"])){
             $update_for_submit_the_info = mysqli_query($connection , "update new_std_form_info set review = 'good' where id='$id_std'");
             $update_for_submit_the_info_descount = mysqli_query($connection , "update new_std_form_info set descount_rate = '$value_daescount' where id='$id_std'");
             if($update_for_submit_the_info){
-              echo "<script>alert('تم تاكيد البيانات')</script>";
+              echo "<script>alert('Successfully Review  Student Information')</script>";
                // header("location: ../info_std_electronic_register/info_std_electronic_register.php");
                
             }
@@ -154,7 +154,7 @@ if(isset($_POST["submit"])){
             $update_for_submit_the_info = mysqli_query($connection , "update new_std_form_info set review = 'good' where id='$id_std'");
             $update_for_submit_the_info_descount = mysqli_query($connection , "update new_std_form_info set descount_rate = '$value_daescount' where id='$id_std'");
             if($update_for_submit_the_info){
-              echo "<script>alert('تم تاكيد البيانات')</script>";
+              echo "<script>alert('Successfully Review  Student Information')</script>";
                // header("location: ../info_std_electronic_register/info_std_electronic_register.php");
                
             }
@@ -170,7 +170,7 @@ if(isset($_POST["submit"])){
             $update_for_submit_the_info = mysqli_query($connection , "update new_std_form_info set review = 'good' where id='$id_std'");
             $update_for_submit_the_info_descount = mysqli_query($connection , "update new_std_form_info set descount_rate = '$value_daescount' where id='$id_std'");
             if($update_for_submit_the_info){
-              echo "<script>alert('تم تاكيد البيانات')</script>";
+              echo "<script>alert('Successfully Review  Student Information')</script>";
                // header("location: ../info_std_electronic_register/info_std_electronic_register.php");
                
             }
