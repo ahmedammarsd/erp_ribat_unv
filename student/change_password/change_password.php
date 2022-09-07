@@ -1,7 +1,7 @@
 <?php
 include "../../connection/connection.php";
 session_start();
-$name_std = $row["name_std"];
+$name_std = $_SESSION["name_std"];
 $unv_id = $_SESSION["unv_id"];
 
 $display_password = mysqli_query($connection , "select password from students where unv_id='$unv_id'");

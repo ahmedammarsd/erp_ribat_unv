@@ -73,6 +73,7 @@ $batch = $row_std["batch"];
             </div>
 </div>
 </form> 
+<div>
     <?php
     if(isset($_POST["result"])){
         $semester = $_POST["semester"];
