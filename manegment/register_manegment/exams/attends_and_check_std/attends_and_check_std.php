@@ -44,10 +44,10 @@ $type_exam = $_GET["type_exam"];
 <div class="form">
 <?php
 if($type_exam == "normal"){
-    echo " <h2>Students List For $name_subject Exam </h2>
+    echo " <label class='lead'>Students List For $name_subject Exam </label>
     <br>
-    <table cellpadding='15' class='table table-success table-hover'>
-     <tr>
+    <table cellpadding='20' class='table table-striped table-hover'>
+    <tr>
      <th>UNV_ID</th>
      <th>Std_Name</th>
      <th>College</th>
@@ -112,15 +112,15 @@ else{
      }
  echo "</table>";
  $total_of_all_students = mysqli_num_rows($display_students_for_degree);
- echo "<h2>Total Students Number</h2>" . $total_of_all_students;
+ echo "<label class='lead'>Total Students Number</label>" . $total_of_all_students;
  echo"</div>";
 //---------------------------------------------------------------------------------------------------------------------
 
 echo "<hr>
 <div class='form'>;
- <h2>List Of Students Attending $name_subject Examination</h2>
+ <label class='lead'>List Of Students Attending $name_subject Examination</label>
     <br>
-    <table cellpadding='15'class='table table-success table-hover'>
+    <table cellpadding='20' class='table table-striped table-hover'>
      <tr>
      <th>UNV_ID</th>
      <th>Std_Name</th>
@@ -150,14 +150,14 @@ echo "<hr>
      }
  echo "</table>";
  $total_of_submit_students = mysqli_num_rows($display_students_for_submit_exam);
- echo "<h2>Number Of Students Attending</h2>" . $total_of_submit_students;
+ echo "<label class='lead'>Number Of Students Attending</label>" . $total_of_submit_students;
  echo "</div> ";
  //---------------------------------------------------------------------------------------------------------------------
  echo "<hr>
  <div class='form'>
- <h2>List Of Students Absent For $name_subject Exam</h2>
+ <label class='lead'>List Of Students Absent For $name_subject Exam</label>
     <br>
-    <table cellpadding='15' class='table table-success table-hover'>
+    <table cellpadding='20' class='table table-striped table-hover'>
      <tr>
      <th>UNV_ID</th>
      <th>Std_Name</th>
@@ -188,7 +188,7 @@ echo "<hr>
     }
 echo "</table>";
 $total_of_absence_students = mysqli_num_rows($display_students_for_absence_exam);
-echo "<h2>The Number Of Absent Students</h2>" . $total_of_absence_students;
+echo "<label class='lead'>The Number Of Absent Students</label>" . $total_of_absence_students;
 echo "<hr>";
 }
 
@@ -196,9 +196,9 @@ echo "<hr>";
 //---------------------------------------------------------------------------------------------------------------------
 //---------------------------------------------------------------------------------------------------------------------
 elseif($type_exam == "sub_exams"){
-    echo " <h2>Students List For $name_subject Exam </h2>
+    echo " <label class='lead'>Students List For $name_subject Exam </label>
     <br>
-    <table cellpadding='15' class='table table-success table-hover'>
+    <table cellpadding='20' class='table table-striped table-hover'>
      <tr>
      <td>$unv_id</td>
      <td>$name_std</td>
@@ -290,12 +290,12 @@ elseif($type_exam == "sub_exams"){
  $total_of_all_students1 = mysqli_num_rows($display_students_attendes) + mysqli_num_rows($display_students_attendes2) +  mysqli_num_rows($display_students_attendes3);
  $total_of_all_students2 = mysqli_num_rows($display_students_attendes2);
  $total_of_all_students3 = mysqli_num_rows($display_students_attendes3);
- echo "<h2>Total Student Number</h2>" . $total_of_all_students1  ;
+ echo "<label class='lead'>Total Student Number</label>" . $total_of_all_students1  ;
 ///----------------------------------------------------------------------------------------------------------------------
 echo "<hr>
- <h2>List Of Students Attending The Supplementary $name_subject Exams</h2>
+ <label class='lead'>List Of Students Attending The Supplementary $name_subject Exams</label>
     <br>
-    <table cellpadding='15' class='table table-success table-hover'>
+    <table cellpadding='20' class='table table-striped table-hover'>
      <tr>
      <th>UNV_ID</th>
      <th>Std_Name</th>
@@ -324,13 +324,13 @@ echo "<hr>
  echo "</table>";
 
  $total_of_submit_students = mysqli_num_rows($display_students_for_submit_exam);
- echo "<h2>Number Of Students Attending</h2>" . $total_of_submit_students;
+ echo "<label class='lead'>Number Of Students Attending</label>" . $total_of_submit_students;
  //------------------------------------------------------------------------------------------
  echo"<div class='form'>";
  echo "<hr>
- <h2>List Of Absent Students For Subject Supplement $name_subject Exams</h2>
+ <label class='lead'>List Of Absent Students For Subject Supplement $name_subject Exams</label>
     <br>
-    <table cellpadding='15' class='table table-success table-hover'>
+    <table cellpadding='20' class='table table-striped table-hover'>
      <tr>
      <th>UNV_ID</th>
      <th>Std_Name</th>
@@ -359,7 +359,7 @@ echo "<hr>
     }
 echo "</table>";
 $total_of_absence_students = mysqli_num_rows($display_students_for_absence_exam);
-echo "<h2>The Number Of Absent Students</h2>" . $total_of_absence_students;
+echo "<label class='lead'>The Number Of Absent Students</label>" . $total_of_absence_students;
 }
 ?>
 

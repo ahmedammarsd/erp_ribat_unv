@@ -123,7 +123,7 @@ while($row=mysqli_fetch_array($display_students_for_degree)){
     elseif($type_exam == "sub_exams"){
         $display_students_for_degree = mysqli_query($connection , "select unv_id ,name_std  ,type_certifcate_unv ,department ,batch ,degree_exam2 from submit_std_and_result_subjects where type_certifcate_unv='$type_certificate' && department='$department' && batch='$batch' && semester='$semester' && name_subject='$name_subject' && type_exam2='$type_exam' && come_to_exam_in_second_time='yes' && check_tetcher2='none'");
        if(mysqli_num_rows($display_students_for_degree) == 0){
-           echo "<h2>Sorry, There Is No Data For Students Because Exams Have Not Started Or The Result Has Been Confirmed</h2>";
+           echo "<label class='lead'>Sorry, There Is No Data For Students Because Exams Have Not Started Or The Result Has Been Confirmed</label    >";
        }
        else{
         echo "<h2>Students Schedule For <?php echo $name_subject ?> Exam</h2>

@@ -71,7 +71,7 @@ if(isset($_POST["add_fees"])){
         <label for="" class="lead"> Select  The Type Certificate </label>
             <select name="type_certificate" id="" class="form-select">
                 <option value="none">--- Select The Certificate ---</option>
-                <option value="بكلاريوس">pacliryos</option>
+                <option value="بكلاريوس">Bachelors</option>
                 <option value="دبلوم">Diploma</option>
             </select>
         </div>   

@@ -51,8 +51,6 @@ session_start();
  $_SESSION["GPA_S6"] = $GPA_S6;
  $_SESSION["GPA_S7"] = $GPA_S7;
  $_SESSION["GPA_S8"] = $GPA_S8;
-
-
 ?>
 
 <!DOCTYPE html>

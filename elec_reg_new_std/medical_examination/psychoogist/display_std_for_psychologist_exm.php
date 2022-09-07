@@ -31,7 +31,7 @@ $specialization = $_SESSION["specialization_doctor"];
             <a href="../statics/statics.php"><li ><img src="../../../icons/statc1.png" alt="" width="40px" height="40px">Statics</li></a>
             <a href="../doctor/display_std_for_doctor_exm.php"><li><img src="../../../icons/doc.png" alt="" width="40px" height="40px"> Doctor</li></a>
             <a href="../optics/display_std_for_optics_exm.php"><li><img src="../../../icons/ds.png" alt="" width="40px" height="40px"> Optics</li></a>
-            <a href="../psychoogist/display_std_for_psychologist_exm.php"><li class="active"><img src="../../../icons/op.png" alt="" width="40px" height="40px">Psychoogist</li></a>
+            <a href="../psychoogist/display_std_for_psychologist_exm.php"><li class="active"><img src="../../../icons/op.png" alt="" width="40px" height="40px">Psychiatrist</li></a>
             <a href="../report_med_exam_info_stds_done/report_med_exam_info_stds_done.php"><li><img src="../../../icons/stdifo1.png" alt="" width="40px" height="40px">Report</li></a>
         </ul>
         </div>

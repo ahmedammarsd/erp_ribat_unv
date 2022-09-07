@@ -58,14 +58,26 @@ $date = date("Y-m-d");
             $type_exam = $row2["type_exam"];
             if($type_exam == "normal"){$type =  "Semester Final Exam";} if($type_exam == "sub_exams"){$type = "Supplement Exam";}
 
-            echo "<table cellpadding='20' class='table table-success table-hover'>
+            echo "<table cellpadding='20' class='table table-striped table-hover'>
             <tr>
-            <td>Subject Name  $name_subject </td>
-            <td> Certificte Type  $type_certificate</td>
-            <td>Department $department</td>
-            <td>Batch $batch</td>
-            <td>Study Year$study_year</td>
-            <td> Semester $semester</td>
+            <th>Subject Name</th>
+            <th>Certificte Type</th>
+            <th>Department</th>
+            <th>Batch</th>
+            <th>Study Year</th>
+            <th>Semester</th>
+            <th>Type</th>
+            <th></th>
+            <th></th>
+            
+            </tr>
+            <tr>
+            <td>$name_subject </td>
+            <td>$type_certificate</td>
+            <td>$department</td>
+            <td>$batch</td>
+            <td>$study_year</td>
+            <td>$semester</td>
             <td>$type<td>
               <td><a href='../attends_and_check_std/attends_and_check_std.php?name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam'><button  class='btn btn-primary'>View</button></a></td>
             </tr>
