@@ -1,7 +1,7 @@
 <?php
 include "../../../connection/connection.php";
 session_start();
-// error_reporting(0);
+error_reporting(0);
 $user_name =$_SESSION["user_doctor"]; 
 $display_info_user = mysqli_query($connection , "select full_name,specialization from medical_exam_doctors where username='$user_name'");
 $row_info = mysqli_fetch_array($display_info_user);

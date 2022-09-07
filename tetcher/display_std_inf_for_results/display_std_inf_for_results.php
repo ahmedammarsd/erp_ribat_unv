@@ -177,15 +177,11 @@ while($row=mysqli_fetch_array($display_students_for_degree)){
       <input type='submit' name='submit_result' value='Conform' class='btn btn-primary'>
       </form>";
   }
-  
       }
     }
-
-  }
-     
-          
+  }       
 ?>
- 
+</div>
 </body>
 </html>
 

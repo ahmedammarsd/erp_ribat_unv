@@ -1,7 +1,7 @@
 <?php
 include "../../../connection/connection.php";
 session_start();
-//info about hr
+//info about 
 $name_user = $_SESSION["full_name_scientific_affairs"] ;
  $display_info_emp = mysqli_query($connection , "select * from scientific_affairs_admins where full_name='$name_user'");
  $row = mysqli_fetch_array($display_info_emp);
