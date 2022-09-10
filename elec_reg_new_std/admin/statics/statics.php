@@ -4,6 +4,9 @@ session_start();
 error_reporting(0);
 //check username for permission
 $username_permission = $_SESSION["user_name_for_permsisson"];
+if($username_permission == ""){
+    header("location: ../../login/login.php");
+}
 $display_data_for_login_admin = mysqli_query($connection ,"select * from scientific_affairs_admins where username='$username_permission'");
 if(mysqli_num_rows($display_data_for_login_admin) == 0){
     echo "<script>alert('Sorry, You don\'t have permissions');
@@ -61,7 +64,7 @@ $num_doctor = mysqli_num_rows($display_num_doctor);
         <h3><a href="../account/account.php"><img src="../../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_user ?></h3>
         </div>
         <div class="log">
-        <a href="../../login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+        <a href="../../logout/logout.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
         </div>
         </div>
     </div>

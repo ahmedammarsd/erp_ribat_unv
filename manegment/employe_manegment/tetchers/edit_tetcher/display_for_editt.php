@@ -88,7 +88,7 @@ if(isset($_POST["edittetcher"])){
   </div>
     
     <div class="log">
-    <a href="../../../login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+    <a href="../../../logout/logout.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
     </div>
     </div>
 </div>

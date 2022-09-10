@@ -123,7 +123,7 @@ if(mysqli_num_rows($dispaly_data_std_for_check_if_exisit) == 1){
         <h3><a href="../../../../tetcher/profile_tetcher/profile_tetcher.php"><img src="../../../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_teacher ?></h3>
         </div>
         <div class="log">
-        <a href="../../../../tetcher/login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+        <a href="../../../../tetcher/logout/logout.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
         </div>
         </div>
 </div>

@@ -44,7 +44,7 @@ $name_user = $_SESSION["full_name_reg"] ;
                <h3><img src="../../../icons/account.png" alt="" width="40px" height="40px"><?php echo " " . $name_user ?></h3>
                            </div>
                <div class="log">
-                <a href="../../login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+                <a href="../../logout/logout.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
                 </div>
             </div>
         </div>

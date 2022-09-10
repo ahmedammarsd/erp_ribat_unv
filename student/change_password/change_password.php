@@ -43,7 +43,7 @@ if(isset($_POST["change"])){
     <link rel="stylesheet" href="../../css/all.min.css">
     <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/manegment/student/change_password.css?v=<?php echo time();?>">
-    <title>تغيير كلمة السر</title>
+    <title>Change Password</title>
 </head>
 <body>
 <div class="side-menu">
@@ -62,7 +62,7 @@ if(isset($_POST["change"])){
             <h3><a href="../profile_std/profile_std.php"><img src="../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_std ?></h3>
             </div>
             <div class="log">
-            <a href="../login_std/login_std.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+            <a href="../logout/logout.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
             </div>
         </div>
     </div>

@@ -40,7 +40,7 @@ $semester = $_GET["semester"];
         <h3><a href="../profile_tetcher/profile_tetcher.php"><img src="../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_teacher ?></h3>
         </div>
         <div class="log">
-        <a href="../login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+        <a href="../logout/logout.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
         </div>
         </div>
 </div>
@@ -58,8 +58,8 @@ $semester = $_GET["semester"];
         <div class="form-group col-lg-4 col-md-6 col-xs-12 my-5">
             <input type="submit" value="Search" name="submit" id="btn" class="btn btn-primary">
         </div>
+</div>
     </form>
-    
   <?php 
   if(isset($_POST["submit"])){
       $type_exam = $_POST["type_exam"];
@@ -70,13 +70,13 @@ $semester = $_GET["semester"];
            echo "<label class='lead'>Sorry There Is No Data For Students Because Exams Have Not Started</label>";
        }
        else{
-       echo "<h2>Students Schedule For <?php echo $name_subject ?> Exam</h2>
+       echo "<label class='lead'>Students Schedule For <?php echo $name_subject ?> Exam :</label>
        <br>";
         echo "<table cellpadding='15' class='table table-striped table-hover'>
         <tr>
         <th>UNV ID</th>
         <th>Name</th>
-        <th> Certificte Type : $type_certificate</th>
+        <th>Certificte Type : $type_certificate</th>
         <th>Department :$department</th>
         <th>Batch</th>
         <th>Subject Degree:  $name_subject </th>
@@ -101,20 +101,19 @@ while($row=mysqli_fetch_array($display_students_for_degree)){
    <td>$department</td>
    <td>$batch</td>
    <td>$degree_exam</td>
-   <td><a href='../insert_degree_subject/insert_degree_subject.php?unv_id=$unv_id&name_std=$name_std&name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam'><button>ادخال الدرجة</button></a></td>
+   <td><a href='../insert_degree_subject/insert_degree_subject.php?unv_id=$unv_id&name_std=$name_std&name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam'><button class='btn btn-primary'>Enter Degree</a></td>
    </tr>";
   }
   echo "</table>";
   $number_of_std_for_result = mysqli_num_rows($display_students_for_degree);
-  echo "The Total Number Of Students Who Took The Exam". "<br>" . $number_of_std_for_result . "<br>";
+  echo "<div class='alert alert-primary'>The Total Number Of Students Who Took The Exam : ". $number_of_std_for_result . "</div>";
   //تحديد عدد الطلاب الذين تم ادخال دردرجاته
   $display_students_complete_insert_degree = mysqli_query($connection , "select unv_id ,name_std  ,type_certifcate_unv ,department ,batch ,degree_exam2 from submit_std_and_result_subjects where type_certifcate_unv='$type_certificate' && department='$department' && batch='$batch' && semester='$semester' && name_subject='$name_subject' && type_exam='$type_exam' && degree_exam ='' && come_to_exam_in_first_time='yes' ");
   $number_of_complete_result = mysqli_num_rows($display_students_complete_insert_degree);
-  echo "Number Of Students Left To Enter Their Grades <br>";
-  echo $number_of_complete_result;
+  echo "<div class='alert alert-primary'>Number Of Students Left To Enter Their Grades : ".$number_of_complete_result." </div>";
   if($number_of_complete_result == 0){
     echo "<form action='submit_and_send_result.php?name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam' method='post'>
-    <input type='submit' name='submit_result' value='Confirm'>
+    <input type='submit' name='submit_result' value='Confirm'  class='btn btn-primary'>
     </form>";
 }
    }
@@ -126,7 +125,7 @@ while($row=mysqli_fetch_array($display_students_for_degree)){
            echo "<label class='lead'>Sorry, There Is No Data For Students Because Exams Have Not Started Or The Result Has Been Confirmed</label    >";
        }
        else{
-        echo "<h2>Students Schedule For <?php echo $name_subject ?> Exam</h2>
+        echo "<label class='lead'>Students Schedule For <?php echo $name_subject ?> Exam</label>
         <br>";
         echo "<table cellpadding='15' class='table table-striped table-hover'>
         <tr>
@@ -159,17 +158,15 @@ while($row=mysqli_fetch_array($display_students_for_degree)){
    <td><span style='color:blue;'>$degree_exam</span></td>
    <td><a href='../insert_degree_subject/insert_degree_subject.php?unv_id=$unv_id&name_std=$name_std&name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam'><button class='btn btn-primary'>ادخال الدرجة</button></a></td>
    </tr>
-  
    ";
   }
   echo " </table> <br>";
   $number_of_std_for_result = mysqli_num_rows($display_students_for_degree);
-  echo "The Total Number Of Students Who Took The Exam". "<br>" . $number_of_std_for_result . "<br>";
+  echo "<div class='alert alert-primary'>The Total Number Of Students Who Took The Exam". $number_of_std_for_result . "</div>";
   //تحديد عدد الطلاب الذين تم ادخال دردرجاته
   $display_students_complete_insert_degree = mysqli_query($connection , "select unv_id ,name_std  ,type_certifcate_unv ,department ,batch ,degree_exam2 from submit_std_and_result_subjects where type_certifcate_unv='$type_certificate' && department='$department' && batch='$batch' && semester='$semester' && name_subject='$name_subject' && type_exam2='$type_exam' && degree_exam2 ='' && come_to_exam_in_second_time='yes' ");
   $number_of_complete_result = mysqli_num_rows($display_students_complete_insert_degree);
-  echo "Number Of Students Left To Enter Their Grades <br>";
-  echo $number_of_complete_result;
+  echo "<div class='alert alert-primary'>Number Of Students Left To Enter Their Grades". $number_of_complete_result." </div>";
 
   //بعد اكتمال ادخال الدرجات يظهر زر لتاكيد البيانات وارسالها الى المسجل
   if($number_of_complete_result == 0){

@@ -3,6 +3,10 @@ include "../../../connection/connection.php";
 $year = date("y");
 session_start();
 $name_user = $_SESSION["full_name_doctor"] ;
+$name_user_admin = $_SESSION["full_name_scientific_affairs"] ;
+if ($name_user_admin != ""){
+    $name_user = $_SESSION["full_name_scientific_affairs"];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +41,7 @@ $name_user = $_SESSION["full_name_doctor"] ;
         <h3><a href="../account/account.php"><img src="../../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_user ?></h3>
         </div>
         <div class="log">
-        <a href="../../medical_examination/login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+        <a href="../logout/logout.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
         </div>
         </div>
     </div>

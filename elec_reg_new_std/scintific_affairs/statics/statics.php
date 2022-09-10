@@ -51,7 +51,7 @@ $num_display_number_of_students_not_reviewed = mysqli_num_rows($display_number_o
                 <a href="../account/account.php"><h3><img src="../../../icons/account.png" alt="" width="40px" height="40px"><?php echo " " . $name_user ?></h3></a>
                 </div>
                 <div class="log">
-                <a href="../../login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+                <a href="../../logout/logout.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
                 </div>
             </div>
         </div>

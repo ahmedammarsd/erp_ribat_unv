@@ -1,5 +1,6 @@
 <?php
 include "../../connection/connection.php";
+session_start();
 $name_teacher =  $_SESSION["name_of_tetcher"];
 
 $unv_id = $_GET["unv_id"];
@@ -146,7 +147,7 @@ if($type_exam == "sub_exams"){
         <h3><a href="../profile_tetcher/profile_tetcher.php"><img src="../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_teacher ?></h3>
         </div>
         <div class="log">
-        <a href="../login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+        <a href="../logout/logout.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
         </div>
         </div>
 </div>

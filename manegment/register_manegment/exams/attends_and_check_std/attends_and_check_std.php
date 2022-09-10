@@ -37,7 +37,7 @@ $type_exam = $_GET["type_exam"];
         <h3><a href="../../../../tetcher/profile_tetcher/profile_tetcher.php"><img src="../../../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_teacher ?></h3>
         </div>
         <div class="log">
-        <a href="../../../../tetcher/login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+        <a href="../../../../tetcher/logout/logout.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
         </div>
         </div>
 </div>
@@ -54,7 +54,10 @@ if($type_exam == "normal"){
      <th>Certifcate  Type</th>
      <th>Department</th>
      <th>Batch</th>
-      <th></th>
+     <th></th>
+     <th></th>
+     <th></th>
+      
      </tr>";
      if($semester == 1){
      $display_students_for_degree = mysqli_query($connection , "select unv_id ,name_std ,college ,type_certifcate_unv ,department ,batch from students where type_certifcate_unv='$type_certificate' && department='$department' && batch='$batch' && confirm_pay_s1='done'");
@@ -105,14 +108,14 @@ else{
      <td>$department</td>
      <td>$batch</td>
      <td>$stuats</td>
-     <td><a href='submit_std.php?unv_id=$unv_id&name_std=$name_std&name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam'><button>تاكيد الحضور</button></a></td>
-     <td><a href='absence_std.php?unv_id=$unv_id&name_std=$name_std&name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam'><button>غياب </button></a></td>
+     <td><a href='submit_std.php?unv_id=$unv_id&name_std=$name_std&name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam'><button class='btn btn-primary'>attendance </button></a></td>
+     <td><a href='absence_std.php?unv_id=$unv_id&name_std=$name_std&name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam'><button class='btn btn-primary'>not attendance </button></a></td>
      </tr>
      "; 
      }
  echo "</table>";
  $total_of_all_students = mysqli_num_rows($display_students_for_degree);
- echo "<label class='lead'>Total Students Number</label>" . $total_of_all_students;
+ echo "<label class='lead'>Total Students Number . $total_of_all_students</label>" ;
  echo"</div>";
 //---------------------------------------------------------------------------------------------------------------------
 

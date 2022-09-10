@@ -26,7 +26,7 @@ $value_unv = $row2["total"];
     <link rel="stylesheet" href="../../../css/all.min.css">
     <link rel="stylesheet" href="../../../bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../../../css/manegment/submit_salary.css?v=<?php echo time();?>">
-    <title>Document</title>
+    <title>Salary</title>
 </head>
 <body>
 <div class="side-menu">
@@ -50,7 +50,7 @@ $value_unv = $row2["total"];
         <h3><a href="../account/account.php"><img src="../../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_user ?></h3>
         </div>
         <div class="log">
-        <a href="../../login/login.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+        <a href="../../logout/logout.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
         </div>
         </div>
     </div>
