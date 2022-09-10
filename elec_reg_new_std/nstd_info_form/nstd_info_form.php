@@ -1,9 +1,6 @@
 <?php
 include "../../connection/connection.php";
 session_start();
-$user_name =$_SESSION["user_admin_scientific_affairs"]; 
-$display_info_user = mysqli_query($connection , "select full_name from scientific_affairs_admins where username='$user_name'");
-$name_user = mysqli_fetch_array($display_info_user)["full_name"];
 
 $formnumber1 =  $_SESSION["formno"];
 
