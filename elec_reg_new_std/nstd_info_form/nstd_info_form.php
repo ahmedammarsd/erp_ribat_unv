@@ -575,11 +575,11 @@ if(isset($_POST["addreg"])){
         <hr>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Nationality</label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Your Nationality">
+            <input type="text"  value="" class="form-control"  placeholder="Enter Your Nationality" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Nationality Number </label>
-            <input type="text"  value="" class="form-control" placeholder="Enter Your Nationality Number">
+            <input type="text"  value="" class="form-control" placeholder="Enter Your Nationality Number" required> 
         </div>
         <div class="form-group  col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead"> Select  Gender</label>
@@ -591,67 +591,67 @@ if(isset($_POST["addreg"])){
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Religion </label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Your Religion">
+            <input type="text"  value="" class="form-control"  placeholder="Enter Your Religion" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">State</label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Your State">
+            <input type="text"  value="" class="form-control"  placeholder="Enter Your State" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">City</label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Your City">
+            <input type="text"  value="" class="form-control"  placeholder="Enter Your City" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Area</label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Your Area">
+            <input type="text"  value="" class="form-control"  placeholder="Enter Your Area" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Home Number</label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Your Home Number">
+            <input type="text"  value="" class="form-control"  placeholder="Enter Your Home Number" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Guardian Name</label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Your Guardian Name">
+            <input type="text"  value="" class="form-control"  placeholder="Enter Your Guardian Name" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Guardian Jop</label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Your Guardian Jop">
+            <input type="text"  value="" class="form-control"  placeholder="Enter Your Guardian Jop" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Relatuve Relation</label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Your Relatuve Relation">
+            <input type="text"  value="" class="form-control"  placeholder="Enter Your Relatuve Relation" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Guardian Phone</label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Your Guardian Phone">
+            <input type="text"  value="" class="form-control"  placeholder="Enter Your Guardian Phone" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead"> Student Phone</label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Your Phone Number">
+            <input type="text"  value="" class="form-control"  placeholder="Enter Your Phone Number" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead"> Email</label>
-            <input type="email"  value="" class="form-control"  placeholder="Enter Your Email">
+            <input type="email"  value="" class="form-control"  placeholder="Enter Your Email"required >
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Closest Relative Name</label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Closest Relative Name">
+            <input type="text"  value="" class="form-control"  placeholder="Enter Closest Relative Name" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Closest Relative Address</label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Closest Relative Address">
+            <input type="text"  value="" class="form-control"  placeholder="Enter Closest Relative Address" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Closest Relative Phone</label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Closest Relative Phone">
+            <input type="text"  value="" class="form-control"  placeholder="Enter Closest Relative Phone" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Select Personal Photo</label>
-            <input type="file" name="personalphoto" id="" class="form-select">
+            <input type="file" name="personalphoto" id="" class="form-select" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead"> Select Nationality Number Photo</label>
-            <input type="file" name="photonationalitynumber" id="" class="form-select">
+            <input type="file" name="photonationalitynumber" id="" class="form-select" required>
         </div>
         <br><hr>
         <div>

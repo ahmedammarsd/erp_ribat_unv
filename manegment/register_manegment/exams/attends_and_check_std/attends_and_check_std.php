@@ -120,7 +120,7 @@ else{
 //---------------------------------------------------------------------------------------------------------------------
 
 echo "<hr>
-<div class='form'>;
+<div class='form'>
  <label class='lead'>List Of Students Attending $name_subject Examination</label>
     <br>
     <table cellpadding='20' class='table table-striped table-hover'>
