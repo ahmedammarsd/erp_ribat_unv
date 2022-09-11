@@ -1,25 +1,31 @@
-*{
+* {
     box-sizing: border-box;
 }
-body{
+
+body {
     min-height: 100vh;
-   font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
 }
-a{
+
+a {
     text-decoration: none;
     color: #f5f6fa;
 }
-li{
+
+li {
     list-style: none;
 }
+
 h2 {
     color: #f5f6fa;
     font-size: 20px;
 }
-.container{
+
+.container {
     width: 100%;
 }
-.container .header{
+
+.container .header {
     position: fixed;
     top: 0;
     right: 0;
@@ -31,81 +37,103 @@ h2 {
     justify-content: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-.container .header .nav{
+
+.container .header .nav {
     width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.container .header .nav h3{
+
+.container .header .nav h3 {
     color: #0e6a93;
-    font-size: 20px;
+    font-size: 30px;
     margin-top: 10px;
     cursor: pointer;
 }
-.container .header .nav h3 img{
+
+.container .header .nav h3 img {
     margin-bottom: 10px;
     cursor: pointer;
 }
-.fa-solid{
+
+.fa-solid {
     color: #0e6a93;
 }
-.log{
+
+.log {
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: #0e6a93;
 }
-.container .form{
-    margin-top:55px;
+
+.container .form {
+    margin-top: 55px;
     margin-bottom: 55px;
     width: 100%;
     padding: 30px;
     border-left: 5px solid #0e6a93;
     border-radius: 10px;
     background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.container .form .roww{
+
+.container .form .roww {
     display: flex;
     justify-content: space-around;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 }
-.form-group{
+
+.form-group {
     margin-bottom: 12px;
 }
-.form-control,.form-select {
+
+.form-control,
+.form-select {
     width: 300px;
     margin: 5px;
-    border-left:3px solid #0e6a93;
+    border-left: 3px solid #0e6a93;
     border-radius: none;
 }
-.sa{
+
+.sa {
     margin-right: 326px;
 }
-label{
+
+label {
     color: #0e6a93;
     margin: 5px;
     font-size: 15px;
 }
-.btn{
-    margin-top: 100px;
+
+.btn {
+    margin-top: 10px;
     width: 400px;
     height: 50px;
     font-size: 20px;
-    background-color:#0e6a93;
+    background-color: #0e6a93;
+    color: whitesmoke;
 }
-.fa-solid{
+
+.fa-solid {
     color: #0e6a93;
 }
-textarea{
+
+textarea {
     width: 700px;
     height: 100px;
     margin: 5px;
-    border-left:5px solid #0e6a93;
+    border-left: 5px solid #0e6a93;
     border-radius: 10px;
 }
-.bssa{
-margin: 0 72px;
+
+.bssa {
+    margin: 0 72px;
+}
+
+.back {
+    width: 80px;
+    z-index: 5;
 }

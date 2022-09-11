@@ -42,6 +42,7 @@ if(isset($_POST["submit"])){
 <div class="header">
     <div class="nav container">
         <div>
+        <a href="../main/main.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
             <h3>RIBAT UNVIRSITY</h3>
         </div>
         <div>
@@ -59,6 +60,8 @@ if(isset($_POST["submit"])){
             <input type="submit" name="submit" value="Confirm" class=" btn btn-primary">
         </div>
     </form>
-</div>
+
+</div>    <input type="submit" name="submit" value="Back" class=" btn btn-primary back">
+
 </body>
 </html>

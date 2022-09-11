@@ -518,7 +518,20 @@ if(isset($_POST["addreg"])){
     <title>بيانات الطالب</title>
 </head>
 <body>
+
 <div class="container">
+<div class="header">
+    <div class="nav">
+        <div>
+            <center><h3>Register Form</h3></center>
+        </div>
+        <div>
+           <a href="../form_number/form_number.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+
+        </div>
+    </div>
+</div>
+
     <!-- <div class="header">
         <div class="nav">
         <div>
