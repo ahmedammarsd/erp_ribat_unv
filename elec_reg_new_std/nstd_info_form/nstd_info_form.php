@@ -17,6 +17,30 @@ $row = mysqli_fetch_array($display_data_new_std);
  $certifcate_rate = $row["certifcate_rate"];
  $set_number = $row["set_number"];
 
+ $_SESSION["nationalitynumber"] = "";
+ $_SESSION["gender"] = "";
+ $_SESSION["nationality"] = "";
+ $_SESSION["religion"] = "";
+ $_SESSION["state"] = "";
+ $_SESSION["city"] = "";
+ $_SESSION["area"] = "";
+ $_SESSION["homenumber"] = "";
+ $_SESSION["nameguardian"] = "";
+ $_SESSION["jopguardian"] = "";
+ $_SESSION["relatuverelation"] = "";
+ $_SESSION["phoneguardian"] = "";
+ $_SESSION["phonestd"] = "";
+ $_SESSION["emailstd"] = "";
+ $_SESSION["nameclosestrelative"] = "";
+ $_SESSION["addressclosestrelative"] = "";
+ $_SESSION["phoneclosestrelative"] = "";
+ $_SESSION["nameofbrother"] = "";
+ $_SESSION["univirsitynumber"] = "";
+ $_SESSION["nameoffatherpolice"] = "";
+ $_SESSION["nameoffaterunv"] = "";
+ $_SESSION["brother"] = "";
+ $_SESSION["police"] = "";
+ $_SESSION["manegment"] = "";
  /*$dispaly_data_if_std_complate_the_register = mysqli_query($connection , "select form_number from new_std_form_info where form_number = 'formnumber1'");
  $row2 = mysqli_fetch_array($dispaly_data_if_std_complate_the_register);
  $form_no_comlete_register = $row2["form_number"];
@@ -41,6 +65,7 @@ if(isset($_POST["addreg"])){
     $the_course = $_POST["course"];
     $the_certificate_rate = $_POST["certifcaterate"];
     $the_set_number = $_POST["setnumber"];
+
     $nationality_number = $_POST["nationalitynumber"];
     $gender = $_POST["gender"];
     $nationality = $_POST["nationality"];
@@ -489,20 +514,43 @@ if(isset($_POST["addreg"])){
                                      if($insert_data_std){
                                         echo "<script>alert('تم التسجيل بنجاح')</script>";
                                     }
-            }
+           }
         }
-
-
     }
-
    /*
     $insert_data_std = mysqli_query($connection , 
     "insert into new_std_form_info (form_number , name_std , college , department , type_certifcate , course , certifcate_rate , set_number , nationality_number , gender , nationality , religion , state, city , area , home_number , name_of_guardian , jop_guardian , relatuve_relation , phone_of_guardian , phone_std , email_std , name_closest_relative , address_closest_relative , phone_closest_relative , personal_photo , photo_nationality_number , name_of_brother , univirsity_number , card_photo , name_of_father_police , services_certificate , name_of_fater_unv , services_certificate_unv, date, hours)
                          value ('$form_number','$name_of_student','$the_college','$the_department','$the_type_certificate','$the_course','$the_certificate_rate','$the_set_number','$nationality_number','$gender','$religion','$state','$city','$area','$home_number','$name_guardian','$jop_guardian','$jop_guardian','$relatuve_relation','$phone_guardian','$phone_std','$email_std','$name_closest_relative','$address_closest_relative','$phone_closest_relative','$personal_photo','$photo_nationality_number','$name_of_brother','$univirsity_number','$card_photo','$name_of_father_police','$services_certificate','$name_of_fater_unv','$services_certificate_unv','$date','$hours')");
 
                          */
+                        $_SESSION["nationalitynumber"] = $_POST["nationalitynumber"];
+                        $_SESSION["gender"] = $_POST["gender"];
+                        $_SESSION["nationality"] = $_POST["nationality"];
+                        $_SESSION["religion"] = $_POST["religion"];
+                        $_SESSION["state"] = $_POST["state"];
+                        $_SESSION["city"] = $_POST["city"];
+                        $_SESSION["area"] = $_POST["area"];
+                        $_SESSION["homenumber"] = $_POST["homenumber"];
+                        $_SESSION["nameguardian"] = $_POST["nameguardian"];
+                        $_SESSION["jopguardian"] = $_POST["jopguardian"];
+                        $_SESSION["relatuverelation"] = $_POST["relatuverelation"];
+                        $_SESSION["phoneguardian"] = $_POST["phoneguardian"];
+                        $_SESSION["phonestd"] = $_POST["phonestd"];
+                        $_SESSION["emailstd"] = $_POST["emailstd"];
+                        $_SESSION["nameclosestrelative"] = $_POST["nameclosestrelative"];
+                        $_SESSION["addressclosestrelative"] = $_POST["addressclosestrelative"];
+                        $_SESSION["phoneclosestrelative"] = $_POST["phoneclosestrelative"];
+                        $_SESSION["nameofbrother"] = $_POST["nameofbrother"];
+                        $_SESSION["univirsitynumber"] = $_POST["univirsitynumber"];
+                        $_SESSION["nameoffatherpolice"] = $_POST["nameoffatherpolice"];
+                        $_SESSION["nameoffaterunv"] = $_POST["nameoffaterunv"];
+                        $_SESSION["brother"] = $_POST["brother"];
+                        $_SESSION["police"] = $_POST["police"];
+                        $_SESSION["manegment"] = $_POST["manegment"];
+
 }
- 
+
+
 
 ?>
 
@@ -530,7 +578,7 @@ if(isset($_POST["addreg"])){
 
         </div>
     </div>
-</div>
+</div> 
 
     <!-- <div class="header">
         <div class="nav">
@@ -547,112 +595,112 @@ if(isset($_POST["addreg"])){
         <div class="row">
             <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">Form Number </label>
-                <input type="text"  class="form-control" value="<?php echo $form_no; ?>" readonly>
+                <input type="text" name="formnumber"  class="form-control" value="<?php echo $form_no; ?>" readonly>
             </div>
             <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">Name </label>
-                <input type="text"  class="form-control" value="<?php echo $name_std; ?>" readonly>
+                <input type="text" name="namestd"  class="form-control" value="<?php echo $name_std; ?>" readonly>
             </div>
              <div  class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">College</label>
-                <input type="text" class="form-control" value="<?php echo $college; ?>" readonly>
+                <input type="text" name="college" class="form-control" value="<?php echo $college; ?>" readonly>
             </div>
             <div  class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">  Certificate Unv Type </label>
-                <input type="text"  class="form-control" value="<?php echo $type_certificate_unv; ?>" readonly>
+                <input type="text" name="type_certificate_unv"  class="form-control" value="<?php echo $type_certificate_unv; ?>" readonly>
             </div>
             <div  class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">Department</label>
-                <input type="text"  class="form-control" value="<?php echo $department; ?>" readonly>
+                <input type="text" name="department"  class="form-control" value="<?php echo $department; ?>" readonly>
             </div>
             <div  class="form-group col-lg-4 col-md-6 col-xs-12">
                  <label for="" class="lead"> Certificate Type</label>
-                <input type="text"  class="form-control" value="<?php echo $type_certifcate; ?>" readonly>
+                <input type="text" name="typecertifcate"  class="form-control" value="<?php echo $type_certifcate; ?>" readonly>
             </div>
             <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">The Course</label>
-                <input type="text" class="form-control" value="<?php echo $course; ?>" readonly>
+                <input type="text" name="course" class="form-control" value="<?php echo $course; ?>" readonly>
             </div>
             <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">Certificate Rate</label>
-                <input type="text"   class="form-control" value="<?php echo $certifcate_rate; ?>" readonly>
+                <input type="text" name="certifcaterate"   class="form-control" value="<?php echo $certifcate_rate; ?>" readonly>
             </div>
             <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Set Number</label>
-                <input type="text" class="form-control" value="<?php echo $set_number; ?>" readonly>
+                <input type="text" name="setnumber" class="form-control" value="<?php echo $set_number; ?>" readonly>
             </div>
         <hr>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Nationality</label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Your Nationality" required>
+            <input type="text" name="nationality"  value="<?php echo $_SESSION["nationality"]; ?>" class="form-control"  placeholder="Enter Your Nationality" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Nationality Number </label>
-            <input type="text"  value="" class="form-control" placeholder="Enter Your Nationality Number" required> 
+            <input type="text" name="nationalitynumber"  value="<?php echo $_SESSION["nationalitynumber"]; ?>" class="form-control" placeholder="Enter Your Nationality Number" required> 
         </div>
         <div class="form-group  col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead"> Select  Gender</label>
             <input type="radio" name="gender" id="" value="none" checked hidden ><br>
-            <input type="radio" name="gender" id="" value="male">
+            <input type="radio" name="gender" id="" value="male" <?php if ($_SESSION["gender"] == "male"){echo "checked";} ?>>
             <label for="" class="lead">Male</label>
-            <input type="radio" name="gender" id="" value="female">
+            <input type="radio" name="gender" id="" value="female" <?php if ($_SESSION["gender"] == "female"){echo "checked";} ?>>
             <label for="" class="lead">Female</label>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Religion </label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Your Religion" required>
+            <input type="text" name="religion"  value="<?php echo $_SESSION["religion"]; ?>" class="form-control"  placeholder="Enter Your Religion" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">State</label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Your State" required>
+            <input type="text" name="state" value="<?php echo $_SESSION["state"]; ?>" class="form-control"  placeholder="Enter Your State" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">City</label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Your City" required>
+            <input type="text" name="city"  value="<?php echo $_SESSION["city"]; ?>" class="form-control"  placeholder="Enter Your City" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Area</label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Your Area" required>
+            <input type="text" name="area" value="<?php echo $_SESSION["area"]; ?>" class="form-control"  placeholder="Enter Your Area" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Home Number</label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Your Home Number" required>
+            <input type="text" name="homenumber" value="<?php echo $_SESSION["homenumber"]; ?>" class="form-control"  placeholder="Enter Your Home Number" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Guardian Name</label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Your Guardian Name" required>
+            <input type="text" name="nameguardian"  value="<?php echo $_SESSION["nameguardian"]; ?>" class="form-control"  placeholder="Enter Your Guardian Name" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Guardian Jop</label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Your Guardian Jop" required>
+            <input type="text" name="jopguardian"  value="<?php echo $_SESSION["jopguardian"]; ?>" class="form-control"  placeholder="Enter Your Guardian Jop" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Relatuve Relation</label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Your Relatuve Relation" required>
+            <input type="text" name="relatuverelation" value="<?php echo $_SESSION["relatuverelation"]; ?>" class="form-control"  placeholder="Enter Your Relatuve Relation" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Guardian Phone</label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Your Guardian Phone" required>
+            <input type="text" name="phoneguardian" value="<?php echo $_SESSION["phoneguardian"]; ?>" class="form-control"  placeholder="Enter Your Guardian Phone" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead"> Student Phone</label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Your Phone Number" required>
+            <input type="text" name="phonestd"  value="<?php echo $_SESSION["phonestd"]; ?>" class="form-control"  placeholder="Enter Your Phone Number" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead"> Email</label>
-            <input type="email"  value="" class="form-control"  placeholder="Enter Your Email"required >
+            <input type="email" name="emailstd"  value="<?php echo $_SESSION["emailstd"]; ?>" class="form-control"  placeholder="Enter Your Email"required >
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Closest Relative Name</label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Closest Relative Name" required>
+            <input type="text" name="nameclosestrelative"  value="<?php echo $_SESSION["nameclosestrelative"]; ?>" class="form-control"  placeholder="Enter Closest Relative Name" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Closest Relative Address</label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Closest Relative Address" required>
+            <input type="text" name="addressclosestrelative" value="<?php echo $_SESSION["addressclosestrelative"]; ?>" class="form-control"  placeholder="Enter Closest Relative Address" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Closest Relative Phone</label>
-            <input type="text"  value="" class="form-control"  placeholder="Enter Closest Relative Phone" required>
+            <input type="text" name="phoneclosestrelative"  value="<?php echo $_SESSION["phoneclosestrelative"]; ?>" class="form-control"  placeholder="Enter Closest Relative Phone" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Select Personal Photo</label>
@@ -669,20 +717,20 @@ if(isset($_POST["addreg"])){
             <label for="" class="lead">Do You Have A Brother Or Sister Who Is Currently Studying At Ribat University?</label>
                 <input type="radio" name="brother" id="" value="none" checked hidden>
                 <br>
-                <input type="radio" name="brother" id="" value="yes">
+                <input type="radio" name="brother" id="" value="yes" <?php if ($_SESSION["brother"] == "yes"){echo "checked";} ?>>
                 <label for="" class="lead">Yes</label>
                 <br>
-                <input type="radio" name="brother" id="" value="no">
+                <input type="radio" name="brother" id="" value="no" <?php if ($_SESSION["brother"] == "no"){echo "checked";} ?>>
                 <label for="" class="lead">No</label>
             </div>
         <div class="row">
             <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">Brother Or Sister Name</label>
-                <input type="text" name="name_brother"  value=""  class="form-control" placeholder="Enter Your Brother Or Sister Name" >
+                <input type="text" name="nameofbrother"  value="<?php echo $_SESSION["nameofbrother"]; ?>"  class="form-control" placeholder="Enter Your Brother Or Sister Name" >
             </div>
             <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">Univirsity Number</label>
-                <input type="text" name="unv_number"  value=""  class="form-control" placeholder="Enter His Univirsity Number" >
+                <input type="text" name="univirsitynumber"  value="<?php echo $_SESSION["univirsitynumber"]; ?>"  class="form-control" placeholder="Enter His Univirsity Number" >
             </div>
             <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead"> Select Univirsity Card Photo</label>
@@ -696,17 +744,17 @@ if(isset($_POST["addreg"])){
                 <input type="radio" name="police" id="" value="none" checked hidden>
                 <br>
             <div class="form-group col-lg-4 col-md-6 col-xs-12">
-                <input type="radio" name="police" id="" value="yes">
+                <input type="radio" name="police" id="" value="yes" <?php if ($_SESSION["police"] == "yes"){echo "checked";} ?>>
                 <label for="" class="lead">Yes</label>
                 <br>
-                <input type="radio" name="police" id="" value="no">
+                <input type="radio" name="police" id="" value="no" <?php if ($_SESSION["police"] == "no"){echo "checked";} ?>>
                 <label for="" class="lead">No</label>
             </div>    
             </div>
             <div class="row">
             <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead"> Father Or Mother Name</label>
-                <input type="text" name="nameoffatherpolice" id="" class="form-control" placeholder=" Enter Your Father Or Mother Name ">
+                <input type="text" name="nameoffatherpolice" value="<?php echo $_SESSION["nameoffatherpolice"]; ?>" id="" class="form-control" placeholder=" Enter Your Father Or Mother Name ">
             </div>
             <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">Select Proof Of Service Certificate</label>
@@ -718,16 +766,16 @@ if(isset($_POST["addreg"])){
            <label for="" class="lead">Is You Father Or Mother Currently Working In Ribat University :</label>
                 <input type="radio" name="manegment" id="" value="none" checked hidden>
                 <br>
-                <input type="radio" name="manegment" id="" value="yes">
+                <input type="radio" name="manegment" id="" value="yes" <?php if ($_SESSION["manegment"] == "yes"){echo "checked";} ?>>
                 <label for="" class="lead">Yes</label>
                 <br>
-                <input type="radio" name="manegment" id="" value="no">
+                <input type="radio" name="manegment" id="" value="no" <?php if ($_SESSION["manegment"] == "male"){echo "checked";} ?>>
                 <label for="" class="lead">No</label>
             </div>
             <div class="row">
                 <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead"> Father Or Mother Name</label>
-                <input type="text" name="nameoffaterunv" id="" class="form-control" placeholder=" Enter Your Father Or Mother Name ">
+                <input type="text" name="nameoffaterunv" value="<?php echo $_SESSION["nameoffaterunv"]; ?>" id="" class="form-control" placeholder=" Enter Your Father Or Mother Name ">
                 </div>
                 <div class="form-group col-lg-4 col-md-6 col-xs-12">
                     <label for="" class="lead">Select Proof Of Service Certificate</label>
