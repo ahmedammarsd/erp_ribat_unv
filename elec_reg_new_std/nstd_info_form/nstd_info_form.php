@@ -3,6 +3,9 @@ include "../../connection/connection.php";
 session_start();
 
 $formnumber1 =  $_SESSION["formno"];
+if ($formnumber1 == ""){
+    header("location: ../form_number/form_number.php");
+}
 
 $display_data_new_std = mysqli_query($connection ,"select * from new_std_like_api where form_number = '$formnumber1'");
 $row = mysqli_fetch_array($display_data_new_std);
@@ -205,7 +208,9 @@ if(isset($_POST["addreg"])){
     "insert into new_std_form_info (form_number , name_std , college , type_certificate_unv, department , type_certifcate , course , certifcate_rate , set_number , nationality_number , gender , nationality , religion , state, city , area , home_number , name_of_guardian , jop_guardian , relatuve_relation , phone_of_guardian , phone_std , email_std , name_closest_relative , address_closest_relative , phone_closest_relative , personal_photo , photo_nationality_number , name_of_brother , univirsity_number , card_photo , name_of_father_police , services_certificate , name_of_fater_unv , services_certificate_unv, date, hours, year)
                          value ('$form_number','$name_of_student','$the_college', '$type_certificate_unv','$the_department','$the_type_certificate','$the_course','$the_certificate_rate','$the_set_number','$nationality_number','$gender','$religion','$state','$city','$area','$home_number','$name_guardian','$jop_guardian','$jop_guardian','$relatuve_relation','$phone_guardian','$phone_std','$email_std','$name_closest_relative','$address_closest_relative','$phone_closest_relative','$new_personal_image','$new_national_image','none','none','none','none','none','none','none','$date','$hours','$year')");
             if($insert_data_std){
-                echo "<script>alert('تم التسجيل بنجاح')</script>";
+                $_SESSION["formno"] = "";
+                echo "<script>alert('تم التسجيل بنجاح');
+                window.location.href='../../main/main.php'</script>";
             }
         }
         elseif($if_have_brother_or_no == "yes" && $if_father_in_police == "no" && $if_father_in_manegment_unv == "no"){
@@ -239,7 +244,9 @@ if(isset($_POST["addreg"])){
                                   value ('$form_number','$name_of_student','$the_college', '$type_certificate_unv','$the_department','$the_type_certificate','$the_course','$the_certificate_rate','$the_set_number','$nationality_number','$gender','$religion','$state','$city','$area','$home_number','$name_guardian','$jop_guardian','$jop_guardian','$relatuve_relation','$phone_guardian','$phone_std','$email_std','$name_closest_relative','$address_closest_relative','$phone_closest_relative','$new_personal_image','$new_national_image','$name_of_brother','$univirsity_number','$new_brother_image','none','none','none','none','$date','$hours','$year')");
          
                                   if($insert_data_std){
-                                    echo "<script>alert('تم التسجيل بنجاح')</script>";
+                                    $_SESSION["formno"] = "";
+                                    echo "<script>alert('تم التسجيل بنجاح');
+                                    window.location.href='../../main/main.php'</script>";
                                 }
             }
         }
@@ -287,7 +294,9 @@ if(isset($_POST["addreg"])){
                                  value ('$form_number','$name_of_student','$the_college', '$type_certificate_unv','$the_department','$the_type_certificate','$the_course','$the_certificate_rate','$the_set_number','$nationality_number','$gender','$religion','$state','$city','$area','$home_number','$name_guardian','$jop_guardian','$jop_guardian','$relatuve_relation','$phone_guardian','$phone_std','$email_std','$name_closest_relative','$address_closest_relative','$phone_closest_relative','$new_personal_image','$new_national_image','$name_of_brother','$univirsity_number','$new_brother_image','$name_of_father_police','$new_police_image','none','none','$date','$hours','$year')");
         
                                  if($insert_data_std){
-                                    echo "<script>alert('تم التسجيل بنجاح')</script>";
+                                    $_SESSION["formno"] = "";
+                                        echo "<script>alert('تم التسجيل بنجاح');
+                                        window.location.href='../../main/main.php'</script>";
                                 }
            }
        }
@@ -348,7 +357,9 @@ if(isset($_POST["addreg"])){
                          value ('$form_number','$name_of_student','$the_college', '$type_certificate_unv','$the_department','$the_type_certificate','$the_course','$the_certificate_rate','$the_set_number','$nationality_number','$gender','$religion','$state','$city','$area','$home_number','$name_guardian','$jop_guardian','$jop_guardian','$relatuve_relation','$phone_guardian','$phone_std','$email_std','$name_closest_relative','$address_closest_relative','$phone_closest_relative','$new_personal_image','$new_national_image','$name_of_brother','$univirsity_number','$new_brother_image','$name_of_father_police','$new_police_image','$name_of_fater_unv','$new_unv_image','$date','$hours','$year')");
 
                          if($insert_data_std){
-                            echo "<script>alert('تم التسجيل بنجاح')</script>";
+                                      $_SESSION["formno"] = "";
+                                        echo "<script>alert('تم التسجيل بنجاح');
+                                        window.location.href='../../main/main.php'</script>";
                         }
             }
         }
@@ -383,7 +394,9 @@ if(isset($_POST["addreg"])){
                          value ('$form_number','$name_of_student','$the_college','$type_certificate_unv','$the_department','$the_type_certificate','$the_course','$the_certificate_rate','$the_set_number','$nationality_number','$gender','$religion','$state','$city','$area','$home_number','$name_guardian','$jop_guardian','$jop_guardian','$relatuve_relation','$phone_guardian','$phone_std','$email_std','$name_closest_relative','$address_closest_relative','$phone_closest_relative','$new_personal_image','$new_national_image','none','none','none','$name_of_father_police','$new_police_image','none','none','$date','$hours','$year')");
 
                          if($insert_data_std){
-                            echo "<script>alert('تم التسجيل بنجاح')</script>";
+                                       $_SESSION["formno"] = "";
+                                        echo "<script>alert('تم التسجيل بنجاح');
+                                        window.location.href='../../main/main.php'</script>";
                         }
             }
         }
@@ -430,7 +443,9 @@ if(isset($_POST["addreg"])){
                                      value ('$form_number','$name_of_student','$the_college', '$type_certificate_unv','$the_department','$the_type_certificate','$the_course','$the_certificate_rate','$the_set_number','$nationality_number','$gender','$religion','$state','$city','$area','$home_number','$name_guardian','$jop_guardian','$jop_guardian','$relatuve_relation','$phone_guardian','$phone_std','$email_std','$name_closest_relative','$address_closest_relative','$phone_closest_relative','$new_personal_image','$new_national_image','none','none','none','$name_of_father_police','$new_police_image','$name_of_fater_unv','$new_unv_image','$date','$hours','$year')");
             
                                      if($insert_data_std){
-                                        echo "<script>alert('تم التسجيل بنجاح')</script>";
+                                        $_SESSION["formno"] = "";
+                                        echo "<script>alert('تم التسجيل بنجاح');
+                                        window.location.href='../../main/main.php'</script>";
                                     }
             }
         }
@@ -464,7 +479,9 @@ if(isset($_POST["addreg"])){
                                      value ('$form_number','$name_of_student','$the_college', '$type_certificate_unv','$the_department','$the_type_certificate','$the_course','$the_certificate_rate','$the_set_number','$nationality_number','$gender','$religion','$state','$city','$area','$home_number','$name_guardian','$jop_guardian','$jop_guardian','$relatuve_relation','$phone_guardian','$phone_std','$email_std','$name_closest_relative','$address_closest_relative','$phone_closest_relative','$new_personal_image','$new_national_image','none','none','none','none','none','$name_of_fater_unv','$new_unv_image','$date','$hours',$year)");
             
                                      if($insert_data_std){
-                                        echo "<script>alert('تم التسجيل بنجاح')</script>";
+                                        $_SESSION["formno"] = "";
+                                        echo "<script>alert('تم التسجيل بنجاح');
+                                        window.location.href='../../main/main.php'</script>";
                                     }
             }
         }
@@ -512,7 +529,9 @@ if(isset($_POST["addreg"])){
                                      value ('$form_number','$name_of_student','$the_college' , '$type_certificate_unv','$the_department','$the_type_certificate','$the_course','$the_certificate_rate','$the_set_number','$nationality_number','$gender','$religion','$state','$city','$area','$home_number','$name_guardian','$jop_guardian','$jop_guardian','$relatuve_relation','$phone_guardian','$phone_std','$email_std','$name_closest_relative','$address_closest_relative','$phone_closest_relative','$new_personal_image','$new_national_image','$name_of_brother','$univirsity_number','$new_brother_image','none','none','$name_of_fater_unv','$new_unv_image','$date','$hours','$year')");
             
                                      if($insert_data_std){
-                                        echo "<script>alert('تم التسجيل بنجاح')</script>";
+                                        $_SESSION["formno"] = "";
+                                        echo "<script>alert('تم التسجيل بنجاح');
+                                        window.location.href='../../main/main.php'</script>";
                                     }
            }
         }
