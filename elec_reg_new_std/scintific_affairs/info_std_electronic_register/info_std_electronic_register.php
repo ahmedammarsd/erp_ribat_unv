@@ -15,6 +15,7 @@ $_SESSION["full_name_scientific_affairs"] = $name_user;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../css/all.min.css">
     <link rel="stylesheet" href="../../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/dashboard.css?v=<?php echo time();?>">
     <link rel="stylesheet" href="../../../css/manegment/scintific_affairs/info_std_electronic_register.css?v=<?php echo time();?>">
     <title>Review Information Students</title>
 </head>

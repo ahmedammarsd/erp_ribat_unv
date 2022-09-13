@@ -40,6 +40,7 @@ if(isset($_POST["add_subject"])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../css/all.min.css">
     <link rel="stylesheet" href="../../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/dashboard.css?v=<?php echo time();?>">
     <link rel="stylesheet" href="../../../css/manegment/Register/add_subject.css?v=<?php echo time();?>">
     <title> Add Subject</title>
 </head>

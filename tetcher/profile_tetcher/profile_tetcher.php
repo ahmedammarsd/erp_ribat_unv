@@ -23,6 +23,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/all.min.css">
     <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/dashboard.css?v=<?php echo time();?>">
     <link rel="stylesheet" href="../../css/manegment/teacher/profile_tetcher.css?v=<?php echo time();?>">
     <title>Teacher Profile</title>
 </head>
