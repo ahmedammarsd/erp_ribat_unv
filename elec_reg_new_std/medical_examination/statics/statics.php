@@ -47,7 +47,7 @@ $num_display_number_of_students_completed_medical = mysqli_num_rows($display_num
         </ul>
         </div>
         <div class="container">
-        <div class="heder">
+        <div class="header">
             <div class="nav">
                 <div>
                 <h3><a href="../account/account.php"><img src="../../../icons/account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_user ?></h3>

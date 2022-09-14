@@ -17,7 +17,7 @@
                 <ul>
                     <li class="active"><a href ="#">Home</a></li>
                     <li><a href ="..\elec_reg_new_std\form_number\form_number.php">ADDMISSION </a></li>
-                    <li><a href ="..\student\login_std\login_std.php">LOGIN</a></li>
+                    <li><a href ="..\student\login\login.php">LOGIN</a></li>
                 </ul>
             </div>
         </div>

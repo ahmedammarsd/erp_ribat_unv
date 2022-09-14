@@ -9,7 +9,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 
 .container .content .cards .card {
@@ -40,5 +39,4 @@
 .btn {
     width: 150px;
     background-color: #0e6a93;
-
 }
