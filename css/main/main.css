@@ -2,46 +2,82 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Tahoma, Geneva, Verdana, sans-serif
-}
+    font-family: "cairo", sans-serif
+} 
 .header {
     width: 100%;
     height: 50px;
-    box-shadow: 0 3px 6px 0 #0e6a93, 0 3px 10px 0 #0e6a93;
+    box-shadow: 0 1px 3px 0 #0e6a93, 0 1px 5px 0 #0e6a93;
+}
+a {
+  text-decoration: none;  
 }
 .header .navbar ul {
-    text-decoration: none;
-    list-style-type: none;
-    align-items: center;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    list-style: none;
 }
 .header .navbar h2 {
-    float: left;
     text-transform: uppercase;
     color: #0e6a93;
     font-weight: 600;
-    margin-top: 5px;
-
 }
 .header .nav ul li {
-    float: left;
-    padding: 10px;
-    justify-content: space-between;
-    text-decoration: none;
     margin: 5px;
-    font-size: 10px;
-
+    font-size: 20px;
+    padding: 15px 15px;
 }
-.header .navbar ul li a {
-    color: #0e6a93;
-    text-decoration: none;
-    margin: 5px;
-
+.header .navbar ul li a{
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-right: 40px;
 }
-.header .navbar ul li a:hover {
-    color: whitesmoke;
+.header .navbar ul li a:hover , .active {
+    color: white;
     background-color: #0e6a93;
-    border-radius: 5px;
 }
+.carousel{
+    width: 100%;
+    height: 92vh;
+    overflow: hidden;
+}
+.carousel .carousel-item img{
+    width: 100%;
+    height: 100%;
+}
+/*a{
+    text-decoration: none;
+    color: #fff;
+}
+header{
+    position: fixed;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin: 30px;
+    z-index: 100;
+}
+header .logo{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+header ul li{
+    margin-right: 30px;
+}
+header ul li a{
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+header ul li a:hover , .active{
+    background-color: #fff;
+    color: #200016;
+}
+*/
