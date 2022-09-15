@@ -1,5 +1,7 @@
 <?php
 include "../../../connection/connection.php";
+session_start();
+$name_teacher =  $_SESSION["name_of_tetcher"];
 $year_for_unv_id = date("y");
 $unv_rand_id = "1-".$year_for_unv_id."-0001".random_int(1111,9999);
 
@@ -94,126 +96,141 @@ if(isset($_POST["submit"])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../css/all.min.css">
+    <link rel="stylesheet" href="../../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/manegment/teacher/interview_std.css?v=<?php echo time();?>">
     <title>information student</title>
 </head>
 <body>
+<div class="container">
+    <div class="header">
+        <div class="nav">
+        <div>
+        <h3><a href="../account/account.php"><img src="../../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_teacher ?></h3>
+        </div>
+        <div class="log">
+        <a href="../../logout/logout.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
+        </div>
+        </div>
+    </div>
+    <div class="form">
     <form action="" method="post">
-    <div>
-            <div>
-                رقم الاستمارة
-                <input type="text"  value="<?php echo $form_number  ?>" readonly>
+    <div class="row">
+            <div  class="form-group col-lg-4 col-md-6 col-xs-12">
+            <label for="" class="lead">Form Number </label>
+                <input type="text"  value="<?php echo $form_number  ?>" class="form-control" readonly>
             </div>
-            <div>
-               الاسم
-                <input type="text" value="<?php echo $name_std  ?>" readonly>
+            <div class="form-group col-lg-4 col-md-6 col-xs-12">
+            <label for="" class="lead">Name </label>
+                <input type="text" value="<?php echo $name_std  ?>"  class="form-control"  readonly>
             </div>
-             <div>
-               الكلية
-                <input type="text" value="<?php echo $the_college  ?>" readonly>
+             <div class="form-group col-lg-4 col-md-6 col-xs-12">
+             <label for="" class="lead">College</label>
+                <input type="text" value="<?php echo $the_college  ?>"  class="form-control"  readonly>
             </div>
-            <div>
-               نوع الشهادة الجامعية
-                <input type="text"  value="<?php echo $type_certificate_unv  ?>" readonly>
+            <div class="form-group col-lg-4 col-md-6 col-xs-12">
+            <label for="" class="lead"> Type Certificate Unv </label>
+                <input type="text"  value="<?php echo $type_certificate_unv  ?>"  class="form-control"  readonly>
             </div>
-            <div>
-                القسم
-                <input type="text"  value="<?php echo $the_department  ?>" readonly>
+            <div class="form-group col-lg-4 col-md-6 col-xs-12">
+            <label for="" class="lead">Department</label>
+                <input type="text"  value="<?php echo $the_department  ?>"  class="form-control"  readonly>
             </div>
-             <div>
-               نوع الشهادة
-                <input type="text"  value="<?php echo $the_type_certificate  ?>" readonly>
+             <div class="form-group col-lg-4 col-md-6 col-xs-12">
+             <label for="" class="lead"> Certificate Type</label>
+                <input type="text"  value="<?php echo $the_type_certificate  ?>"  class="form-control"  readonly>
             </div>
-            <div>
-                المساق
-                <input type="text" value="<?php echo $the_course  ?>" readonly>
+            <div class="form-group col-lg-4 col-md-6 col-xs-12">
+            <label for="" class="lead">The Course</label>
+                <input type="text" value="<?php echo $the_course  ?>"  class="form-control"  readonly>
             </div>
-            <div>
-               نسبة الشهادة
-                <input type="text"  value="<?php echo $the_certificate_rate  ?>" readonly>
+            <div class="form-group col-lg-4 col-md-6 col-xs-12">
+            <label for="" class="lead">Certificate Rate</label>
+                <input type="text"  value="<?php echo $the_certificate_rate  ?>"  class="form-control"  readonly>
             </div>
-            <div>
-               رقم الجلوس
-                <input type="text"  value="<?php echo $the_set_number  ?>" readonly>
+            <div class="form-group col-lg-4 col-md-6 col-xs-12">
+            <label for="" class="lead">Set Number</label>
+                <input type="text"  value="<?php echo $the_set_number  ?>"  class="form-control"  readonly>
             </div>
-        </div>
+        
         <hr>
-        <div>
-           الرقم الوطني
-            <input type="text"  value="<?php echo $nationality_number  ?>"  readonly>
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for="" class="lead">Nationality Number </label> 
+            <input type="text"  value="<?php echo $nationality_number  ?>" class="form-control"  readonly>
         </div>
-        <div>
-            الجنس
-            <input type="text"  value="<?php echo $gender  ?>"  readonly>
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for="" class="lead">Gender</label>
+            <input type="text"  value="<?php echo $gender  ?>" class="form-control"  readonly>
         </div>
-        <div>
-            الجنسية
-            <input type="text"  value="<?php echo $nationality  ?>" readonly>
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for="" class="lead">Nationality</label>
+            <input type="text"  value="<?php echo $nationality  ?>" class="form-control" readonly>
         </div>
-        <div>
-            الديانة
-            <input type="text"  value="<?php echo $religion  ?>" readonly>
+        <div class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for="" class="lead">Religion </label>
+            <input type="text"  value="<?php echo $religion  ?>" class="form-control" readonly>
         </div>
-        <div>
-            الولاية
-            <input type="text"  value="<?php echo $state  ?>" readonly>
+        <div class="form-group col-lg-4 col-md-6 col-xs-12" >
+        <label for="" class="lead">State</label>
+            <input type="text"  value="<?php echo $state  ?>" class="form-control" readonly>
         </div>
-        <div>
-            المدينة
-            <input type="text"  value="<?php echo $city  ?>" readonly>
+        <div  class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for="" class="lead">City</label>
+            <input type="text"  value="<?php echo $city  ?>" class="form-control" readonly>
         </div>
-        <div>
-            الحي
-            <input type="text"  value="<?php echo $area  ?>" readonly>
+        <div  class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for="" class="lead">Area</label>
+            <input type="text"  value="<?php echo $area  ?>" class="form-control" readonly>
         </div>
-        <div>
-            رقم المنزل
-            <input type="text"  value="<?php echo $home_number  ?>" readonly>
+        <div  class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for="" class="lead">Home Number</label>
+            <input type="text"  value="<?php echo $home_number  ?>" class="form-control" readonly>
         </div>
-        <div>
-            اسم ولي الامر
-            <input type="text"  value="<?php echo $name_guardian  ?>" readonly>
+        <div  class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for="" class="lead">Guardian Name</label>
+            <input type="text"  value="<?php echo $name_guardian  ?>" class="form-control" readonly>
         </div>
-        <div>
-            مهنة ولي الامر
-            <input type="text"  value="<?php echo $jop_guardian  ?>" readonly>
+        <div  class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for="" class="lead">Guardian Jop</label>
+            <input type="text"  value="<?php echo $jop_guardian  ?>" class="form-control" readonly>
         </div>
-        <div>
-            صلة القرابة
-            <input type="text"  value="<?php echo $relatuve_relation  ?>" readonly>
+        <div  class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for="" class="lead">Relatuve Relation</label>
+            <input type="text"  value="<?php echo $relatuve_relation  ?>" class="form-control" readonly>
         </div>
-        <div>
-            هاتف ولي الامر
-            <input type="text"  value="<?php echo $phone_guardian  ?>" readonly>
+        <div  class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for="" class="lead">Guardian Phone</label>
+            <input type="text"  value="<?php echo $phone_guardian  ?>" class="form-control" readonly>
         </div>
-        <div>
-            هاتف الطالب
-            <input type="text"  value="<?php echo $phone_std  ?>" readonly>
+        <div  class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for="" class="lead"> Student Phone</label>
+            <input type="text"  value="<?php echo $phone_std  ?>" class="form-control"  readonly>
         </div>
-        <div>
-            الايميل
-            <input type="email"  value="<?php echo $email_std  ?>" readonly>
+        <div  class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for="" class="lead"> Email</label>
+            <input type="email"  value="<?php echo $email_std  ?>" class="form-control"  readonly>
         </div>
-        <div>
-            اسم اقرب الاقربين
-            <input type="text"  value="<?php echo $name_closest_relative  ?>" readonly>
+        <div  class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for="" class="lead">Closest Relative Name</label>
+            <input type="text"  value="<?php echo $name_closest_relative  ?>" class="form-control"  readonly>
         </div>
-        <div>
-            عنوان اقرب الاقربين
-            <input type="text"  value="<?php echo $address_closest_relative  ?>" readonly>
+        <div  class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for="" class="lead">Closest Relative Address</label> 
+            <input type="text"  value="<?php echo $address_closest_relative  ?>" class="form-control"  readonly>
         </div>
-        <div>
-            هاتف اقرب الاقربين
-            <input type="text"  value="<?php echo $phone_closest_relative  ?>" readonly>
+        <div  class="form-group col-lg-4 col-md-6 col-xs-12">
+        <label for="" class="lead">Closest Relative Phone</label> 
+            <input type="text"  value="<?php echo $phone_closest_relative  ?>" class="form-control"  readonly>
         </div>
-        <div>
-            ارفاق صورة شخصية
-            <div style="width: 500px; height: 500px;">
+        <div  class="form-group col-lg-6 col-md-12 col-xs-12">
+        <label for="" class="lead">Personal Photo</label>
+        <div style="width: 300px; height: 300px; margin:0 auto;" class="form-control">
            <img src="../../nstd_info_form/images_uplodes/<?php echo $personal_photo ?>" alt="none" width="100%" height="100%">
            </div>
         </div>
-        <div>
-            ارفاق صورة الرقم الوطني
-            <div style="width: 500px; height: 500px;">
+        <div  class="form-group col-lg-6 col-md-12 col-xs-12">
+        <label for="" class="lead">Nationality Number Photo</label>
+        <div style="width: 300px; height: 300px; margin:0 auto;" class="form-control">
            <img src="../../nstd_info_form/images_uplodes/<?php echo $photo_nationality_number ?>" alt="none" width="100%" height="100%">
            </div>
         </div>
@@ -280,23 +297,23 @@ if(isset($_POST["submit"])){
         ?>
        
          <br>   
-         <div>
-              نسبة التخفيض
-                <input type="text" name="descount_rate"  value="<?php echo $descount_rate ?>" readonly>
+         <div  class="form-group col-lg-4 col-md-6 col-xs-12">
+         <label for="" class="lead">discount pesnt</label>
+                <input type="text" name="descount_rate"  value="<?php echo $descount_rate ?>" class="form-control" readonly>
             </div>
        <br>
        <hr>
-       <div>
-           الدفعة
-           <input type="text" name="batch" id="" value="<?php echo $batch; ?>">
+       <div  class="form-group col-lg-4 col-md-6 col-xs-12">
+       <label for="" class="lead">Batch</label>
+           <input type="text" name="batch" id="" value="<?php echo $batch; ?>"class="form-control" readonly>
        </div>
-       <div>
-           الرقم الجامعي
-           <input type="text" name="unv_idd" id="" value="<?php echo $unv_rand_id ?>">
+       <div class="form-group col-lg-4 col-md-6 col-xs-12">
+       <label for="" class="lead">unv_id</label>
+           <input type="text" name="unv_idd" id="" value="<?php echo $unv_rand_id ?>"class="form-control" readonly>
        </div>
-       <div>
-           رسوم التسجيل
-           <input type="text" name="reg_fee" value="<?php echo $register_fee; ?>" readonly>
+       <div  class="form-group col-lg-4 col-md-6 col-xs-12">
+       <label for="" class="lead">register fees</label>
+           <input type="text" name="reg_fee" value="<?php echo $register_fee; ?>"class="form-control" readonly>
        </div>
        <?php
            if($descount_rate == "0%"){
@@ -332,20 +349,20 @@ if(isset($_POST["submit"])){
                 $new_value_descout_rate = 0;
             }
            ?>
-       <div>
-          رسوم السنة الدراسية
-           <input type="text" name="year_fee" value="<?php echo $year_fee*$new_value_descout_rate/100; ?>" readonly>
+       <div  class="form-group col-lg-4 col-md-6 col-xs-12">
+       <label for="" class="lead"> Study fees</label>
+       <input type="text" name="year_fee" value="<?php echo $year_fee*$new_value_descout_rate/100; ?>"class="form-control" readonly>
        </div>
-       <div>
-           ملاحظة
-           <input type="text" name="note" value="<?php echo $note; ?>" id="">
+       <div class="form-group col-lg-4 col-md-6 col-xs-12">
+       <label for="" class="lead">  Noots</label>
+           <input type="text" name="note" value="<?php echo $note; ?>"class="form-control" id="" readonly>
        </div>
        <hr>
 
-        <div>
-            <input type="submit" value="تاكيد المعاينة" name="submit">
-          
+        <div class="form-group col-lg-12 col-md-12 col-xs-12">
+           <input type="submit" value="Confirm Interview " name="submit" class='btn btn-primary' >
         </div>
+    </div>
     </form>
 
     <?php
