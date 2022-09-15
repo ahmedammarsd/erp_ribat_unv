@@ -254,6 +254,7 @@ if($workerid){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../css/all.min.css">
     <link rel="stylesheet" href="../../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/dashboard.css">
     <link rel="stylesheet" href="../../../css/manegment/insert to salary.css?v=<?php echo time();?>">
     <title>Salary</title>
 </head>
