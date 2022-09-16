@@ -43,7 +43,7 @@ $_SESSION["full_name_reg"] = $name_user;
         </div>
     </div>
 <div class="content">
-                <div class="cards">
+                <div class="cards" style="justify-content: space-around;">
                     <div class="card">
                         <div class="box"><br>
                             <h3>Query student</h3>
@@ -64,17 +64,6 @@ $_SESSION["full_name_reg"] = $name_user;
                         </div>
                         <div>
                            <a href="../reports/reg_std/reg_std.php"><button class="btn btn-primary">View</button></a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="box"><br>
-                            <h3> 2</h3>
-                        </div>
-                        <div class="icon-case">
-                            <img src="../../../icons/mustahq1.png" alt="" srcset=""  width="70px" height="70px">
-                        </div>
-                        <div>
-                           <a href="#"><button class="btn btn-primary">View</button></a>
                         </div>
                     </div>
               </div>  

@@ -18,10 +18,9 @@ a {
     align-items: center;
     list-style: none;
 }
-.header .navbar h2 {
-    text-transform: uppercase;
+.header .navbar h3 {
     color: #0e6a93;
-    font-weight: 600;
+    font-weight:600;
 }
 .header .nav ul li {
     margin: 5px;
@@ -29,7 +28,7 @@ a {
     padding: 15px 15px;
 }
 .header .navbar ul li a{
-    padding: 12px 15px;
+    padding: 13px 15px;
     border-radius: 8px;
     margin-right: 40px;
 }

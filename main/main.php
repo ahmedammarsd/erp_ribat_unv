@@ -13,7 +13,7 @@
 <div class="header">
     <div class="navbar">
             <div class="container">
-                <h2>RIBAT UNVIRSITY</h2>
+                <h3>RIBAT UNVIRSITY</h3>
                 <ul>
                     <li><a href ="#"  class="active">Home</a></li>
                     <li><a href ="..\elec_reg_new_std\form_number\form_number.php">ADDMISSION </a></li>
