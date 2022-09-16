@@ -1,5 +1,6 @@
 <?php
 include "../../connection/connection.php";
+error_reporting(0);
 session_start();
 
 $name_subject = $_GET["name_subject"];
@@ -55,6 +56,7 @@ if( $type_exam == "sub_exams"){
     }
 }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,17 +64,27 @@ if( $type_exam == "sub_exams"){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/manegment/teacher/submit_and_send_result.css?v=<?php echo time();?>">
     <title>Confirm The Result</title>
 </head>
 <body>
-    <h2>Are You Sure You Can Confirm These Scores?</h2>
+    <div class="container">
+        <div class="confirm-massege">
+    <h3>Are You Sure You Want Confirm These Scores?</h3>
     <form action="" method="post">
-        <div>
-            <button name="submit">Confirm</button>
+        <div class="row">
+        <div class="form-group col-lg-6 col-md-6 col-sm-6">
+            <button name="submit" class="btn btn-success">Confirm</button>
         </div>
+        <div class="form-group col-lg-6 col-md-6 col-sm-6">
         <?php 
-       echo "<a href='display_std_inf_for_results.php?name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam'>Back</a>";
+       echo "<a href='display_std_inf_for_results.php?name_subject=$name_subject&type_certificate=$type_certificate&department=$department&batch=$batch&study_year=$study_year&semester=$semester&type_exam=$type_exam' class='btn btn-danger'>Back</a>";
         ?>
+        </div>
+        </div>
+        </div>
     </form>
+    </div>
 </body>
 </html>
