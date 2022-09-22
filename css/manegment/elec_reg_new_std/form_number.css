@@ -40,10 +40,10 @@
     position: relative;
 }
 
-.fa-solid {
+.form-group img {
     position: absolute;
-    top: 56px;
-    left: 15px;
+    top: 48px;
+    left: 10px;
     color: #0e6a93;
 }
 
