@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 22, 2022 at 05:50 PM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.2
+-- Generation Time: Jul 30, 2022 at 07:24 PM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 7.3.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -71,10 +70,7 @@ INSERT INTO `distribution_subject` (`id`, `name_subject`, `name_tetcher`, `type_
 (32, 'لغة عربية', 'aisha', 'بكلاريوس', 'تقنية معلومات', '1', 'الاولى', '1', '3', 'bssa abdo', '22', '2022-07-26', '12:07:13', 'none'),
 (33, 'oop', 'aisha', 'بكلاريوس', 'تقنية معلومات', '1', 'الاولى', '1', '4', 'bssa abdo', '22', '2022-07-26', '12:07:42', 'none'),
 (34, 'هياكل بيانات', 'aisha', 'بكلاريوس', 'تقنية معلومات', '1', 'الاولى', '1', '4', 'bssa abdo', '22', '2022-07-26', '12:07:03', 'none'),
-(35, 'alogrithm', 'aisha', 'بكلاريوس', 'تقنية معلومات', '1', 'الاولى', '1', '4', 'bssa abdo', '22', '2022-07-26', '12:07:22', 'none'),
-(36, 'oop', 'bssa', 'Ø¨ÙƒÙ„Ø§Ø±ÙŠÙˆØ', 'ØªÙ‚Ù†ÙŠØ© Ù…Ø¹', '1', 'Ø§Ù„Ø§ÙˆÙ„Ù‰', '1', '4', 'bssa3', '22', '2022-09-06', '04:09:33', 'none'),
-(37, 'oop', 'm7med', 'Ø¨ÙƒÙ„Ø§Ø±ÙŠÙˆØ', 'ØªÙ‚Ù†ÙŠØ© Ù…Ø¹', '1', 'Ø§Ù„Ø§ÙˆÙ„Ù‰', '1', '4', 'bssa3', '22', '2022-09-07', '08:09:47', 'none'),
-(38, 'DB', 'm7med', 'Ø¨ÙƒÙ„Ø§Ø±ÙŠÙˆØ', 'ØªÙ‚Ù†ÙŠØ© Ù…Ø¹', '1', 'Ø§Ù„Ø§ÙˆÙ„Ù‰', '1', '4', 'bssa3', '22', '2022-09-07', '08:09:05', 'none');
+(35, 'alogrithm', 'aisha', 'بكلاريوس', 'تقنية معلومات', '1', 'الاولى', '1', '4', 'bssa abdo', '22', '2022-07-26', '12:07:22', 'none');
 
 -- --------------------------------------------------------
 
@@ -134,13 +130,7 @@ INSERT INTO `distribution_tetcher_exams` (`id`, `name_subject`, `name_tetcher`, 
 (29, 'لغة عربية', 'aisha', 'بكلاريوس', 'تقنية معلومات', '1', 'الاولى', '1', 'normal', '2022-07-26', 'bssa abdo', '22', '2022-07-26', '12:07:25'),
 (30, 'oop', 'aisha', 'بكلاريوس', 'تقنية معلومات', '1', 'الاولى', '1', 'normal', '2022-07-26', 'bssa abdo', '22', '2022-07-26', '12:07:48'),
 (31, 'هياكل بيانات', 'aisha', 'بكلاريوس', 'تقنية معلومات', '1', 'الاولى', '1', 'normal', '2022-07-26', 'bssa abdo', '22', '2022-07-26', '12:07:17'),
-(32, 'alogrithm', 'aisha', 'بكلاريوس', 'تقنية معلومات', '1', 'الاولى', '1', 'normal', '2022-07-26', 'bssa abdo', '22', '2022-07-26', '12:07:46'),
-(33, 'oop', 'bssa', 'Ø¨ÙƒÙ„Ø§Ø±ÙŠÙˆØ', 'ØªÙ‚Ù†ÙŠØ© Ù…Ø¹', '1', 'Ø§Ù„Ø§ÙˆÙ„Ù‰', '1', 'normal', '2022-09-06', 'bssa3', '22', '2022-09-06', '04:09:03'),
-(34, 'DB', 'bssa', 'Ø¨ÙƒÙ„Ø§Ø±ÙŠÙˆØ', 'ØªÙ‚Ù†ÙŠØ© Ù…Ø¹', '1', 'Ø§Ù„Ø§ÙˆÙ„Ù‰', '1', 'normal', '2022-09-06', 'bssa3', '22', '2022-09-06', '04:09:14'),
-(35, '??????', 'm7med', 'Ø¨ÙƒÙ„Ø§Ø±ÙŠÙˆØ', 'ØªÙ‚Ù†ÙŠØ© Ù…Ø¹', '1', 'Ø§Ù„Ø§ÙˆÙ„Ù‰', '1', 'normal', '2022-09-07', 'bssa3', '22', '2022-09-07', '08:09:37'),
-(36, 'DB', 'm7med', 'Ø¨ÙƒÙ„Ø§Ø±ÙŠÙˆØ', 'ØªÙ‚Ù†ÙŠØ© Ù…Ø¹', '1', 'Ø§Ù„Ø§ÙˆÙ„Ù‰', '1', 'normal', '2022-09-08', 'bssa3', '22', '2022-09-07', '08:09:05'),
-(37, 'calculas2', 'm7med', 'Ø¨ÙƒÙ„Ø§Ø±ÙŠÙˆØ', 'ØªÙ‚Ù†ÙŠØ© Ù…Ø¹', '1', 'Ø§Ù„Ø§ÙˆÙ„Ù‰', '1', 'normal', '2022-09-10', 'bssa3', '22', '2022-09-10', '09:09:43'),
-(38, 'alogrithm', 'm7med', 'Ø¨ÙƒÙ„Ø§Ø±ÙŠÙˆØ', 'ØªÙ‚Ù†ÙŠØ© Ù…Ø¹', '1', 'Ø§Ù„Ø§ÙˆÙ„Ù‰', '1', 'normal', '2022-09-10', 'bssa3', '22', '2022-09-10', '09:09:14');
+(32, 'alogrithm', 'aisha', 'بكلاريوس', 'تقنية معلومات', '1', 'الاولى', '1', 'normal', '2022-07-26', 'bssa abdo', '22', '2022-07-26', '12:07:46');
 
 -- --------------------------------------------------------
 
@@ -171,12 +161,11 @@ CREATE TABLE `employes` (
 
 INSERT INTO `employes` (`id`, `full_name`, `phone_number`, `email`, `address`, `academic_qualification`, `type_of_jop`, `salary`, `username`, `password`, `date_of_add`, `hours`, `del`, `take_salary`) VALUES
 (12, 'bssa ', '0934678244', 'bsheer@gmail.com', 'المعمورة', 'بكاليريوس محاسبة', 'Accountant', '90000', 'bssa2', '0000', '2022-07-02', '12:07:00', 'no', 'yes'),
-(13, 'bsheer', '09999123', 'bsheer@gmail.com', 'omdorman', 'بكاليريوس تقنية معلومات', 'Human Resource', '90000', 'basheer', '0000', '2022-07-02', '12:07:04', 'no', 'yes'),
-(14, 'bssa abdo', '09999123', 'omer@gmail.com', 'omdorman', 'بكاليريوس تقنية معلومات', 'Registered', '100000', 'bssareg', '0000', '2022-07-02', '01:07:41', 'no', 'yes'),
+(13, 'bsheer', '09999123', 'bsheer@gmail.com', 'omdorman', 'بكاليريوس تقنية معلومات', 'Human Resource', '90000', 'basheer', '0000', '2022-07-02', '12:07:04', 'no', 'no'),
+(14, 'bssa abdo', '09999123', 'omer@gmail.com', 'omdorman', 'بكاليريوس تقنية معلومات', 'Registered', '100000', 'bssareg', '0000', '2022-07-02', '01:07:41', 'no', 'no'),
 (15, 'm7med', 'w345789', 'bsheer@gmail.com', 'المعمورة', 'بكاليريوس تقنية معلومات', 'Human Resource', '40000', 'm7med', '0000', '2022-07-05', '07:07:31', 'no', 'no'),
-(16, 'snhoory', '3456789', 'bsheer@gmail.com', 'المعمورة', 'بكاليريوس تقنية معلومات', 'Human Resource', '100000', 'snhoory', '1111', '2022-07-05', '07:07:04', 'no', 'no'),
-(17, 'bssa3', '0934678244', 'bssa@gmia.coml', 'الصحافة', 'بكاليريوس تقنية معلومات', 'Registered', '100000', 'bssa3', '0000', '2022-07-06', '12:07:07', 'no', 'no'),
-(18, 'osman', '34567899', 'reemali0707@gmail.com', 'alshafA', 'IT', 'Accountant', '13345678', 'osman', '0000', '2022-09-04', '05:09:04', 'no', 'no');
+(16, 'snhoory', '3456789', 'bsheer@gmail.com', 'المعمورة', 'بكاليريوس تقنية معلومات', 'Human Resource', '100000', 'snhoory', '0000', '2022-07-05', '07:07:04', 'no', 'no'),
+(17, 'bssa3', '0934678244', 'bssa@gmia.coml', 'الصحافة', 'بكاليريوس تقنية معلومات', 'Registered', '100000', 'bssa3', '0000', '2022-07-06', '12:07:07', 'no', 'no');
 
 -- --------------------------------------------------------
 
@@ -214,9 +203,7 @@ INSERT INTO `expenses` (`id`, `username`, `type_exp`, `distnation_expens`, `valu
 (10, 'ahmed ammar', 'فاتورة مياه', 'وزارة المياه', '100', 'bank_safe', '2022-06-30', '07:06:52', 'snhory_acc', 'done'),
 (11, 'ahmed ammar', 'فاتورة كهرباء', 'وزارة المياه', '12000', 'bank_safe', '2022-07-01', '02:07:54', 'bssa', 'done'),
 (12, 'ahmed ammar', 'فاتورة كهرباء', 'fddddd', '1000', 'unv_safe', '2022-07-01', '02:07:43', 'bssa', 'done'),
-(13, 'bsheer', '<input>', '<hr>', '1000', 'bank_safe', '2022-07-05', '07:07:27', 'bssa ', 'done'),
-(14, 'snhoory', 'ÙØ·ÙˆØ±', '234', '4555', 'bank_safe', '2022-09-04', '04:09:19', 'bssa ', 'done'),
-(15, 'snhoory', 'ÙØ·ÙˆØ±', 'ÙŠØ¨Ù„ÙØºØ¹Ù‡', '33', '', '2022-09-04', '04:09:35', '', 'none');
+(13, 'bsheer', '<input>', '<hr>', '1000', '', '2022-07-05', '07:07:27', '', 'none');
 
 -- --------------------------------------------------------
 
@@ -269,8 +256,7 @@ INSERT INTO `feeding` (`id`, `user_name`, `value_of_feeding`, `date`) VALUES
 (93, 'محمد عبدالمتعال', '2000', '2022-07-01'),
 (94, 'محمد عبدالمتعال', '1000', '2022-07-01'),
 (95, 'محمد عبدالمتعال', '1000', '2022-07-01'),
-(96, 'محمد عبدالمتعال', '700', '2022-07-01'),
-(97, 'Ù…Ø­Ù…Ø¯ Ø¹Ø¨Ø¯Ø§Ù„Ù…ØªØ¹Ø§Ù„', '666', '2022-09-06');
+(96, 'محمد عبدالمتعال', '700', '2022-07-01');
 
 -- --------------------------------------------------------
 
@@ -295,8 +281,7 @@ CREATE TABLE `fees_for_batchs` (
 --
 
 INSERT INTO `fees_for_batchs` (`id`, `department`, `type_certificate`, `batch`, `register_fee`, `year_fee`, `username`, `date`, `hours`) VALUES
-(2, 'تقنية معلومات', 'بكلاريوس', '1', 1500, 250000, 'احمد عمار صديق', '2022-05-18', '07:05:53'),
-(3, 'none', 'none', 'none', 0, 0, 'bssa3', '2022-09-06', '04:09:18');
+(2, 'تقنية معلومات', 'بكلاريوس', '1', 1500, 250000, 'احمد عمار صديق', '2022-05-18', '07:05:53');
 
 -- --------------------------------------------------------
 
@@ -391,9 +376,7 @@ INSERT INTO `loans` (`id`, `name_of_take`, `type_of_job`, `phone_number`, `value
 (78, 'bssa ', 'Accountant', '0934678244', '30000', '', '', '2022-07-05', 'yes', '', 'none'),
 (79, 'hassen', 'tetcher', '0934678244', '', '', '', '2022-07-05', 'no', '', 'none'),
 (80, 'hassen', 'tetcher', '0934678244', '', '', '', '2022-07-05', 'no', '', 'none'),
-(81, 'bssa ', 'Accountant', '0934678244', '30000', '', '', '2022-07-05', 'yes', '', 'none'),
-(82, 'm7med', 'Human Resource', 'w345789', '40000', '', '', '2022-09-04', 'no', '', 'none'),
-(83, 'bssa', 'Accountant', '0934678244', '9000', '', '', '2022-09-14', 'no', '', 'none');
+(81, 'bssa ', 'Accountant', '0934678244', '30000', '', '', '2022-07-05', 'yes', '', 'none');
 
 -- --------------------------------------------------------
 
@@ -627,6 +610,19 @@ CREATE TABLE `new_std_form_info` (
   `interview` varchar(8) NOT NULL DEFAULT 'none'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `new_std_form_info`
+--
+
+INSERT INTO `new_std_form_info` (`id`, `form_number`, `name_std`, `college`, `type_certificate_unv`, `department`, `type_certifcate`, `course`, `certifcate_rate`, `set_number`, `nationality_number`, `gender`, `nationality`, `religion`, `state`, `city`, `area`, `home_number`, `name_of_guardian`, `jop_guardian`, `relatuve_relation`, `phone_of_guardian`, `phone_std`, `email_std`, `name_closest_relative`, `address_closest_relative`, `phone_closest_relative`, `personal_photo`, `photo_nationality_number`, `name_of_brother`, `univirsity_number`, `card_photo`, `name_of_father_police`, `services_certificate`, `name_of_fater_unv`, `services_certificate_unv`, `date`, `hours`, `year`, `review`, `notes_not_submit`, `descount_rate`, `optic`, `doctor`, `psychologist`, `interview`) VALUES
+(1, '12345678', 'احمد عمار صديق مصطفى', 'كلية دراسات الحاسوب', 'بكلاريوس', 'تقنية معلومات', 'ثانوية', 'ادبي', '80%', '7788', '118579654', 'male', 'مسلم', 'مانشيستر', 'بحري', 'الشعبية', '434', 'الصادق  صد', 'محامي', 'محامي', 'اب', '09876545', '0987654345', 'ahme@gmail.com', 'ياسر صديق', 'امدرمان', '098766456', '6261ee30a0966.jpg', '6261ee30a0f99.png', 'none', 'none', 'none', 'none', 'none', 'none', 'none', '2022-04-22', '01:04:16', '22', 'good', '', '0%', 'done', 'none', 'done', 'done'),
+(2, '234567', 'عمر حامح عمر مرغني', 'كلية دراسات الحاسوب', 'دبلوم', 'تقنية المعلومات', 'ثانوية', 'ادبي', '70%', '87665', '4356789', 'male', 'مسلم', 'جبل اولياء', 'الجبل', 'الجبل', '456', 'حامد مرغني', 'في الشرطة', 'في الشرطة', 'اب', '09987654', '09876543', 'omer@gmail.com', 'حسن حامد', 'الجبل', '0987654', '62684ce69acc9.png', '62684ce69dc00.png', 'none', 'none', 'none', 'none', 'none', 'none', 'none', '2022-04-26', '09:04:58', '22', 'good', '', '0%', 'done', 'done', 'done', 'none'),
+(3, '31001913', 'محمد عبدالمتعال الحسين احمد', 'كلية دراسات الحاسوب', 'بكلاريوس', 'تقنية المعلومات', 'ثانوية', 'علمي', '77%', '13000', '34789045789', 'male', 'مسلم', 'مانشيستر', 'لندن', 'الشعبية', '114', '', 'محامي', 'محامي', 'اب', '09876545', '0987654345', 'omer@gmail.com', 'حسن حامد', 'امدرمان', '0987654222', '627d6d95b8dc5.jpg', '627d6d95b9153.jpg', 'ريان عبد المتعال', '1731001913', '627d6d95b058b.png', 'none', 'none', 'none', 'none', '2022-05-12', '10:05:01', '22', 'good', '', '10%', 'done', 'done', 'done', 'none'),
+(4, '997654', 'عمر حامد مرغني محمد', 'كلية دراسات الحاسوب', 'بكلاريوس', 'تقنية معلومات', 'ثانوية', 'ادبي', '79.9%', '978654', '1234589', 'male', 'مسلم', 'مانشيستر', 'الجبل', 'الجبل', '114', 'حامد مرغني', 'اعمال حره', 'اعمال حره', 'اب', '09987654', '0926271827', 'omer@gmail.com', 'ياسر صديق', 'الجبل', '0987654222', '627fa1497c847.jpg', '627fa1497ceb4.jpg', 'none', 'none', 'none', 'none', 'none', 'none', 'none', '2022-05-14', '02:05:09', '22', 'good', '', '0%', 'done', 'done', 'done', 'none'),
+(5, '555999', 'يوسف خالد احمد', 'كلية دراسات الحاسوب', 'بكلاريوس', 'تقنية معلومات', 'ثانوية', 'ادبي', '80%', '19000', '12345890', 'male', 'مسلم', 'جبل اولياء', 'الجبل', 'الجبل', '565', 'الصادق  صد', 'اعمال حره', 'اعمال حره', 'اب', '87543245', '0926271827', 'yosif@gmail.com', 'حسن حامد', 'امدرمان', '45678765', '6286276fbbc79.jpg', '6286276fcfa2e.jpg', 'none', 'none', 'none', 'none', 'none', 'none', 'none', '2022-05-19', '01:05:07', '22', 'bad', '35', '0%', 'done', 'done', 'done', 'done'),
+(6, '559955', 'بشير عبدالملك عوض الكريم', 'كلية دراسات الحاسوب', 'بكلاريوس', 'تقنية معلومات', 'ثانوية', 'علمي', '75%', '88889', '987654123', 'male', 'مسلم', 'الخرطوم', 'الخرطوم', 'المعموره', '1199', 'عبدالملك ع', 'كابتن', 'كابتن', 'اب', '0901234376', '0902444525', 'basheercrash@hotmail.com', 'الصومالي', 'المعموره', '09065275687', '62a1df0946cfb.jpg', '62a1df094d23e.jpg', 'none', 'none', 'none', 'none', 'none', 'none', 'none', '2022-06-09', '01:06:41', '22', 'none', '', '0%', 'none', 'none', 'none', 'none'),
+(7, 'fy', 'yt', 'كلية دراسات الحاسوب', 'بكلاريوس', 'tfu', '', 'ryd', 'rydr', 'rdy', 'ryd', 'ryd', 'rhg', 'dr', 'yu', 'rd', 'yut', 'yrt', 'yrd', '', 'yrd', 'rytf', 'tgy', 'ftdr', 'rd', 'dr', 'rd', 'ydrk', 'ryd', 'ytf', 'rdyt', 'rdy', 'dry', '', 'yrdkt', 'ert', '2022-07-26', '23:34:22', '22', 'none', '', '0%', 'none', 'none', 'none', 'none');
+
 -- --------------------------------------------------------
 
 --
@@ -658,7 +654,7 @@ INSERT INTO `new_std_like_api` (`id`, `form_number`, `name_std`, `univirsity`, `
 (6, '997654', 'عمر حامد مرغني محمد', 'حامعة الرباط الوطني', 'كلية دراسات الحاسوب', 'بكلاريوس', 'تقنية معلومات', 'ثانوية', 'ادبي', '79.9%', '978654'),
 (7, '555999', 'يوسف خالد احمد', 'جامعة الرباط الوطني', 'كلية دراسات الحاسوب', 'بكلاريوس', 'تقنية معلومات', 'ثانوية', 'ادبي', '80%', '19000'),
 (8, '559955', 'بشير عبدالملك عوض الكريم', 'جامعة الرباط الوطني', 'كلية دراسات الحاسوب', 'بكلاريوس', 'تقنية معلومات', 'ثانوية', 'علمي', '75%', '88889'),
-(12, '9090', 'محمد معتصم محمد الهادي', 'جامعة الرباط الوطني', 'كلية دراسات الحاسوب', 'بكلاريوس', 'تقنية معلومات', 'ثانوية', 'ادبي', '80%', '8080');
+(9, '232323', 'ahmed yasir siddig ', 'جامعة الرباط الوطني', 'كلية دراسات الحاسوب', 'بكلاريوس', 'تقنية معلومات', 'ثانوية', 'علمي', '80%', '87765');
 
 -- --------------------------------------------------------
 
@@ -677,8 +673,8 @@ CREATE TABLE `safe_monye` (
 --
 
 INSERT INTO `safe_monye` (`id`, `type_of_safe`, `total`) VALUES
-(1, 'bank_safe', 7108280),
-(2, 'unv_safe', 7565165);
+(1, 'bank_safe', 7114501),
+(2, 'unv_safe', 7564499);
 
 -- --------------------------------------------------------
 
@@ -731,9 +727,7 @@ INSERT INTO `salary` (`id`, `name`, `phone_number`, `type_of_jop`, `salary`, `va
 (54, 'ياسر محمد احمد', '095678234', 'tetcher', '3000', '', '3000', '2022-07-01', '', 'none'),
 (55, 'ياسر محمد احمد', '095678234', 'tetcher', '3000', '', '3000', '2022-07-01', '', 'none'),
 (56, 'bssa ', '0934678244', 'Accountant', '90000', '60000', '30000', '2022-07-05', 'bssa ', 'done'),
-(57, 'ياسر محمد', '3456545', 'worker', '4000', '1000', '3000', '2022-07-26', '', 'none'),
-(58, 'bsheer', '09999123', 'Human Resource', '90000', '', '90000', '2022-09-04', '', 'none'),
-(59, 'bssa abdo', '09999123', 'Registered', '100000', '', '100000', '2022-09-04', '', 'none');
+(57, 'ياسر محمد', '3456545', 'worker', '4000', '1000', '3000', '2022-07-26', '', 'none');
 
 -- --------------------------------------------------------
 
@@ -923,8 +917,7 @@ INSERT INTO `subjects` (`id`, `name_subject`, `number_hours_subject`, `user_name
 (18, 'جبر خطي', '3', 'عصام الدين محمد', '2022-06-23', '01:06:37'),
 (19, 'رياضيات متقطعة', '3', 'عصام الدين محمد', '2022-06-23', '01:06:54'),
 (20, 'مهارات اتصالات', '3', 'عصام الدين محمد', '2022-06-23', '01:06:21'),
-(21, 'econmec', '2', 'bssa3', '2022-07-06', '02:07:54'),
-(22, 'HSI', '2', 'bssa3', '2022-09-04', '06:09:33');
+(21, 'econmec', '2', 'bssa3', '2022-07-06', '02:07:54');
 
 -- --------------------------------------------------------
 
@@ -1223,37 +1216,37 @@ ALTER TABLE `workers`
 -- AUTO_INCREMENT for table `distribution_subject`
 --
 ALTER TABLE `distribution_subject`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `distribution_tetcher_exams`
 --
 ALTER TABLE `distribution_tetcher_exams`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `employes`
 --
 ALTER TABLE `employes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `expenses`
 --
 ALTER TABLE `expenses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `feeding`
 --
 ALTER TABLE `feeding`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
 
 --
 -- AUTO_INCREMENT for table `fees_for_batchs`
 --
 ALTER TABLE `fees_for_batchs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `fisal_bank`
@@ -1271,13 +1264,13 @@ ALTER TABLE `khartoum_bank`
 -- AUTO_INCREMENT for table `loans`
 --
 ALTER TABLE `loans`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
 
 --
 -- AUTO_INCREMENT for table `medical_exam_doctors`
 --
 ALTER TABLE `medical_exam_doctors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `med_doctor`
@@ -1313,13 +1306,13 @@ ALTER TABLE `mustahqat`
 -- AUTO_INCREMENT for table `new_std_form_info`
 --
 ALTER TABLE `new_std_form_info`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `new_std_like_api`
 --
 ALTER TABLE `new_std_like_api`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `safe_monye`
@@ -1331,7 +1324,7 @@ ALTER TABLE `safe_monye`
 -- AUTO_INCREMENT for table `salary`
 --
 ALTER TABLE `salary`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT for table `scientific_affairs_admins`
@@ -1361,7 +1354,7 @@ ALTER TABLE `students`
 -- AUTO_INCREMENT for table `subjects`
 --
 ALTER TABLE `subjects`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `submit_std_and_result_subjects`
