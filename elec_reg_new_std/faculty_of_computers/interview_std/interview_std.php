@@ -261,15 +261,18 @@ if(isset($_POST["submit"])){
 
         if($name_of_father_police != "none" && $services_certificate != "none"){
             echo "
-            تخفيض بنسبة 20% اذا كان والدك او والدتك تعمل في الشرطة حاليا
+            <label class = 'lead'>تخفيض بنسبة 20% اذا كان والدك او والدتك تعمل في الشرطة حاليا
+           </label>
             <div>
-              اسم الوالد او الوالدة
-                <input type='text' name='name_father_police'  value='$name_of_father_police' readonly>
+
+             <label class ='lead'> اسم الوالد او الوالدة </lable>
+
+                <input type='text' name='name_father_police'  value='$name_of_father_police' readonly class = 'form-control'>
             </div>
             <div>
-                ارفاق اثبات شهادة قيد الخدمة
+                <label class ='lead'>ارفاق اثبات شهادة قيد الخدمة</label>
                 <div style='width: 500px; height: 500px;'>
-           <img src='../../nstd_info_form/images_uplodes/$services_certificate' alt='none' width='100%' height='100%'>
+           <img src='../../nstd_info_form/images_uplodes/$services_certificate' alt='none' width='100%' height='100%' >
            </div>
             </div>
         </div>
@@ -295,23 +298,21 @@ if(isset($_POST["submit"])){
             ";
         }
         ?>
-       
-         <br>   
-         <div  class="form-group col-lg-4 col-md-6 col-xs-12">
+         <div  class="form-group col-lg-6 col-md-12 col-xs-12">
          <label for="" class="lead">discount pesnt</label>
                 <input type="text" name="descount_rate"  value="<?php echo $descount_rate ?>" class="form-control" readonly>
             </div>
-       <br>
-       <hr>
-       <div  class="form-group col-lg-4 col-md-6 col-xs-12">
+            <hr>
+            <div class="row">
+       <div  class="form-group col-lg-6 col-md-12 col-xs-12">
        <label for="" class="lead">Batch</label>
            <input type="text" name="batch" id="" value="<?php echo $batch; ?>"class="form-control" readonly>
        </div>
-       <div class="form-group col-lg-4 col-md-6 col-xs-12">
+       <div class="form-group col-lg-6 col-md-12 col-xs-12">
        <label for="" class="lead">unv_id</label>
            <input type="text" name="unv_idd" id="" value="<?php echo $unv_rand_id ?>"class="form-control" readonly>
        </div>
-       <div  class="form-group col-lg-4 col-md-6 col-xs-12">
+       <div  class="form-group col-lg-6 col-md-12 col-xs-12">
        <label for="" class="lead">register fees</label>
            <input type="text" name="reg_fee" value="<?php echo $register_fee; ?>"class="form-control" readonly>
        </div>
@@ -349,16 +350,14 @@ if(isset($_POST["submit"])){
                 $new_value_descout_rate = 0;
             }
            ?>
-       <div  class="form-group col-lg-4 col-md-6 col-xs-12">
+       <div  class="form-group col-lg-6 col-md-12 col-xs-12">
        <label for="" class="lead"> Study fees</label>
        <input type="text" name="year_fee" value="<?php echo $year_fee*$new_value_descout_rate/100; ?>"class="form-control" readonly>
        </div>
-       <div class="form-group col-lg-4 col-md-6 col-xs-12">
+       <div class="form-group col-lg-6 col-md-12 col-xs-12">
        <label for="" class="lead">  Noots</label>
            <input type="text" name="note" value="<?php echo $note; ?>"class="form-control" id="" readonly>
        </div>
-       <hr>
-
         <div class="form-group col-lg-12 col-md-12 col-xs-12">
            <input type="submit" value="Confirm Interview " name="submit" class='btn btn-primary' >
         </div>

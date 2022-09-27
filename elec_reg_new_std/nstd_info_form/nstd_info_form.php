@@ -723,11 +723,11 @@ if(isset($_POST["addreg"])){
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead">Select Personal Photo</label>
-            <input type="file" name="personalphoto" id="" class="form-select" required>
+            <input type="file" name="personalphoto" id="formFile" class="form-control" required>
         </div>
         <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead"> Select Nationality Number Photo</label>
-            <input type="file" name="photonationalitynumber" id="" class="form-select" required>
+            <input type="file" name="photonationalitynumber" id="" class="form-control" required>
         </div>
         <br><hr>
         <div>
@@ -753,7 +753,7 @@ if(isset($_POST["addreg"])){
             </div>
             <div class="form-group col-lg-4 col-md-6 col-xs-12">
             <label for="" class="lead"> Select Univirsity Card Photo</label>
-                <input type="file" name="cardphoto" id="" class="form-select">
+                <input type="file" name="cardphoto" id="" class="form-control">
             </div><br><hr>
         </div>
         <div>
@@ -777,7 +777,7 @@ if(isset($_POST["addreg"])){
             </div>
             <div class="form-group col-lg-4 col-md-6 col-xs-12">
                 <label for="" class="lead">Select Proof Of Service Certificate</label>
-                <input type="file" name="servicessertificate" id="" class="form-select">
+                <input type="file" name="servicessertificate" id="" class="form-control">
             </div><br><hr>
         <div>
         <label for="" class="lead">A 70% discount If You Father Or Mother Currently Working In Ribat University :</label><br><br>
@@ -798,7 +798,7 @@ if(isset($_POST["addreg"])){
                 </div>
                 <div class="form-group col-lg-4 col-md-6 col-xs-12">
                     <label for="" class="lead">Select Proof Of Service Certificate</label>
-                    <input type="file" name="servicessertificateunv" id="" class="form-select">
+                    <input type="file" name="servicessertificateunv" id="" class="form-control">
                 </div>
             </div>
         <div>
