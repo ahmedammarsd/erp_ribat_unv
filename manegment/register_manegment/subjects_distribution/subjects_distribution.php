@@ -16,44 +16,44 @@ if(isset($_POST["add_info"])){
     $hours = date("h:m:s");
 
     if($name_subject2 == "none"){
-        echo "<script>alert('عذرا الرجاء تحديد المادة')</script>";
+        echo "<script>alert('Sorry, please select the subject')</script>";
     }
     elseif($name_tetcher == "none"){
-        echo "<script>alert('عذرا الرجاء تحديد الاستاذ')</script>";
+        echo "<script>alert('Sorry, please select the Teacher')</script>";
     }
     elseif($type_certificate == "none"){
-        echo "<script>alert('عذرا الرجاء تحديد الشهادة')</script>";
+        echo "<script>alert('Sorry, please select the certificate')</script>";
     }
     elseif($department == "none"){
-        echo "<script>alert('عذرا الرجاء تحديد القسم')</script>";
+        echo "<script>alert('Sorry, please select the department')</script>";
     }
     elseif($batch == "none"){
-        echo "<script>alert('عذرا الرجاء تحديد الدفعة')</script>";
+        echo "<script>alert('Sorry, please select the batch')</script>";
     }
     elseif($study_year == "none"){
-        echo "<script>alert('عذرا الرجاء تحديد السنة الدراسية')</script>";
+        echo "<script>alert('Sorry, please select the study year')</script>";
     }
     elseif($semester == "none"){
-        echo "<script>alert('عذرا الرجاء تحديد السمستر')</script>";
+        echo "<script>alert('Sorry, please select the semester')</script>";
     }
     elseif($study_year == "الاولى" && ($semester == 3 || $semester == 4 || $semester == 5 || $semester == 6 || $semester == 7 || $semester == 8)){
        // if($semester == 3 || $semester == 4 || $semester == 5 || $semester == 6 || $semester == 7 || $semester == 8){
-        echo "<script>alert('عذرا السنة الاولى تقبل السمستر الاول والثاني فقط')</script>";
+        echo "<script>alert('Sorry, the first year only accepts the first and second semester')</script>";
        // }
     }
     elseif($study_year == "الثانية" && ($semester == 1 || $semester == 2 || $semester == 5 || $semester == 6 || $semester == 7 || $semester == 8)){
        // if($semester == 1 || $semester == 2 || $semester == 5 || $semester == 6 || $semester == 7 || $semester == 8){
-        echo "<script>alert('عذرا السنة الثانية تقبل السمستر الثالث والرابع فقط')</script>";
+        echo "<script>alert('Sorry, the second year only accepts the third and fourth semester')</script>";
        // }
     }
     elseif($study_year == "الثالثة"  && ($semester == 1 || $semester == 2 || $semester == 3 || $semester == 4 || $semester == 7 || $semester == 8)){
         //if($semester == 1 || $semester == 2 || $semester == 3 || $semester == 4 || $semester == 7 || $semester == 8){
-        echo "<script>alert('عذرا السنة الثالثة تقبل السمستر الخامس والسادس فقط')</script>";
+        echo "<script>alert('Sorry, the third year only accepts the fifth and sixth semester')</script>";
         //}
     }
     elseif($study_year == "الرابعة" && ($semester == 1 || $semester == 2 || $semester == 3 || $semester == 4 || $semester == 5 || $semester == 6)){
       //  if($semester == 1 || $semester == 2 || $semester == 3 || $semester == 4 || $semester == 5 || $semester == 6){
-        echo "<script>alert('عذرا السنة الرابعة تقبل السمستر السابع والثامن فقط')</script>";
+        echo "<script>alert('Sorry, the fourth year only accepts the seventh and eighth semester')</script>";
        // }
     }
     else{
@@ -65,14 +65,14 @@ if(isset($_POST["add_info"])){
             $insert_data = mysqli_query($connection , "insert into distribution_subject (name_subject , name_tetcher , type_certifcate_unv ,department, batch ,study_year, semester,number_of_hour_subject, username, year, date, hours)
                value ('$name_subject2','$name_tetcher','$type_certificate','$department','$batch','$study_year','$semester','$value_hour2','$username','$year','$date','$hours')");
        if($insert_data){
-           echo "<script>alert('تم التحديد بنجاح')</script>";
+           echo "<script>alert('Successfully selected')</script>";
        }      
        else{
-          echo "<script>alert('عذرا حدث خطا في التحديد')</script>";
+          echo "<script>alert('Sorry, there was an error in the selection')</script>";
        }  
         }
         else{
-            echo "<script>alert('عذرا حدث خطا في التحديد الرجاء الاتصال بالمطور')</script>";
+            echo "<script>alert('Sorry, there was an error in the selection, please contact the developer')</script>";
          }  
     }   
 }

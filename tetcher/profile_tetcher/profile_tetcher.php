@@ -35,7 +35,7 @@ session_start();
         <ul>
         <a href="../subjects/subjects.php"><li><img src="../../icons/statc1.png" alt="" width="40px" height="40px">Subjects</li></a>
         <a href="../../manegment/register_manegment/exams/select_subject_for_check/select_subject_for_check.php"><li><img src="../../icons/statc1.png" alt="" width="40px" height="40px">Exams Control</li></a>
-        <a href="../../elec_reg_new_std/faculty_of_computers/display_std/display_std.php"><li><img src="../../icons/statc1.png" alt="" width="40px" height="40px">Interview Student</li></a>
+        <a href="../../elec_reg_new_std/faculty_of_computers/display_std/display_std.php"><li><img src="../../icons/stdifo1.png" alt="" width="40px" height="40px">Interview Student</li></a>
         
             
         </ul>
@@ -51,7 +51,40 @@ session_start();
         </div>
         </div>
 </div>
-<div class="form">
+<div class="info">
+    <div class="info-two">
+          <h3> NAME </h3>
+          <h3>  <?php
+            echo $name;
+            ?></h3>  
+    </div>
+    <div class="info-two">
+          <h3>  PHONE NUMBER </h3>
+          <h3> <?php
+            echo $phone_number;
+            ?></h3>  
+    </div>
+    <div class="info-two">
+          <h3>EMAIL</h3>
+          <h3>
+            <?php
+            echo $email;
+            ?></h3>  
+    </div>
+    <div class="info-two">
+       <h3> ADDRESS</h3>
+       <h3><?php
+            echo $address;
+            ?></h3>  
+    </div>
+</div>
+<div class="change form-group">
+            <a href='../change_password/change_password.php'><input type='submit' value='Change Password' class="btn btn-danger"></a>
+            
+        </div>
+</div>
+
+<!-- <div class="form">
 <div class="row">
     <div class="form-group col-lg-4 col-md-6 col-xs-12">
         <label for=""class="lead">Name </label>
@@ -87,6 +120,6 @@ session_start();
      <div class="form-group col-lg-8 col-md-5 col-xs-12">
             <a href='../change_password/change_password.php'><input type='submit' value='Change Password' class="btn btn-danger"></a> 
      </div>
-</div>
+</div> -->
 </body>
 </html>

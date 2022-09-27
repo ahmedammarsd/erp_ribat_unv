@@ -79,13 +79,13 @@ if(isset($_POST["submit"])){
         if($insert_data){
             $update_data_inteview = mysqli_query($connection , "update new_std_form_info set interview='done' where id='$id_std'");
             if($update_data_inteview){
-                echo "<script>alert('تمت المعاينة بنجاح');
+                echo "<script>alert('Previewed successfully');
                 window.location.href='../display_std/display_std.php';</script>";
             //header("location: ../display_std/display_std.php");
             }
         }  
         else{
-            echo "<script>alert('عذرا يوجد خطا في المعاينة الرجاء الاتصال بالمطور')</script>";
+            echo "<script>alert('Sorry, there is an error in the preview. Please contact the developer')</script>";
         }        
 }
 
@@ -239,19 +239,19 @@ if(isset($_POST["submit"])){
         if($name_of_brother != "none" && $univirsity_number != "none" && $card_photo != "none" ){
             echo "
             <div>
-            تخفيض بنسبة 10% في حالة لديك اخ او اخت يدرس في الجامعة حاليا
-            <div>
-                اسم الاخ او الاخت
-                <input type='text' name='name_brother'  value='$name_of_brother' readonly>
+            <label class='lead'>A 10% Discount if you have a Brother or Sister Who is Currently Studying at The University</label>
+            <div class='form-group'>
+                <label class='lead'>Brother or Sister Name</label>
+                <input type='text' name='name_brother'  value='$name_of_brother' class='form-control' readonly>
             </div>
-            <div>
-                الرقم الجامعي
-                <input type='text' name='unv_number'  value='$univirsity_number' readonly>
+            <div class='form-group'>
+               <label>UNV ID</label>
+                <input type='text' name='unv_number'  value='$univirsity_number' class='form-control' readonly>
             </div>
-            <div>
-                ارفاق صورة البطاقة الجامعية
-                <div style='width: 500px; height: 500px;'>
-           <img src='../../nstd_info_form/images_uplodes/$card_photo' alt='none' width='100%' height='100%'>
+            <div class='form-group'>
+            <label>Attach a copy of the university card</label>
+            <div style='width: 500px; height: 500px;'>
+           <img src='../../nstd_info_form/images_uplodes/$card_photo' alt='none' width='100%' height='100%' class='form-control'>
            </div>
             </div>
         </div>
@@ -261,15 +261,15 @@ if(isset($_POST["submit"])){
 
         if($name_of_father_police != "none" && $services_certificate != "none"){
             echo "
-            تخفيض بنسبة 20% اذا كان والدك او والدتك تعمل في الشرطة حاليا
-            <div>
-              اسم الوالد او الوالدة
-                <input type='text' name='name_father_police'  value='$name_of_father_police' readonly>
+            <label> A 20% Discount if your Father or Mother is Currently Working in the Police</label>
+            <div class='form-group'>
+                <label>Father's or Mother's Name</label>
+                <input type='text' name='name_father_police'  value='$name_of_father_police' class='form-control' readonly>
             </div>
-            <div>
-                ارفاق اثبات شهادة قيد الخدمة
+            <div class='form-group'>
+            <label>Attach Proof of Service Registration Certificate</label>
                 <div style='width: 500px; height: 500px;'>
-           <img src='../../nstd_info_form/images_uplodes/$services_certificate' alt='none' width='100%' height='100%'>
+                <img src='../../nstd_info_form/images_uplodes/$services_certificate' alt='none' width='100%' height='100%' class='form-control'>
            </div>
             </div>
         </div>
@@ -279,15 +279,15 @@ if(isset($_POST["submit"])){
 
         if($name_of_fater_unv != "none" && $services_certificate_unv != "none"){
             echo "
-            تخفيض بنسبة 70% اذا كان والدك او والدتك تعمل في ادارة جامعة الرباط الوطني حاليا
-            <div>
-              اسم الوالد او الوالدة
-                <input type='text' name='name_father_unv'  value='$name_of_fater_unv'>
+            <label>A 70% discount if your father or mother is currently working in the administration of the National Ribat University</label>
+            <div class='form-group'>
+                <label>Father's or Mother's Name</label>
+                <input type='text' name='name_father_unv'  value='$name_of_fater_unv' class='form-control'>
             </div>
-            <div>
-                ارفاق اثبات شهادة قيد الخدمة
+            <div class='form-group'>
+                <label>Attach proof of service registration certificate</label>
                 <div style='width: 500px; height: 500px;'>
-           <img src='../../nstd_info_form/images_uplodes/$services_certificate_unv' alt='none' width='100%' height='100%'>
+           <img src='../../nstd_info_form/images_uplodes/$services_certificate_unv' alt='none' width='100%' height='100%' class='form-control'>
            </div>
             </div>
         </div>

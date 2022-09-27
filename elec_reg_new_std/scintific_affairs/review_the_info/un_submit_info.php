@@ -15,7 +15,7 @@ if(isset($_POST["submit"])){
     $add_notes = mysqli_query($connection , "update new_std_form_info set notes_not_submit = '$notes' where id = '$id_std'");
     $update_for_un_submit_the_info = mysqli_query($connection , "update new_std_form_info set review = 'bad' where id='$id_std'");
     if($add_notes && $update_for_un_submit_the_info){
-        echo "<script>alert('تم تحديد الملاحظة  بنجاح');
+        echo "<script>alert('Note selected successfully');
         window.location.href='../info_std_electronic_register/info_std_electronic_register.php';</script>";
        // header("location: ../info_std_electronic_register/info_std_electronic_register.php");
         }

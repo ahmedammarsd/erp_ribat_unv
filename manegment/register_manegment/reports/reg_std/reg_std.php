@@ -116,16 +116,16 @@ $date_now = date("Y-m-d");
        $status = $_POST["status"];
        
        if($type_certificate == "none"){
-        echo "<script>alert('عذرا الرجاء تحديد الشهادة')</script>";
+        echo "<script>alert('Sorry, please select the certificate')</script>";
     }
     elseif($department == "none"){
-        echo "<script>alert('عذرا الرجاء تحديد القسم')</script>";
+        echo "<script>alert('Sorry, please select the department')</script>";
     }
     elseif($batch == "none"){
-        echo "<script>alert('عذرا الرجاء تحديد الدفعة')</script>";
+        echo "<script>alert('Sorry, please select the batch')</script>";
     }
     elseif($semester == "none"){
-        echo "<script>alert('عذرا الرجاء تحديد السمستر')</script>";
+        echo "<script>alert('Sorry, please select the semester')</script>";
     }
     elseif($status == "none"){
         echo "<script>alert('Sorry, Please Select Status')</script>";

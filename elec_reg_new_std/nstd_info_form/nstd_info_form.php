@@ -106,10 +106,10 @@ if(isset($_POST["addreg"])){
 
 
     if($_FILES["personalphoto"]["error"] === 4){
-        echo "<script>alert('عذرا الرجاء ارفاق صورة الرقم الوطني')</script>";
+        echo "<script>alert('Sorry, please attach a photo of the national number')</script>";
     }
     elseif($_FILES["photonationalitynumber"]["error"] === 4){
-        echo "<script>alert('عذرا الرجاء ارفاق صورة شخصية')</script>";
+        echo "<script>alert('Sorry, please attach a photo')</script>";
     }
     else{
          //الصورة الشخصية
@@ -165,31 +165,31 @@ if(isset($_POST["addreg"])){
 
         //للتحقق من مسار الصورة التي تم اختيارها 
         if(!in_array($imageextension , $validimageextinsion)){
-            echo "<script>alert('عذرا هذا الملف او الصورة الخاصة بالصورة الشخصية غير صالح')</script>";
+            echo "<script>alert('Sorry, this file or profile picture is invalid')</script>";
         }
         //للتحقق من مساحاة الصورة وعدم تخطيها مساحة ال2 ميغابايت
         elseif($personal_photo_size > 2000000){
-            echo "<script>alert('عذرا مساحة الصورة الخاصة بالصورة الشخصية اكبر من المساحة المحددة')</script>";
+            echo "<script>alert('Sorry, the image size of the profile picture is larger than the specified area')</script>";
         }
         //-----------------------------------------------------------
 
 
         elseif(!in_array($imageextension_national , $validimageextinsion_national)){
-            echo "<script>alert('عذرا هذا الملف او الصورة الخاص بالرقم الوطني غير صالح')</script>";
+            echo "<script>alert('Sorry, this file or photo for the national number is not valid')</script>";
         }
         elseif($national_number_size > 2000000){
-            echo "<script>alert('عذرا مساحة الصورة الخاصة بالرقم الوطني اكبر من المساحة المحددة')</script>";
+            echo "<script>alert('Sorry, the image size of the national number is larger than the specified area')</script>";
         }
         //----------------------------------------------------------------
 
         elseif($if_have_brother_or_no == "none"){
-            echo "<script>alert('عذرا الرجاء تحديد اذا ماكان لديك اخ او اخت في يدرس في الجامعة')</script>";
+            echo "<script>alert('Sorry, please specify if you have a brother or sister who is studying at the university')</script>";
         }
         elseif($if_father_in_police == "none"){
-            echo "<script>alert('عذرا الرجاء تحديد اذا ماكان الوالد او الوالدة في الشرطة')</script>";
+            echo "<script>alert('Sorry, please specify if the father or mother is in the police')</script>";
         }
         elseif($if_father_in_manegment_unv == "none"){
-            echo "<script>alert('عذرا الرجاء تحديد اذا ماكان الوالد او الوالدة في ي/تعمل في ادارة الجامعة')</script>";
+            echo "<script>alert('Sorry, please specify if the father or mother is in the university administration')</script>";
         }
         elseif($if_have_brother_or_no == "no" && $if_father_in_police == "no" && $if_father_in_manegment_unv == "no"){
             //كود خاص برفع الصورة السخصية الي السيرفر
@@ -209,21 +209,21 @@ if(isset($_POST["addreg"])){
                          value ('$form_number','$name_of_student','$the_college', '$type_certificate_unv','$the_department','$the_type_certificate','$the_course','$the_certificate_rate','$the_set_number','$nationality_number','$gender','$religion','$state','$city','$area','$home_number','$name_guardian','$jop_guardian','$jop_guardian','$relatuve_relation','$phone_guardian','$phone_std','$email_std','$name_closest_relative','$address_closest_relative','$phone_closest_relative','$new_personal_image','$new_national_image','none','none','none','none','none','none','none','$date','$hours','$year')");
             if($insert_data_std){
                 $_SESSION["formno"] = "";
-                echo "<script>alert('تم التسجيل بنجاح');
+                echo "<script>alert('successfully registered');
                 window.location.href='../../main/main.php'</script>";
             }
         }
         elseif($if_have_brother_or_no == "yes" && $if_father_in_police == "no" && $if_father_in_manegment_unv == "no"){
            
             if($_FILES["cardphoto"]["error"] === 4){
-                echo "<script>alert('عذرا الرجاء ارفاق صورة البطاقة الجامعية (اخ / اخت)')</script>";
+                echo "<script>alert('Sorry, please attach a copy of the university ID card (brother / sister)')</script>";
             }
 
             elseif(!in_array($borther_imageextension , $borther_validimageextinsion)){
-                echo "<script>alert('عذرا هذا الملف او الصورة الخاصة ببطافة الجامعة(اخ/اخت) غير صالحه')</script>";
+                echo "<script>alert('Sorry, this file or photo of the university card (brother / sister) is not valid')</script>";
             }
             elseif($borther_photo_size > 2000000){
-                echo "<script>alert('عذرا مساحة الصورة الخاصة ببطافة الجامعة(اخ/اخت) اكبر من المساحة المحددة')</script>";
+                echo "<script>alert('Sorry, the size of the photo of the university card (brother / sister) is larger than the specified area')</script>";
             }
             else{
                 $new_brother_image = uniqid();
@@ -245,7 +245,7 @@ if(isset($_POST["addreg"])){
          
                                   if($insert_data_std){
                                     $_SESSION["formno"] = "";
-                                    echo "<script>alert('تم التسجيل بنجاح');
+                                    echo "<script>alert('successfully registered');
                                     window.location.href='../../main/main.php'</script>";
                                 }
             }
@@ -253,23 +253,23 @@ if(isset($_POST["addreg"])){
         elseif($if_have_brother_or_no == "yes" && $if_father_in_police == "yes" && $if_father_in_manegment_unv == "no"){
            
            if($_FILES["cardphoto"]["error"] === 4){
-               echo "<script>alert('عذرا الرجاء ارفاق صورة البطاقة الجامعية (اخ / اخت)')</script>";
+               echo "<script>alert('Sorry, please attach a copy of the university ID card (brother / sister)')</script>";
            }
            elseif($_FILES["servicessertificate"]["error"] === 4){
-            echo "<script>alert('عذرا الرجاء ارفاق صورة شهادة قيد العمل لاثبات ان الوالد او الوالدة ت/يعمل في الشرطة')</script>";
+            echo "<script>alert('Sorry, please attach a copy of a work-in-progress certificate to prove that the father or mother works in the police')</script>";
            }
 
            elseif(!in_array($borther_imageextension , $borther_validimageextinsion)){
-               echo "<script>alert('عذرا هذا الملف او الصورة الخاصة ببطافة الجامعة(اخ/اخت) غير صالحه')</script>";
+               echo "<script>alert('Sorry, this file or photo of the university card (brother / sister) is not valid')</script>";
            }
            elseif($borther_photo_size > 2000000){
-               echo "<script>alert('عذرا مساحة الصورة الخاصة ببطافة الجامعة(اخ/اخت) اكبر من المساحة المحددة')</script>";
+               echo "<script>alert('Sorry, the size of the photo of the university card (brother / sister) is larger than the specified area')</script>";
            }
            elseif(!in_array($police_imageextension , $police_validimageextinsion)){
-            echo "<script>alert('عذرا هذا الملف او الصورة الخاصة بشهادة قيد العمل في الشرطة غير صالحه')</script>";
+            echo "<script>alert('Sorry, this file or image of a police certificate is invalid')</script>";
             }
             elseif($police_photo_size > 2000000){
-                echo "<script>alert('عذرا مساحة الصورة الخاصة بشهادة قيد العمل في الشرطة اكبر من المساحة المحددة')</script>";
+                echo "<script>alert('Sorry, the image size of a police certificate is larger than the specified area')</script>";
             }
            else{
                $new_brother_image = uniqid();
@@ -295,7 +295,7 @@ if(isset($_POST["addreg"])){
         
                                  if($insert_data_std){
                                     $_SESSION["formno"] = "";
-                                        echo "<script>alert('تم التسجيل بنجاح');
+                                        echo "<script>alert('successfully registered');
                                         window.location.href='../../main/main.php'</script>";
                                 }
            }
@@ -303,32 +303,32 @@ if(isset($_POST["addreg"])){
             elseif($if_have_brother_or_no == "yes" && $if_father_in_police == "yes" && $if_father_in_manegment_unv == "yes"){
 
             if($_FILES["cardphoto"]["error"] === 4){
-                echo "<script>alert('عذرا الرجاء ارفاق صورة البطاقة الجامعية (اخ / اخت)')</script>";
+                echo "<script>alert('Sorry, please attach a copy of the university ID card (brother / sister)')</script>";
             }
             elseif($_FILES["servicessertificate"]["error"] === 4){
-                echo "<script>alert('عذرا الرجاء ارفاق صورة شهادة قيد العمل لاثبات ان الوالد او الوالدة ت/يعمل في الشرطة')</script>";
+                echo "<script>alert('Sorry, please attach a copy of a work-in-progress certificate to prove that the father or mother works in the police ')</script>";
             }
             elseif($_FILES["servicessertificateunv"]["error"] === 4){
-                echo "<script>alert('عذرا الرجاء ارفاق صورة شهادة قيد العمل لاثبات ان الوالد او الوالدة ت/يعمل في ادارة الجامعة')</script>";
+                echo "<script>alert('Sorry, please attach a copy of a work-in-progress certificate to prove that the father or mother  works in the university administration')</script>";
             }
 
             elseif(!in_array($borther_imageextension , $borther_validimageextinsion)){
-                echo "<script>alert('عذرا هذا الملف او الصورة الخاصة ببطافة الجامعة(اخ/اخت) غير صالحه')</script>";
+                echo "<script>alert('Sorry, this file or photo of the university card (brother / sister) is not valid')</script>";
             }
             elseif($borther_photo_size > 2000000){
-                echo "<script>alert('عذرا مساحة الصورة الخاصة ببطافة الجامعة(اخ/اخت) اكبر من المساحة المحددة')</script>";
+                echo "<script>alert('Sorry, the size of the photo of the university card (brother / sister) is larger than the specified area')</script>";
             }
             elseif(!in_array($police_imageextension , $police_validimageextinsion)){
-                echo "<script>alert('عذرا هذا الملف او الصورة الخاصة بشهادة قيد العمل في الشرطة غير صالحه')</script>";
+                echo "<script>alert('Sorry, this file or image of a police certificate is invalid')</script>";
                 }
                 elseif($police_photo_size > 2000000){
-                    echo "<script>alert('عذرا مساحة الصورة الخاصة بشهادة قيد العمل في الشرطة اكبر من المساحة المحددة')</script>";
+                    echo "<script>alert('Sorry, the image size of a police certificate is larger than the specified area')</script>";
                 }
                 elseif(!in_array($unv_imageextension , $unv_validimageextinsion)){
-                    echo "<script>alert('عذرا هذا الملف او الصورة الخاصة بشهادة قيد العمل في ادارة الجامعة غير صالحه')</script>";
+                    echo "<script>alert('Sorry, this file or photo of a certificate in work at the university administration is not valid')</script>";
                     }
                     elseif($unv_photo_size > 2000000){
-                        echo "<script>alert('عذرا مساحة الصورة الخاصة بشهادة قيد العمل في ادارة الجامعة اكبر من المساحة المحددة')</script>";
+                        echo "<script>alert('Sorry, the size of the image of the certificate in work in the university administration is larger than the specified area')</script>";
                     }  
             else{
                 $new_brother_image = uniqid();
@@ -358,7 +358,7 @@ if(isset($_POST["addreg"])){
 
                          if($insert_data_std){
                                       $_SESSION["formno"] = "";
-                                        echo "<script>alert('تم التسجيل بنجاح');
+                                        echo "<script>alert('successfully registered');
                                         window.location.href='../../main/main.php'</script>";
                         }
             }
@@ -366,14 +366,14 @@ if(isset($_POST["addreg"])){
         elseif($if_have_brother_or_no == "no" && $if_father_in_police == "yes" && $if_father_in_manegment_unv == "no"){
            
             if($_FILES["servicessertificate"]["error"] === 4){
-                echo "<script>alert('عذرا الرجاء ارفاق صورة شهادة قيد العمل لاثبات ان الوالد او الوالدة ت/يعمل في الشرطة')</script>";
+                echo "<script>alert('Sorry, please attach a copy of a work-in-progress certificate to prove that the father or mother works in the police')</script>";
             }
 
             elseif(!in_array($police_imageextension , $police_validimageextinsion)){
-                echo "<script>alert('عذرا هذا الملف او الصورة الخاصة بشهادة قيد العمل في الشرطة غير صالحه')</script>";
+                echo "<script>alert('Sorry, this file or image of a police certificate is invalid')</script>";
             }
             elseif($police_photo_size > 2000000){
-                echo "<script>alert('عذرا مساحة الصورة الخاصة بشهادة قيد العمل في الشرطة اكبر من المساحة المحددة')</script>";
+                echo "<script>alert('Sorry, the image size of a police certificate is larger than the specified area')</script>";
             }
             else{
                 $new_police_image = uniqid();
@@ -395,7 +395,7 @@ if(isset($_POST["addreg"])){
 
                          if($insert_data_std){
                                        $_SESSION["formno"] = "";
-                                        echo "<script>alert('تم التسجيل بنجاح');
+                                        echo "<script>alert('successfully registered');
                                         window.location.href='../../main/main.php'</script>";
                         }
             }
@@ -403,22 +403,22 @@ if(isset($_POST["addreg"])){
         elseif($if_have_brother_or_no == "no" && $if_father_in_police == "yes" && $if_father_in_manegment_unv == "yes"){
 
             if($_FILES["servicessertificate"]["error"] === 4){
-                echo "<script>alert('عذرا الرجاء ارفاق صورة شهادة قيد العمل لاثبات ان الوالد او الوالدة ت/يعمل في الشرطة')</script>";
+                echo "<script>alert('Sorry, please attach a copy of a work-in-progress certificate to prove that the father or mother works in the police ')</script>";
             }
             elseif($_FILES["servicessertificateunv"]["error"] === 4){
-                echo "<script>alert('عذرا الرجاء ارفاق صورة شهادة قيد العمل لاثبات ان الوالد او الوالدة ت/يعمل في ادارة الجامعة')</script>";
+                echo "<script>alert('Sorry, please attach a copy of a work-in-progress certificate to prove that the father or mother  works in the university administration')</script>";
             }
             elseif(!in_array($police_imageextension , $police_validimageextinsion)){
-                echo "<script>alert('عذرا هذا الملف او الصورة الخاصة بشهادة قيد العمل في الشرطة غير صالحه')</script>";
+                echo "<script>alert('Sorry, this file or image of a police certificate is invalid')</script>";
                 }
                 elseif($police_photo_size > 2000000){
-                    echo "<script>alert('عذرا مساحة الصورة الخاصة بشهادة قيد العمل في الشرطة اكبر من المساحة المحددة')</script>";
+                    echo "<script>alert('Sorry, the image size of a police certificate is larger than the specified area')</script>";
                 }
                 elseif(!in_array($unv_imageextension , $unv_validimageextinsion)){
-                    echo "<script>alert('عذرا هذا الملف او الصورة الخاصة بشهادة قيد العمل في ادارة الجامعة غير صالحه')</script>";
+                    echo "<script>alert('Sorry, this file or photo of a certificate in work at the university administration is not valid')</script>";
                     }
                     elseif($unv_photo_size > 2000000){
-                        echo "<script>alert('عذرا مساحة الصورة الخاصة بشهادة قيد العمل في ادارة الجامعة اكبر من المساحة المحددة')</script>";
+                        echo "<script>alert('Sorry, the size of the image of the certificate in work in the university administration is larger than the specified area')</script>";
                     }  
             else{
                 $new_police_image = uniqid();
@@ -444,7 +444,7 @@ if(isset($_POST["addreg"])){
             
                                      if($insert_data_std){
                                         $_SESSION["formno"] = "";
-                                        echo "<script>alert('تم التسجيل بنجاح');
+                                        echo "<script>alert('successfully registered');
                                         window.location.href='../../main/main.php'</script>";
                                     }
             }
@@ -452,13 +452,13 @@ if(isset($_POST["addreg"])){
         elseif($if_have_brother_or_no == "no" && $if_father_in_police == "no" && $if_father_in_manegment_unv == "yes"){
 
             if($_FILES["servicessertificateunv"]["error"] === 4){
-                echo "<script>alert('عذرا الرجاء ارفاق صورة شهادة قيد العمل لاثبات ان الوالد او الوالدة ت/يعمل في ادارة الجامعة')</script>";
+                echo "<script>alert('Sorry, please attach a copy of a work-in-progress certificate to prove that the father or mother  works in the university administration')</script>";
             }
                 elseif(!in_array($unv_imageextension , $unv_validimageextinsion)){
-                    echo "<script>alert('عذرا هذا الملف او الصورة الخاصة بشهادة قيد العمل في ادارة الجامعة غير صالحه')</script>";
+                    echo "<script>alert('Sorry, this file or photo of a certificate in work at the university administration is not valid')</script>";
                     }
                     elseif($unv_photo_size > 2000000){
-                        echo "<script>alert('عذرا مساحة الصورة الخاصة بشهادة قيد العمل في ادارة الجامعة اكبر من المساحة المحددة')</script>";
+                        echo "<script>alert('Sorry, the size of the image of the certificate in work in the university administration is larger than the specified area')</script>";
                     }  
             else{
                 $new_unv_image = uniqid();
@@ -480,7 +480,7 @@ if(isset($_POST["addreg"])){
             
                                      if($insert_data_std){
                                         $_SESSION["formno"] = "";
-                                        echo "<script>alert('تم التسجيل بنجاح');
+                                        echo "<script>alert('successfully registered');
                                         window.location.href='../../main/main.php'</script>";
                                     }
             }
@@ -488,23 +488,23 @@ if(isset($_POST["addreg"])){
         elseif($if_have_brother_or_no == "yes" && $if_father_in_police == "no" && $if_father_in_manegment_unv == "yes"){
 
             if($_FILES["cardphoto"]["error"] === 4){
-                echo "<script>alert('عذرا الرجاء ارفاق صورة البطاقة الجامعية (اخ / اخت)')</script>";
+                echo "<script>alert('Sorry, please attach a copy of the university ID card (brother / sister)')</script>";
             }
             elseif($_FILES["servicessertificateunv"]["error"] === 4){
-                echo "<script>alert('عذرا الرجاء ارفاق صورة شهادة قيد العمل لاثبات ان الوالد او الوالدة ت/يعمل في ادارة الجامعة')</script>";
+                echo "<script>alert('Sorry, please attach a copy of a work-in-progress certificate to prove that the father or mother  works in the university administration')</script>";
             }
 
             elseif(!in_array($borther_imageextension , $borther_validimageextinsion)){
-                echo "<script>alert('عذرا هذا الملف او الصورة الخاصة ببطافة الجامعة(اخ/اخت) غير صالحه')</script>";
+                echo "<script>alert('Sorry, this file or photo of the university card (brother / sister) is not valid')</script>";
             }
             elseif($borther_photo_size > 2000000){
-                echo "<script>alert('عذرا مساحة الصورة الخاصة ببطافة الجامعة(اخ/اخت) اكبر من المساحة المحددة')</script>";
+                echo "<script>alert('Sorry, the size of the photo of the university card (brother / sister) is larger than the specified area')</script>";
             }
                 elseif(!in_array($unv_imageextension , $unv_validimageextinsion)){
-                    echo "<script>alert('عذرا هذا الملف او الصورة الخاصة بشهادة قيد العمل في ادارة الجامعة غير صالحه')</script>";
+                    echo "<script>alert('Sorry, this file or photo of a certificate in work at the university administration is not valid')</script>";
                     }
                     elseif($unv_photo_size > 2000000){
-                        echo "<script>alert('عذرا مساحة الصورة الخاصة بشهادة قيد العمل في ادارة الجامعة اكبر من المساحة المحددة')</script>";
+                        echo "<script>alert('Sorry, the size of the image of the certificate in work in the university administration is larger than the specified area')</script>";
                     }  
             else{
                 $new_brother_image = uniqid();
@@ -530,7 +530,7 @@ if(isset($_POST["addreg"])){
             
                                      if($insert_data_std){
                                         $_SESSION["formno"] = "";
-                                        echo "<script>alert('تم التسجيل بنجاح');
+                                        echo "<script>alert('successfully registered');
                                         window.location.href='../../main/main.php'</script>";
                                     }
            }

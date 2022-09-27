@@ -22,7 +22,7 @@ $total_of_bank = $row["total"];
     if($value_feeding > $total_of_bank){
         //header("location: feeding_safe.php?selects=1");
         //$_SESSION["alertf"] = "<script>alert('الرجاء مراجعة الحساب البنكي')</script>";
-        echo "<script>alert('الرجاء مراجعة الحساب البنكي');
+        echo "<script>alert('Please check the bank account');
         window.location.href='feeding_safe.php';</script>";
     }
     else{
@@ -38,7 +38,7 @@ $total_of_bank = $row["total"];
              if($insert_information_fedding){
                // $_SESSION["alertf"] = "<script>alert('تم تغذية الخزينة الجامعية')</script>";
                // header("location: feeding_safe.php?selects=2");
-               echo "<script>alert('تم تغذية الخزينة الجامعية');
+               echo "<script>alert('Feeding Successfully');
                window.location.href='feeding_safe.php';</script>";
              }
          }

@@ -26,7 +26,7 @@ $date = date("Y-m-d");
         <ul>
         <a href="../../../../tetcher/subjects/subjects.php"><li><img src="../../../../icons/statc1.png" alt="" width="40px" height="40px">Subjects</li></a>
         <a href="#"><li class="active"><img src="../../../../icons/statc1.png" alt="" width="40px" height="40px">Exams Control</li></a>
-        <a href="../../../../elec_reg_new_std/faculty_of_computers/display_std/display_std.php"><li><img src="../../../../icons/statc1.png" alt="" width="40px" height="40px">Interview Student</li></a>   
+        <a href="../../../../elec_reg_new_std/faculty_of_computers/display_std/display_std.php"><li><img src="../../../../icons/stdifo1.png" alt="" width="40px" height="40px">Interview Student</li></a>   
         </ul>
 </div>
 <div class="container">

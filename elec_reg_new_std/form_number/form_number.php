@@ -12,7 +12,7 @@ if(isset($_POST["submit"])){
     $display_form_number_from_new_student2 = mysqli_fetch_array($display_form_number_from_new_student)['form_number'];
    // echo $display_form_number_from_new_student2 ;
     if($formnumber == $display_form_number_from_new_student2){
-        echo "<script>alert('عذرا لقد اكملت عملية التسجيل مسبقا')</script>";
+        echo "<script>alert('Sorry, you have already completed the registration process')</script>";
     }
     else{
     if(mysqli_num_rows(mysqli_query($connection , $display_form_number_from_api_minstry)) > 0) {
@@ -20,7 +20,7 @@ if(isset($_POST["submit"])){
      header("location: ../nstd_info_form/nstd_info_form.php");
     }
     else{
-        echo "<script>alert('عذرا رقم الاستمارة غير صحيح')</script>";
+        echo "<script>alert('Sorry, the form number is incorrect')</script>";
     }
 }
 }

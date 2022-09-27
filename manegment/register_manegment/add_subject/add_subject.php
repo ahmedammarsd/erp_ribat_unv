@@ -11,10 +11,10 @@ if(isset($_POST["add_subject"])){
     $hours = date("h:m:s");
 
     if($hours_subject == 0){
-        echo "<script>alert('عذرا لا يمكن ان يكون عدد الساعات = 0')</script>";
+        echo "<script>alert('Sorry, hours can't be 0')</script>";
     }
     elseif($hours_subject > 15) {
-        echo "<script>alert('عذرا لايمكن ان يتخطى عدد ساعات الماده 15')</script>";
+        echo "<script>alert('Sorry, the number of hours for the course cannot exceed 15')</script>";
     }
     else{
 
@@ -22,10 +22,10 @@ if(isset($_POST["add_subject"])){
         value ('$name_subject','$hours_subject','$username','$date','$hours')");
 
    if($insert_subject){
-       echo "<script>alert('تمت اضافة المادة')</script>";
+       echo "<script>alert('successfully add Subject')</script>";
    }    
    else{
-       echo "<script>alert('عذرا لم تتم عملية الاضافة')</script>";
+       echo "<script>alert('Sorry, the add was not completed')</script>";
    } 
     }
    

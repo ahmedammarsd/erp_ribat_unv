@@ -64,7 +64,7 @@ if(isset($_POST["submit"])){
 
       echo "<script>alert('Successfully Review  Student Information')</script>";
 
-        echo "<script>alert('تم تاكيد البيانات');
+        echo "<script>alert('The data has been confirmed');
         window.location.href='../info_std_electronic_register/info_std_electronic_register.php'</script>";
 
        // header("location: ../info_std_electronic_register/info_std_electronic_register.php");
@@ -73,7 +73,7 @@ if(isset($_POST["submit"])){
     }
     if($value_daescount == "10%"){
         if($name_brother == "none" || $unv_number == "none" || $card_photo == "none"){
-            echo "<script>alert('عذرا لايمكن تطبيق نسبة التخفيض %10 نظرا لعدم اكتمال البيانات')</script>";
+            echo "<script>alert('Sorry, the 10% discount cannot be applied due to incomplete data')</script>";
         }
         else{
             $update_for_submit_the_info = mysqli_query($connection , "update new_std_form_info set review = 'good' where id='$id_std'");
@@ -82,7 +82,7 @@ if(isset($_POST["submit"])){
 
               echo "<script>alert('Successfully Review  Student Information')</script>";
 
-                echo "<script>alert('تم تاكيد البيانات');
+                echo "<script>alert('The data has been confirmed');
                 window.location.href='../info_std_electronic_register/info_std_electronic_register.php'</script>";
 
                // header("location: ../info_std_electronic_register/info_std_electronic_register.php");
@@ -94,7 +94,7 @@ if(isset($_POST["submit"])){
 
     if($value_daescount == "20%"){
         if($name_father_police == "none" || $services_certificate == "none"){
-            echo "<script>alert('عذرا لايمكن تطبيق نسبة التخفيض %20 نظرا لعدم اكتمال البيانات')</script>";
+            echo "<script>alert('Sorry, the 20% discount cannot be applied due to incomplete data')</script>";
         }
         else{
             $update_for_submit_the_info = mysqli_query($connection , "update new_std_form_info set review = 'good' where id='$id_std'");
@@ -103,7 +103,7 @@ if(isset($_POST["submit"])){
 
               echo "<script>alert('Successfully Review  Student Information')</script>";
 
-                echo "<script>alert('تم تاكيد البيانات');
+                echo "<script>alert('The data has been confirmed');
                 window.location.href='../info_std_electronic_register/info_std_electronic_register.php'</script>";
 
                // header("location: ../info_std_electronic_register/info_std_electronic_register.php");
@@ -115,7 +115,7 @@ if(isset($_POST["submit"])){
 
     if($value_daescount == "30%"){
         if($name_father_police == "none" || $services_certificate == "none" || $name_brother == "none" || $unv_number == "none" || $card_photo == "none"){
-            echo "<script>alert('عذرا لايمكن تطبيق نسبة التخفيض %30 نظرا لعدم اكتمال البيانات')</script>";
+            echo "<script>alert('Sorry, the 30% discount cannot be applied due to incomplete data')</script>";
         }
         else{
             $update_for_submit_the_info = mysqli_query($connection , "update new_std_form_info set review = 'good' where id='$id_std'");
@@ -124,7 +124,7 @@ if(isset($_POST["submit"])){
 
               echo "<script>alert('Successfully Review  Student Information')</script>";
 
-                echo "<script>alert('تم تاكيد البيانات');
+                echo "<script>alert('The data has been confirmed');
                 window.location.href='../info_std_electronic_register/info_std_electronic_register.php'</script>";
 
                // header("location: ../info_std_electronic_register/info_std_electronic_register.php");
@@ -136,7 +136,7 @@ if(isset($_POST["submit"])){
 
     if($value_daescount == "70%"){
         if($name_father_unv == "none" || $services_certificate_unv == "none"){
-            echo "<script>alert('عذرا لايمكن تطبيق نسبة التخفيض %70 نظرا لعدم اكتمال البيانات')</script>";
+            echo "<script>alert('Sorry, the 70% discount cannot be applied due to incomplete data')</script>";
         }
         else{
             $update_for_submit_the_info = mysqli_query($connection , "update new_std_form_info set review = 'good' where id='$id_std'");
@@ -145,7 +145,7 @@ if(isset($_POST["submit"])){
 
               echo "<script>alert('Successfully Review  Student Information')</script>";
 
-                echo "<script>alert('تم تاكيد البيانات');
+                echo "<script>alert('The data has been confirmed');
                 window.location.href='../info_std_electronic_register/info_std_electronic_register.php'</script>";
 
                // header("location: ../info_std_electronic_register/info_std_electronic_register.php");
@@ -157,7 +157,7 @@ if(isset($_POST["submit"])){
 
     if($value_daescount == "80%"){
         if($name_father_unv == "none" || $services_certificate_unv == "none" || $name_brother == "none" || $unv_number == "none" || $card_photo == "none"){
-            echo "<script>alert('عذرا لايمكن تطبيق نسبة التخفيض %80 نظرا لعدم اكتمال البيانات')</script>";
+            echo "<script>alert('Sorry, the 80% discount cannot be applied due to incomplete data')</script>";
         }
         else{
             $update_for_submit_the_info = mysqli_query($connection , "update new_std_form_info set review = 'good' where id='$id_std'");
@@ -166,7 +166,7 @@ if(isset($_POST["submit"])){
 
               echo "<script>alert('Successfully Review  Student Information')</script>";
 
-                echo "<script>alert('تم تاكيد البيانات');
+                echo "<script>alert('The data has been confirmed');
                 window.location.href='../info_std_electronic_register/info_std_electronic_register.php'</script>";
 
                // header("location: ../info_std_electronic_register/info_std_electronic_register.php");
@@ -178,7 +178,7 @@ if(isset($_POST["submit"])){
 
     if($value_daescount == "90%"){
         if($name_father_unv == "none" || $services_certificate_unv == "none" || $name_father_police == "none" || $services_certificate == "none"){
-            echo "<script>alert('عذرا لايمكن تطبيق نسبة التخفيض %80 نظرا لعدم اكتمال البيانات')</script>";
+            echo "<script>alert('Sorry, the 80% discount cannot be applied due to incomplete data')</script>";
         }
         else{
             $update_for_submit_the_info = mysqli_query($connection , "update new_std_form_info set review = 'good' where id='$id_std'");
@@ -187,7 +187,7 @@ if(isset($_POST["submit"])){
 
               echo "<script>alert('Successfully Review  Student Information')</script>";
 
-              echo "<script>alert('تم تاكيد البيانات');
+              echo "<script>alert('The data has been confirmed');
               window.location.href='../info_std_electronic_register/info_std_electronic_register.php'</script>";
 
                // header("location: ../info_std_electronic_register/info_std_electronic_register.php");
@@ -199,7 +199,7 @@ if(isset($_POST["submit"])){
 
     if($value_daescount == "100%"){
         if($name_father_unv == "none" || $services_certificate_unv == "none" || $name_father_police == "none" || $services_certificate == "none" || $name_brother == "none" || $unv_number == "none" || $card_photo == "none"){
-            echo "<script>alert('عذرا لايمكن تطبيق نسبة التخفيض %100 نظرا لعدم اكتمال البيانات')</script>";
+            echo "<script>alert('Sorry, 100% discount cannot be applied due to incomplete data')</script>";
         }
         else{
             $update_for_submit_the_info = mysqli_query($connection , "update new_std_form_info set review = 'good' where id='$id_std'");
@@ -208,7 +208,7 @@ if(isset($_POST["submit"])){
 
               echo "<script>alert('Successfully Review  Student Information')</script>";
 
-              echo "<script>alert('تم تاكيد البيانات');
+              echo "<script>alert('The data has been confirmed');
               window.location.href='../info_std_electronic_register/info_std_electronic_register.php'</script>";
 
                // header("location: ../info_std_electronic_register/info_std_electronic_register.php");

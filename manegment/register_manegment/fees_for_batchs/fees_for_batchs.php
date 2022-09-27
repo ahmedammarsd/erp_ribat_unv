@@ -16,7 +16,7 @@ if(isset($_POST["add_fees"])){
     $insert_date_fees = mysqli_query($connection , "insert into fees_for_batchs (department,type_certificate,batch,register_fee,year_fee,username,date ,hours)
      value ('$department','$type_certificate','$batch','$register_fee','$year_fee','$username','$date','$hour') ");
      if($insert_date_fees){
-         echo "<script>alert('تم تحديد الرسوم بنجاح')</script>";
+         echo "<script>alert('Fee selected successfully')</script>";
      }
 }
 ?>

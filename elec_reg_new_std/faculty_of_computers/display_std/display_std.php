@@ -26,7 +26,7 @@ $year = date("y");
         <ul>
         <a href="../../../tetcher/subjects/subjects.php"><li><img src="../../../icons/statc1.png" alt="" width="40px" height="40px">Subjects</li></a>
         <a href="../../../manegment/register_manegment/exams/select_subject_for_check/select_subject_for_check.php"><li><img src="../../../icons/statc1.png" alt="" width="40px" height="40px">Exams Control</li></a>
-        <a href="#"><li class="active"><img src="../../../icons/statc1.png" alt="" width="40px" height="40px">Interview Student</li></a>     
+        <a href="#"><li class="active"><img src="../../../icons/stdifo1.png" alt="" width="40px" height="40px">Interview Student</li></a>     
         </ul>
 </div>
 <div class="container">
