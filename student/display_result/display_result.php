@@ -488,7 +488,7 @@ $batch = $row_std["batch"];
                         echo "<hr>";
                         echo "<hr>";
                         echo "<hr>";
-                        echo "<div class='alert alert-primary'>Semester " . $display_GPA_S . "</div>";
+                        // echo "<div class='alert alert-primary'>Semester " . $display_GPA_S . "</div>";
                         echo "<div class='alert alert-primary'> GPA " . $display_TGPA . "</div>";
                     }
                 }
