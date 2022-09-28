@@ -57,27 +57,17 @@ $num_workers = mysqli_num_rows($display_num_user_worker);
         </ul>
     </div>
     <div class="container">
-<<<<<<< HEAD
     <div class="header">
         <div class="nav">
         <div>
         <h3><a href="../account/account.php"><img src="../../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_user ?></h3>
     </div>
-        <div class="log">
-        <a href="../../logout/logout.php"><div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div></a>
-=======
-        <div class="header">
-            <div class="nav">
-                <div>
-                    <h3><a href="../account/account.php"><img src="../../../icons/Account.png" alt="" width="40px" height="40px"></a><?php echo " " . $name_user ?></h3>
-                </div>
                 <div class="log">
-                    <a href="../logout/logout.php">
+                    <a href="../../logout/logout.php">
                         <div><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></div>
                     </a>
                 </div>
             </div>
->>>>>>> 0c85f42336657d3fab7edb0f700e1799bedbc01a
         </div>
         <div class="content">
             <div class="row">
